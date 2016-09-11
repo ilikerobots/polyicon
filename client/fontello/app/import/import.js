@@ -126,7 +126,7 @@ function import_zip(data, file) {
       // Try to search fontello config by known path
       // 'fontello-XXXXXX/config.json'. If exists - consider zip
       // as fontello archive & do config import.
-      let search = zip.file(/fontello-[0-9a-f]+[\\/]config[.]json/);
+      let search = zip.file(/polymer-iconset-[0-9a-f]+[\\/]config[.]json/);
 
       if ((search.length === 1) && (search[0].dir === false)) {
         //import_config(search[0].asText());

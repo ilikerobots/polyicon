@@ -1,12 +1,21 @@
 .container
   #toolbar.btn-toolbar
 
-    .btn-group
+    //.btn-group
+    //  input#search.form-control.toolbar__search(
+    //    type='text',
+    //    placeholder='search',
+    //    autocomplete='off'
+    //  )
+
+    .form-group.label-floating( style="float:left" )
+      label.control-label( for="search" )= self.t('search')
       input#search.form-control.toolbar__search(
         type='text',
-        placeholder='search',
+        placeholder='',
         autocomplete='off'
       )
+
 
     .btn-group
       a.search-permalink.btn.btn-link._popover(
@@ -23,8 +32,8 @@
 
     .btn-toolbar.pull-right
 
-      .btn-group.hidden-xs.hidden-sm
-        input#glyph-size-slider.form-control.toolbar__size-slider(
+      .btn-group.hidden-xs.hidden-sm(style="margin-top:48px; margin-bottom: 0px;")
+        input#glyph-size-slider.XXform-control.XXtoolbar__size-slider(
           type='range',
           data-bind='value: fontSize, valueUpdate: "input", attr: { min: fontSizeMin, max: fontSizeMax }'
         )
@@ -33,7 +42,7 @@
 
       .btn-group.dropdown
 
-        button.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown')
+        //button.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown')
           i.icon-settings
           //-span.caret
 
@@ -46,7 +55,7 @@
         )
 
         //- data-on-click='import.start',
-        ul.dropdown-menu.pull-right.toolbar__settings-menu
+        //ul.dropdown-menu.pull-right.toolbar__settings-menu
           li: a(
                 href='#',
                 onClick='document.getElementById("toolbar__import").click()'
@@ -72,18 +81,27 @@
           li.divider
           li: a(href='#', data-on-click='cmd:settings_dialog')= self.t('menu_advanced_settings')
 
-
-      .btn-group
-        input#result-fontname.form-control._popover(type='text',
+      .form-group.label-static( style="float:left" )
+        label.control-label( for="result-fontname" )= 'Font Name'
+        input#result-fontname.form-control._popover(
           placeholder=self.t('file_name_placeholder'),
           autocomplete='off',
           pattern='[a-z0-9_\-]*',
           data-bind='value: fontName',
-          data-content=self.t('file_name_help'),
-          data-placement='bottom',
-          data-trigger='hover',
-          data-container='.layout__fixed'
-          data-delay='{"show":500,"hide":100}')
+          )
+        p.help-block=self.t('file_name_help')
+
+      //.btn-group
+      //  input#result-fontname.form-control._popover(type='text',
+      //    placeholder=self.t('file_name_placeholder'),
+      //    autocomplete='off',
+      //    pattern='[a-z0-9_\-]*',
+      //    data-bind='value: fontName',
+      //    data-content=self.t('file_name_help'),
+      //    data-placement='bottom',
+      //    data-trigger='hover',
+      //    data-container='.layout__fixed'
+      //    data-delay='{"show":500,"hide":100}')
 
 
       .btn-group(data-bind='visible: apiMode() && apiUrl()', style='display:none')
@@ -137,7 +155,7 @@
       //- Show button, depending on mode
       .btn-group(data-bind='visible: !apiMode()')
         //- Standard mode - `Download` button
-        button.btn.btn-danger.disabled(
+        button.btn.btn-primary.btn-raised.disabled(
           data-on-click='build_font',
           data-bind='css: {disabled: !selectedCount()}'): strong
           i.icon-download(data-bind='visible: !building()')
@@ -147,9 +165,12 @@
           |  (
           span#selected-glyphs-count(data-bind='text: selectedCount()') 0
           | )
-        button.btn.btn-danger.disabled.dropdown-toggle(data-toggle='dropdown' data-bind='css: { disabled: !selectedCount() }')
+        button.btn.btn-primary.btn-raised.disabled.dropdown-toggle(data-toggle='dropdown' data-bind='css: { disabled: !selectedCount() }')
           span.caret
         ul.dropdown-menu.pull-right
           li: a(download='config.json'
             data-bind='attr: { href: "data:application/octet-stream," + encodeURIComponent(JSON.stringify(getConfig(), null, "  ")) } '
           )= self.t('download_config')
+
+
+

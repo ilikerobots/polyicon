@@ -28,7 +28,7 @@ module.exports = function (N, apiPath) {
   N.wire.on(apiPath, function send_dowloaded_file(env, callback) {
     let req = env.origin.req;
     let res = env.origin.res;
-    let filename = `filename=fontello-${env.params.id.substr(0, 8)}.zip`;
+    let filename = `filename=polymer-iconset-${env.params.id.substr(0, 8)}.zip`;
 
     N.downloads.get(env.params.id, { valueEncoding: 'binary' }, (err, body) => {
       if (err) {

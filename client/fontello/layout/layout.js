@@ -39,3 +39,7 @@ N.wire.once('navigate.done', { priority: 10 }, function load_social_buttons() {
     //injectScript('https://apis.google.com/js/plusone.js', true);
   }, 2000);
 });
+
+N.wire.once('navigate.done', { priority: 10 }, function init_material() {
+  $.material.init()
+});

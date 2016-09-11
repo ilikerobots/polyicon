@@ -86,7 +86,6 @@ N.wire.once('navigate.done', function (data) {
   var $view   = $('#toolbar'),
       toolbar = new ToolbarModel();
 
-
   // Save user session (loaded via API) back to database
   function save() {
     if (!N.app.apiSessionId) { return Promise.resolve(); }
@@ -191,8 +190,8 @@ N.wire.once('navigate.done', function (data) {
       }
     })
     .typeahead({
-      hint: true,
-      highlight: true,
+      hint: false,
+      highlight: false,
       minLength: 1
     }, {
       name: 'keywords',

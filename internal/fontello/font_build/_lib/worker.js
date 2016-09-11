@@ -24,20 +24,20 @@ const JSZip     = require('jszip');
 
 const TEMPLATES_DIR = path.join(__dirname, '../../../../support/font-templates');
 const TEMPLATES = {};
-const SVG_FONT_TEMPLATE = _.template(fs.readFileSync(path.join(TEMPLATES_DIR, 'font/svg.tpl'), 'utf8'));
+//const SVG_FONT_TEMPLATE = _.template(fs.readFileSync(path.join(TEMPLATES_DIR, 'font/svg.tpl'), 'utf8'));
 const POLYMER_FONT_TEMPLATE = _.template(fs.readFileSync(path.join(TEMPLATES_DIR,
                                          'font/iron_iconset_svg.tpl'), 'utf8'));
 
 
 _.forEach({
   'demo.jade':              'demo.html',
-  'css/css.jade':           'css/${FONTNAME}.css',
-  'css/css-ie7.jade':       'css/${FONTNAME}-ie7.css',
-  'css/css-codes.jade':     'css/${FONTNAME}-codes.css',
-  'css/css-ie7-codes.jade': 'css/${FONTNAME}-ie7-codes.css',
-  'css/css-embedded.jade':  'css/${FONTNAME}-embedded.css',
+  //'css/css.jade':           'css/${FONTNAME}.css',
+  //'css/css-ie7.jade':       'css/${FONTNAME}-ie7.css',
+  //'css/css-codes.jade':     'css/${FONTNAME}-codes.css',
+  //'css/css-ie7-codes.jade': 'css/${FONTNAME}-ie7-codes.css',
+  //'css/css-embedded.jade':  'css/${FONTNAME}-embedded.css',
   'LICENSE.jade':           'LICENSE.txt',
-  'css/animation.css':      'css/animation.css',
+  //'css/animation.css':      'css/animation.css',
   'README.txt':             'README.txt'
 }, (outputName, inputName) => {
   let inputFile = path.join(TEMPLATES_DIR, inputName);
@@ -100,20 +100,20 @@ module.exports = co.wrap(function* fontWorker(taskInfo) {
   //
   files = {
     config:      path.join(taskInfo.tmpDir, 'config.json'),
-    svg:         path.join(taskInfo.tmpDir, 'font', `${fontname}.svg`),
-    ttf:         path.join(taskInfo.tmpDir, 'font', `${fontname}.ttf`),
-    ttfUnhinted: path.join(taskInfo.tmpDir, 'font', `${fontname}-unhinted.ttf`),
-    eot:         path.join(taskInfo.tmpDir, 'font', `${fontname}.eot`),
-    woff:        path.join(taskInfo.tmpDir, 'font', `${fontname}.woff`),
-    woff2:       path.join(taskInfo.tmpDir, 'font', `${fontname}.woff2`),
-    polymer:     path.join(taskInfo.tmpDir, 'polymer', `${fontname}-iconset-svg.html`)
+    //svg:         path.join(taskInfo.tmpDir, 'font', `${fontname}.svg`),
+    //ttf:         path.join(taskInfo.tmpDir, 'font', `${fontname}.ttf`),
+    //ttfUnhinted: path.join(taskInfo.tmpDir, 'font', `${fontname}-unhinted.ttf`),
+    //eot:         path.join(taskInfo.tmpDir, 'font', `${fontname}.eot`),
+    //woff:        path.join(taskInfo.tmpDir, 'font', `${fontname}.woff`),
+    //woff2:       path.join(taskInfo.tmpDir, 'font', `${fontname}.woff2`),
+    polymer:     path.join(taskInfo.tmpDir, `${fontname}-iconset-svg`, `${fontname}-iconset-svg.html`)
   };
 
 
   // Generate initial SVG font.
   //
   /*eslint-disable new-cap*/
-  let svgOutput = SVG_FONT_TEMPLATE(taskInfo.builderConfig);
+  //let svgOutput = SVG_FONT_TEMPLATE(taskInfo.builderConfig);
 
   // Generate Polymer iron-iconset-svg
   let polymerOutput = POLYMER_FONT_TEMPLATE(buildPolymerConfig(taskInfo.builderConfig));
@@ -122,9 +122,9 @@ module.exports = co.wrap(function* fontWorker(taskInfo) {
   //
   yield rimraf(taskInfo.tmpDir);
   yield mkdirp(taskInfo.tmpDir);
-  yield mkdirp(path.join(taskInfo.tmpDir, 'font'));
-  yield mkdirp(path.join(taskInfo.tmpDir, 'css'));
-  yield mkdirp(path.join(taskInfo.tmpDir, 'polymer'));
+  //yield mkdirp(path.join(taskInfo.tmpDir, 'font'));
+  //yield mkdirp(path.join(taskInfo.tmpDir, 'css'));
+  yield mkdirp(path.join(taskInfo.tmpDir, `${fontname}-iconset-svg`));
 
 
   // Write clinet config and initial SVG font.
@@ -132,61 +132,61 @@ module.exports = co.wrap(function* fontWorker(taskInfo) {
   let configOutput = JSON.stringify(taskInfo.clientConfig, null, '  ');
 
   yield mz.fs.writeFile(files.config, configOutput, 'utf8');
-  yield mz.fs.writeFile(files.svg, svgOutput, 'utf8');
+  //yield mz.fs.writeFile(files.svg, svgOutput, 'utf8');
   yield mz.fs.writeFile(files.polymer, polymerOutput, 'utf8');
 
 
   // Convert SVG to TTF
   //
-  let ttf = svg2ttf(svgOutput, { copyright: taskInfo.builderConfig.font.copyright });
+  //let ttf = svg2ttf(svgOutput, { copyright: taskInfo.builderConfig.font.copyright });
 
-  yield mz.fs.writeFile(files.ttf, new Buffer(ttf.buffer));
+  //yield mz.fs.writeFile(files.ttf, new Buffer(ttf.buffer));
 
 
   // Autohint the resulting TTF.
   //
-  let max_segments = _.maxBy(taskInfo.builderConfig.glyphs, glyph => glyph.segments).segments;
+  //let max_segments = _.maxBy(taskInfo.builderConfig.glyphs, glyph => glyph.segments).segments;
 
   // KLUDGE :)
   // Don't allow hinting if font has "strange" glyphs.
   // That's useless anyway, and can hang ttfautohint < 1.0
-  if (max_segments <= 500 && taskInfo.builderConfig.hinting) {
-    yield mz.fs.rename(files.ttf, files.ttfUnhinted);
-    yield mz.child_process.execFile('ttfautohint', [
-      '--no-info',
-      '--windows-compatibility',
-      '--symbol',
-      // temporary workaround for #464
-      // https://github.com/fontello/fontello/issues/464#issuecomment-202244651
-      '--fallback-script=latn',
-      files.ttfUnhinted,
-      files.ttf
-    ], { cwd: taskInfo.cwdDir });
-    yield mz.fs.unlink(files.ttfUnhinted);
-  }
+  // if (max_segments <= 500 && taskInfo.builderConfig.hinting) {
+  //   yield mz.fs.rename(files.ttf, files.ttfUnhinted);
+  //   yield mz.child_process.execFile('ttfautohint', [
+  //     '--no-info',
+  //     '--windows-compatibility',
+  //     '--symbol',
+  //     // temporary workaround for #464
+  //     // https://github.com/fontello/fontello/issues/464#issuecomment-202244651
+  //     '--fallback-script=latn',
+  //     files.ttfUnhinted,
+  //     files.ttf
+  //   ], { cwd: taskInfo.cwdDir });
+  //   yield mz.fs.unlink(files.ttfUnhinted);
+  // }
 
 
   // Read the resulting TTF to produce EOT and WOFF.
   //
-  let ttfOutput = new Uint8Array(yield mz.fs.readFile(files.ttf));
+  //let ttfOutput = new Uint8Array(yield mz.fs.readFile(files.ttf));
 
 
   // Convert TTF to EOT.
   //
-  let eotOutput = ttf2eot(ttfOutput).buffer;
+  //let eotOutput = ttf2eot(ttfOutput).buffer;
 
-  yield mz.fs.writeFile(files.eot, new Buffer(eotOutput));
+  //yield mz.fs.writeFile(files.eot, new Buffer(eotOutput));
 
 
   // Convert TTF to WOFF.
   //
-  let woffOutput = ttf2woff(ttfOutput).buffer;
+  //let woffOutput = ttf2woff(ttfOutput).buffer;
 
-  yield mz.fs.writeFile(files.woff, new Buffer(woffOutput));
+  //yield mz.fs.writeFile(files.woff, new Buffer(woffOutput));
 
   // Convert TTF to WOFF2.
   //
-  yield mz.fs.writeFile(files.woff2, ttf2woff2(ttfOutput));
+  //yield mz.fs.writeFile(files.woff2, ttf2woff2(ttfOutput));
 
 
   // Write template files. (generate dynamic and copy static)
@@ -206,9 +206,9 @@ module.exports = co.wrap(function* fontWorker(taskInfo) {
     let outputFile = path.join(taskInfo.tmpDir, outputName);
     let outputData = templateData(taskInfo.builderConfig);
 
-    outputData = outputData
-                    .replace('%WOFF64%', b64.fromByteArray(woffOutput))
-                    .replace('%TTF64%', b64.fromByteArray(ttfOutput));
+    //outputData = outputData
+                    //.replace('%WOFF64%', b64.fromByteArray(woffOutput))
+                    //.replace('%TTF64%', b64.fromByteArray(ttfOutput));
 
     yield mz.fs.writeFile(outputFile, outputData, 'utf8');
   }

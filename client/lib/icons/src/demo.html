@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head><!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <meta charset="UTF-8"><style type="text/css">/*
+  <head><!--[if lt IE 9]><script language="javascript" type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <meta charset="UTF-8"><style>/*
  * Bootstrap v2.2.1
  *
  * Copyright 2012 Twitter, Inc
@@ -228,14 +227,59 @@ body {
 .i-code {
   display: none;
 }
-</style>
-    <link rel="stylesheet" href="css/icons.css">
-    <link rel="stylesheet" href="css/animation.css"><!--[if IE 7]>
-    <link rel="stylesheet" href="css/icons-ie7.css"><![endif]-->
+@font-face {
+      font-family: 'icons';
+      src: url('./font/icons.eot?28801464');
+      src: url('./font/icons.eot?28801464#iefix') format('embedded-opentype'),
+           url('./font/icons.woff?28801464') format('woff'),
+           url('./font/icons.ttf?28801464') format('truetype'),
+           url('./font/icons.svg?28801464#icons') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+     
+     
+    .demo-icon
+    {
+      font-family: "icons";
+      font-style: normal;
+      font-weight: normal;
+      speak: none;
+     
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      text-align: center;
+      /* opacity: .8; */
+     
+      /* For safety - reset parent styles, that can break glyph codes*/
+      font-variant: normal;
+      text-transform: none;
+     
+      /* fix buttons height, for twitter bootstrap */
+      line-height: 1em;
+     
+      /* Animation center compensation - margins should be symmetric */
+      /* remove if not needed */
+      margin-left: .2em;
+     
+      /* You can be more comfortable with increased icons size */
+      /* font-size: 120%; */
+     
+      /* Font smoothing. That was taken from TWBS */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+     
+      /* Uncomment for 3D effect */
+      /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    }
+     </style>
+    <link rel="stylesheet" href="css/animation.css"><!--[if IE 7]><link rel="stylesheet" href="css/icons-ie7.css"><![endif]-->
     <script>
       function toggleCodes(on) {
         var obj = document.getElementById('icons');
-        
+      
         if (on) {
           obj.className += ' codesOn';
         } else {
@@ -257,28 +301,31 @@ body {
     </div>
     <div id="icons" class="container">
       <div class="row">
-        <div title="Code: 0xe834" class="the-icons span3"><i class="icon-load animate-spin"></i> <span class="i-name">icon-load</span><span class="i-code">0xe834</span></div>
-        <div title="Code: 0xf307" class="the-icons span3"><i class="icon-github-text"></i> <span class="i-name">icon-github-text</span><span class="i-code">0xf307</span></div>
-        <div title="Code: 0xe841" class="the-icons span3"><i class="icon-chrome"></i> <span class="i-name">icon-chrome</span><span class="i-code">0xe841</span></div>
-        <div title="Code: 0xe842" class="the-icons span3"><i class="icon-opera"></i> <span class="i-name">icon-opera</span><span class="i-code">0xe842</span></div>
+        <div title="Code: 0x2302" class="the-icons span3"><i class="demo-icon icon-home">&#x2302;</i> <span class="i-name">icon-home</span><span class="i-code">0x2302</span></div>
+        <div title="Code: 0x2709" class="the-icons span3"><i class="demo-icon icon-mail">&#x2709;</i> <span class="i-name">icon-mail</span><span class="i-code">0x2709</span></div>
+        <div title="Code: 0x2713" class="the-icons span3"><i class="demo-icon icon-check">&#x2713;</i> <span class="i-name">icon-check</span><span class="i-code">0x2713</span></div>
+        <div title="Code: 0x2715" class="the-icons span3"><i class="demo-icon icon-remove">&#x2715;</i> <span class="i-name">icon-remove</span><span class="i-code">0x2715</span></div>
       </div>
       <div class="row">
-        <div title="Code: 0xe800" class="the-icons span3"><i class="icon-edit"></i> <span class="i-name">icon-edit</span><span class="i-code">0xe800</span></div>
-        <div title="Code: 0xf001" class="the-icons span3"><i class="icon-settings"></i> <span class="i-name">icon-settings</span><span class="i-code">0xf001</span></div>
-        <div title="Code: 0xe801" class="the-icons span3"><i class="icon-twitter-bird"></i> <span class="i-name">icon-twitter-bird</span><span class="i-code">0xe801</span></div>
-        <div title="Code: 0xf003" class="the-icons span3"><i class="icon-search"></i> <span class="i-name">icon-search</span><span class="i-code">0xf003</span></div>
+        <div title="Code: 0xe800" class="the-icons span3"><i class="demo-icon icon-edit">&#xe800;</i> <span class="i-name">icon-edit</span><span class="i-code">0xe800</span></div>
+        <div title="Code: 0xe801" class="the-icons span3"><i class="demo-icon icon-twitter-bird">&#xe801;</i> <span class="i-name">icon-twitter-bird</span><span class="i-code">0xe801</span></div>
+        <div title="Code: 0xe834" class="the-icons span3"><i class="demo-icon icon-load animate-spin">&#xe834;</i> <span class="i-name">icon-load</span><span class="i-code">0xe834</span></div>
+        <div title="Code: 0xe840" class="the-icons span3"><i class="demo-icon icon-firefox">&#xe840;</i> <span class="i-name">icon-firefox</span><span class="i-code">0xe840</span></div>
       </div>
       <div class="row">
-        <div title="Code: 0xe840" class="the-icons span3"><i class="icon-firefox"></i> <span class="i-name">icon-firefox</span><span class="i-code">0xe840</span></div>
-        <div title="Code: 0x2713" class="the-icons span3"><i class="icon-check"></i> <span class="i-name">icon-check</span><span class="i-code">0x2713</span></div>
-        <div title="Code: 0x2715" class="the-icons span3"><i class="icon-remove"></i> <span class="i-name">icon-remove</span><span class="i-code">0x2715</span></div>
-        <div title="Code: 0x2302" class="the-icons span3"><i class="icon-home"></i> <span class="i-name">icon-home</span><span class="i-code">0x2302</span></div>
+        <div title="Code: 0xe841" class="the-icons span3"><i class="demo-icon icon-chrome">&#xe841;</i> <span class="i-name">icon-chrome</span><span class="i-code">0xe841</span></div>
+        <div title="Code: 0xe842" class="the-icons span3"><i class="demo-icon icon-opera">&#xe842;</i> <span class="i-name">icon-opera</span><span class="i-code">0xe842</span></div>
+        <div title="Code: 0xf000" class="the-icons span3"><i class="demo-icon icon-download">&#xf000;</i> <span class="i-name">icon-download</span><span class="i-code">0xf000</span></div>
+        <div title="Code: 0xf001" class="the-icons span3"><i class="demo-icon icon-settings">&#xf001;</i> <span class="i-name">icon-settings</span><span class="i-code">0xf001</span></div>
       </div>
       <div class="row">
-        <div title="Code: 0xf002" class="the-icons span3"><i class="icon-link"></i> <span class="i-name">icon-link</span><span class="i-code">0xf002</span></div>
-        <div title="Code: 0xf000" class="the-icons span3"><i class="icon-download"></i> <span class="i-name">icon-download</span><span class="i-code">0xf000</span></div>
-        <div title="Code: 0xf31b" class="the-icons span3"><i class="icon-dribbble"></i> <span class="i-name">icon-dribbble</span><span class="i-code">0xf31b</span></div>
-        <div title="Code: 0x2709" class="the-icons span3"><i class="icon-mail"></i> <span class="i-name">icon-mail</span><span class="i-code">0x2709</span></div>
+        <div title="Code: 0xf002" class="the-icons span3"><i class="demo-icon icon-link">&#xf002;</i> <span class="i-name">icon-link</span><span class="i-code">0xf002</span></div>
+        <div title="Code: 0xf003" class="the-icons span3"><i class="demo-icon icon-search">&#xf003;</i> <span class="i-name">icon-search</span><span class="i-code">0xf003</span></div>
+        <div title="Code: 0xf09b" class="the-icons span3"><i class="demo-icon icon-github-circled">&#xf09b;</i> <span class="i-name">icon-github-circled</span><span class="i-code">0xf09b</span></div>
+        <div title="Code: 0xf307" class="the-icons span3"><i class="demo-icon icon-github-text">&#xf307;</i> <span class="i-name">icon-github-text</span><span class="i-code">0xf307</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf31b" class="the-icons span3"><i class="demo-icon icon-dribbble">&#xf31b;</i> <span class="i-name">icon-dribbble</span><span class="i-code">0xf31b</span></div>
       </div>
     </div>
     <div class="container footer">Generated by <a href="http://fontello.com">fontello.com</a></div>

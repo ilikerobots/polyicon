@@ -11,6 +11,7 @@
 #selector
   position relative
 
+
 ////////////////////////////////////////////////////////////////////////////////
 // Font header content
 
@@ -94,13 +95,13 @@ a.selector__font-name
 
 .selector__font-cnt-selected
 .selector__font-cnt-search
-  font-size 14px
-  color red
-  margin-right .5em
-  opacity .6
+  //font-size 14px
+  //color red
+  margin-right .2em
+  opacity .9
 
 .selector__font-cnt-search
-  color green
+  //color green
   display none
 
 .search-mode
@@ -115,6 +116,9 @@ a.selector__font-name
 .selector__glyphs-container
   margin-bottom 20px
   margin-left 10px
+  #custom_icons &
+    margin-left 0
+
 
 .selector__glyphs-list
   display inline-block
@@ -189,7 +193,7 @@ a.selector__font-name
     border 2px solid transparent
 
 .selector__glyph-inner:hover, .selector__glyph:focus .selector__glyph-inner
-  background #333
+  background #666
   color #fff
 
 .selector__glyph.xselectable-selected
@@ -233,6 +237,31 @@ a.selector__font-name
 .selector__glyph:hover .animate-spin
     animation-iteration-count infinite
 
+.selector__font:nth-of-type(4n-3)
+  .selector__glyph-inner:hover, .selector__glyph:focus .selector__glyph-inner
+    background darken(glyphPreviewColor3, 10)
+  .selector__glyphs-list
+    color glyphPreviewColor3
+  .selector__glyph-inner.checked:before
+    border-color darken(glyphPreviewColor3, 10)
+.selector__font:nth-of-type(4n-2) .selector__glyphs-list
+  .selector__glyph-inner:hover, .selector__glyph:focus .selector__glyph-inner
+    background darken(glyphPreviewColor2, 10)
+  color glyphPreviewColor2
+  .selector__glyph-inner.checked:before
+    border-color darken(glyphPreviewColor2, 10)
+.selector__font:nth-of-type(4n-1) .selector__glyphs-list
+  .selector__glyph-inner:hover, .selector__glyph:focus .selector__glyph-inner
+    background darken(glyphPreviewColor1, 10)
+  color glyphPreviewColor1
+  .selector__glyph-inner.checked:before
+    border-color darken(glyphPreviewColor1, 10)
+.selector__font:nth-of-type(4n) .selector__glyphs-list
+  .selector__glyph-inner:hover, .selector__glyph:focus .selector__glyph-inner
+    background darken(glyphPreviewColor0, 10)
+  color glyphPreviewColor0
+  .selector__glyph-inner.checked:before
+    border-color darken(glyphPreviewColor0, 10)
 
 ////////////////////////////////////////////////////////////////////////////////
 // Misc
@@ -254,6 +283,7 @@ a.selector__font-name
   border-radius 3px
   background-color #f8f8f8
   text-align center
+  border: 2px dashed #aaa
 
 
 // Helper, shown after click on glyph,
@@ -262,3 +292,4 @@ a.selector__font-name
 ._multicursor .selector__glyph label
 .xselectable-box
   cursor crosshair
+

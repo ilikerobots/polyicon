@@ -54,3 +54,8 @@ N.wire.once('navigate.done', { priority: 10 }, function () {
     }
   });
 });
+
+//MH - prevent dropdown from closing on clicks
+$(document).on('click', '#tools .dropdown-menu', function (e) {
+  e.stopPropagation();
+});

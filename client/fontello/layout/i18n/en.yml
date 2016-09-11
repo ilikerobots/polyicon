@@ -1,13 +1,14 @@
 en-US:
-  title: Fontello - icon fonts generator
-  description: Tool to build custom fonts with icons.
+  title: TBD - Polymer iconset generator
+  description: Build custom polymer iconsets from popular webfonts.
   desc_long: >
-    An easy way to create a custom icon font for your site. Select
-    images from our large collection, and make a webfont pack with one click.
+    Build a Polymer custom iron-iconset-svg containing selected glyphs
+    from popular webfont, or include your own vector art.
 
   menu_feedback: Feedback
   menu_discuss: Ask in Google Groups
   menu_bugreports: Report bugs at Github
+  menu_help: Help / Wiki
   menu_bugreports_help: >
     We prefer to communicate via Github. Share you ideas with us there.
     If you still don't have a Github account - it's time to join the biggest
