@@ -92,11 +92,20 @@ html.no-js(lang='en', itemscope, itemtype='http://schema.org/WebPage')
 
           .notifications
 
-      //- top toolbar/tabs
-      .toolbar-container
-        != self.partial('@fontello.blocks.toolbar')
-      .tabs-container.container
-        != self.partial('@fontello.blocks.tabs')
+      .container
+        .navbar(style="margin: 0px")
+          .container-fluid
+            .navbar-header
+              button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse")
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            //.navbar-collapse.collapse.navbar-responsive-collapse
+              //- top toolbar/tabs
+              //.tabs-container.container
+            != self.partial('@fontello.blocks.tabs')
+              //.toolbar-container.container
+            != self.partial('@fontello.blocks.toolbar')
 
     != self.content
 
