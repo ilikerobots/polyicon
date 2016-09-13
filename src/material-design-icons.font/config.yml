@@ -1,0 +1,3842 @@
+---
+# This is configuration file for font builder and other support scripts.
+# Format is descriped below.
+#
+#
+# # metadata, to generate demo & fontello info dialogs
+# meta:
+#
+#  author: Daniel Buce
+#  homepage: http://...
+#  email: ...
+#  twitter: http://twitter.com/...
+#  dribble: http://dribbble.com/...
+#  license: SIL
+#  license_url: http://scripts.sil.org/OFL
+#
+#   css-prefix: "icon-"             # prefix for css-generated classes
+#   demo-columns: 4                 # used for html demo page generation
+#
+# # Font headers. All vars from here will be used as font
+# # params in fontforge http://fontforge.sourceforge.net/python.html
+# font:
+#
+#   version: "1.0"
+#
+#   # use !!!small!!! letters a-z, or Opera will fail under OS X
+#   # fontname will be also used as file name.
+#   fontname: myfont
+#
+#   fullname: MyFont
+#   familyname: Myfont
+#
+#   copyright: Copyright (C) 2012 by xxxxxxxx
+#
+#   ascent: 1638
+#   descent: 410
+#   weight: Regular
+#
+#
+# #
+# # Optional. You can apply global rescale + offset to all font glyphs.
+# # Param values ar 0..1, where 1 = 100%. 
+# #
+# transform:
+#   baseline: 0.2                 # baseline for rescale symmetry. Default value
+#                                 # calculated from ascent/decsent
+#   rescale: 0.68                 # rescale glyphs and center around baseline
+#   offset: -0.1                  # shift up/down
+#
+# glyphs:
+#   - file: glyph1_file           # file name, without extention
+#     from: 0xNNN                 # Source code for remapper or merge tool
+#     code: 0xNNN                 # Symbol code 0x - hex
+#     css: icon-gpyph1-name       # For generated CSS
+#     search: [word1, word2]      # Search aliases (array). CSS name will be
+#                                 # included automatically
+#     src: first_font_alias       # alias to font for merge tool
+#                                 # list of aliases in src_fonts section
+#
+#     #
+#     # local transformations, only for this glyph (optional)
+#     #
+#     transform:                  # personal glyph transformation.
+#       rescale_rel               # *_rel - applyed after global.
+#       offset: 0.2               # without *_rel - override global
+#
+# #
+# # Fonts aliases used only in font merge tool
+# #
+# src_fonts:
+#   first_font_alias: "/absolute/path/to/first/font.ttf"
+#
+################################################################################
+#
+
+
+meta:
+  author: Google
+  homepage: https://design.google.com/icons/
+  twitter: 
+  github: https://github.com/google/material-design-icons/
+  license: Apache 2.0
+  license_url: https://www.apache.org/licenses/LICENSE-2.0
+
+  css_prefix_text: "icon-"
+  columns: 4
+
+transform:
+  baseline: 0.5
+  rescale: 1.2
+  # offset: -0.025
+
+font:
+  # use !!!small!!! letters a-z, or Opera will fail under OS X
+  # fontname will be also used as file name.
+  version: 2.2.0
+  fontname: material
+
+  fullname: Material Design Icons
+  familyname: Material
+
+  copyright: Copyright (C) Google, Inc
+
+  ascent: 850
+  descent: -150
+  weight: Normal
+
+
+glyphs: 
+  - css: 3d_rotation
+    code: 0xf0028
+    uid: 2cc10cdba83708a30142016d40519bb9
+    search: []
+  - css: ac_unit
+    code: 0xf0033
+    uid: 6a105ad156427b024b633a799e03af7b
+    search: []
+  - css: access_alarm
+    code: 0xf0036
+    uid: 9548f8adbc5e7b2dc94633be2821cd1f
+    search: []
+  - css: access_alarms
+    code: 0xf0039
+    uid: 2b1bcd8b15d35599f6828e4f5eadfa30
+    search: []
+  - css: access_time
+    code: 0xf0042
+    uid: 82f44f1094ffd1d78093e76c33cc08cc
+    search: []
+  - css: accessibility
+    code: 0xf0044
+    uid: ad65fa7f0f35e80fe1f1a5afadbc561f
+    search: []
+  - css: accessible
+    code: 0xf0046
+    uid: 74bc3a2d72aec992ff1e08cfdd986b38
+    search: []
+  - css: account_balance
+    code: 0xf0049
+    uid: 5da59f89dd294fa4475a7cdbe3cd3145
+    search: []
+  - css: account_balance_wallet
+    code: 0xf008
+    uid: cdd836ec082da15e51545f2ea1a37015
+    search: []
+  - css: account_box
+    code: 0xf0054
+    uid: 58f376c8c60c911e8cd5a65becb0d932
+    search: []
+  - css: account_circle
+    code: 0xf0056
+    uid: 22a893e7725504a4a3b8905fb20cac53
+    search: []
+  - css: adb
+    code: 0xf0590
+    uid: f6f259a0c6c3af2f14b6942d4003a558
+    search: []
+  - css: add
+    code: 0xf0062
+    uid: 34b1fe24d083539fd5d40ab2e57322b4
+    search: []
+  - css: add_a_photo
+    code: 0xf0064
+    uid: 1f946f1677e2320edbdcfc40d3eef556
+    search: []
+  - css: add_alarm
+    code: 0xf0067
+    uid: 2df2d4af1abc5fef304a72f03aa39580
+    search: []
+  - css: add_alert
+    code: 0xf0070
+    uid: 8a5aa3a8ac461707750fe1df169087b1
+    search: []
+  - css: add_box
+    code: 0xf0072
+    uid: 12069d2c13acbb806992a17dbd0ce334
+    search: []
+  - css: add_circle
+    code: 0xf0074
+    uid: 5c5bc6f4c6030254f642f00104a6bdeb
+    search: []
+  - css: add_circle_outline
+    code: 0xf0076
+    uid: 24f6c08bd38dc0e137e4b1b98d7d24e2
+    search: []
+  - css: add_location
+    code: 0xf0078
+    uid: afc98761bc2ee5d4e8cb8b5a85b0f66b
+    search: []
+  - css: add_shopping_cart
+    code: 0xf0080
+    uid: 53d20a593b610c9cc648f101ebcdc73f
+    search: []
+  - css: add_to_photos
+    code: 0xf0083
+    uid: 51f8aafdf68796e9e138c4b27e7367d2
+    search: []
+  - css: add_to_queue
+    code: 0xf0085
+    uid: 538114eb6d771c5f11738537ca077ddd
+    search: []
+  - css: adjust
+    code: 0xf0087
+    uid: deb2d5ad122b53b499f6121e667927bf
+    search: []
+  - css: airline_seat_flat
+    code: 0xf0089
+    uid: 0253b67f248589687d733e9d65f8c768
+    search: []
+  - css: airline_seat_flat_angled
+    code: 0xf0091
+    uid: 01883ee97be852da18a1d0ffff28fe4f
+    search: []
+  - css: airline_seat_individual_suite
+    code: 0xf0093
+    uid: 88f6d42179107747b63d9847e2444e71
+    search: []
+  - css: airline_seat_legroom_extra
+    code: 0xf0095
+    uid: 5f8a7c52b1ec100dd789eac89ea3d4ad
+    search: []
+  - css: airline_seat_legroom_normal
+    code: 0xf0097
+    uid: fe0a068b93408b588b322c0e7653f21f
+    search: []
+  - css: airline_seat_legroom_reduced
+    code: 0xf0099
+    uid: f5b4a28ccb580b79a09613d01bb90055
+    search: []
+  - css: airline_seat_recline_extra
+    code: 0xf0101
+    uid: 3f841e3054ae72c0638b10d76f35fd70
+    search: []
+  - css: airline_seat_recline_normal
+    code: 0xf0104
+    uid: 4616162b8fcb1c5843241ed4d4931dfd
+    search: []
+  - css: airplanemode_active
+    code: 0xf0107
+    uid: 316b4f9c4ed938a216e678c36a1039cb
+    search: []
+  - css: airplanemode_inactive
+    code: 0xf0109
+    uid: d15b48e87fe4ff0190fc1e683a8b5895
+    search: []
+  - css: airplay
+    code: 0xf0111
+    uid: e11ab94dbc769068075eb4ae15839d07
+    search: []
+  - css: airport_shuttle
+    code: 0xf0113
+    uid: e5fe7fbdd4d8e94ce27958e909ae9e8c
+    search: []
+  - css: alarm
+    code: 0xf0116
+    uid: 4a85104f654b593ff9fafbbb1dd18f02
+    search: []
+  - css: alarm_add
+    code: 0xf0119
+    uid: cd42473d375131959503c0711d41df9d
+    search: []
+  - css: alarm_off
+    code: 0xf0122
+    uid: a6c332b15a7812c4166b7615ba5ed08c
+    search: []
+  - css: alarm_on
+    code: 0xf0125
+    uid: 09f0fa2bf0cc39990c3bcf915a0b28cc
+    search: []
+  - css: album
+    code: 0xf0128
+    uid: 7064ec5658a1a7ef305e0994f2cfe1df
+    search: []
+  - css: all_inclusive
+    code: 0xf0130
+    uid: 43d998e224a6395b157221a2510c5810
+    search: []
+  - css: all_out
+    code: 0xf0133
+    uid: ef31a40de565b5e5a48c78e2a2641dc0
+    search: []
+  - css: android
+    code: 0xf0135
+    uid: 0bf4594052a369ae069b85140f9418b6
+    search: []
+  - css: announcement
+    code: 0xf0139
+    uid: 1e278c6113fba0bc3ee06c25d0ba937c
+    search: []
+  - css: apps
+    code: 0xf0141
+    uid: 3b309524d24ad4b098b0034d31ee77a5
+    search: []
+  - css: archive
+    code: 0xf0143
+    uid: 342d54e7504057667fbf2046f401a4b3
+    search: []
+  - css: arrow_back
+    code: 0xf0145
+    uid: 2799c57f6de779678d46786054fb2dc3
+    search: []
+  - css: arrow_downward
+    code: 0xf0147
+    uid: d7e939581802df95a9553642f3e8c25b
+    search: []
+  - css: arrow_drop_down
+    code: 0xf0149
+    uid: 46fe603b8b3390939c1cb27b4e4241ea
+    search: []
+  - css: arrow_drop_down_circle
+    code: 0xf0151
+    uid: 6733f26d9cff24d12f3474cc3ace9890
+    search: []
+  - css: arrow_drop_up
+    code: 0xf0153
+    uid: 2c95002db8304b1e7cdb2b34f44c2fe3
+    search: []
+  - css: arrow_forward
+    code: 0xf0155
+    uid: 7362a605c268424e1ad473245ab339a1
+    search: []
+  - css: arrow_upward
+    code: 0xf0157
+    uid: 3e89ed7a1e6956c7e3ee6be343c89a4a
+    search: []
+  - css: art_track
+    code: 0xf0159
+    uid: 3b9460082691e3de113becd50f291703
+    search: []
+  - css: aspect_ratio
+    code: 0xf0161
+    uid: 83f6bdcc197c77417046c1951ac9734b
+    search: []
+  - css: assessment
+    code: 0xf0163
+    uid: de03ebf92b076a74a8575293118942f2
+    search: []
+  - css: assignment
+    code: 0xf0165
+    uid: 4fe434d1e9790de98db338048055f24c
+    search: []
+  - css: assignment_ind
+    code: 0xf0168
+    uid: 3e8b53cdc64d705d66ac3a8d2452c6c8
+    search: []
+  - css: assignment_late
+    code: 0xf0171
+    uid: cf90c4c73dc80fb4b585dd6be21ccc67
+    search: []
+  - css: assignment_return
+    code: 0xf0174
+    uid: 9eb96e6b1c3095b9169701a7ca8d88ae
+    search: []
+  - css: assignment_returned
+    code: 0xf0177
+    uid: d347eb3c6a4d93d477401a80904efb42
+    search: []
+  - css: assignment_turned_in
+    code: 0xf0179
+    uid: 217851518691636a6919833b02c9e87b
+    search: []
+  - css: assistant
+    code: 0xf0182
+    uid: 7add56953ce18ab71ee3a5f35caec5e7
+    search: []
+  - css: assistant_photo
+    code: 0xf0184
+    uid: 290ee7567aa7d0810364a9c3f1d2bc58
+    search: []
+  - css: attach_file
+    code: 0xf0186
+    uid: 62970e54ae42b2dce13eceb147b5cc26
+    search: []
+  - css: attach_money
+    code: 0xf0189
+    uid: 79862c055035d48e5126fd4511de2059
+    search: []
+  - css: attachment
+    code: 0xf0192
+    uid: f3a92ff354e525e78fae6ee1b289a3b1
+    search: []
+  - css: audiotrack
+    code: 0xf0195
+    uid: 690a846fc9d080a9f88bcc5ca04c6687
+    search: []
+  - css: autorenew
+    code: 0xf0197
+    uid: 52c6fc2494bcc643373bb69d3d5d74dc
+    search: []
+  - css: av_timer
+    code: 0xf0199
+    uid: 254190823b8afa58da4b5fc89a755fc4
+    search: []
+  - css: backspace
+    code: 0xf0202
+    uid: 31c3b3597f9afa4b92eab953fc00c150
+    search: []
+  - css: backup
+    code: 0xf0204
+    uid: 69e80565027e4ece49ad7c3194eb7fbd
+    search: []
+  - css: battery_alert
+    code: 0xf0206
+    uid: 6183c6950a4e5f4ac2590b0cb6ca461c
+    search: []
+  - css: battery_charging_full
+    code: 0xf0208
+    uid: b1c822864b8f33a31287d4c0805b3834
+    search: []
+  - css: battery_full
+    code: 0xf0210
+    uid: a161638dea408d85ee26092048657318
+    search: []
+  - css: battery_std
+    code: 0xf0212
+    uid: c385e93980fe5148a1f8891426086d06
+    search: []
+  - css: battery_unknown
+    code: 0xf0214
+    uid: b4f1b4565c821f0159d37e595e49cd3f
+    search: []
+  - css: beach_access
+    code: 0xf0217
+    uid: f8d2b9af4ce7fa49e51d3982a6a16012
+    search: []
+  - css: beenhere
+    code: 0xf0220
+    uid: 1cfdfc6573dbba66f6fc86aead2b7b0f
+    search: []
+  - css: block
+    code: 0xf0222
+    uid: b50a70e4986f26423f1926879fe725ec
+    search: []
+  - css: bluetooth
+    code: 0xf0224
+    uid: ccc72862be460b29c0b4662b400678d1
+    search: []
+  - css: bluetooth_audio
+    code: 0xf0226
+    uid: 9492961dc6da1ff8dbc751c5dc3f68f7
+    search: []
+  - css: bluetooth_connected
+    code: 0xf0229
+    uid: b24d8e6b91f684f2f241df47c65edd66
+    search: []
+  - css: bluetooth_disabled
+    code: 0xf0231
+    uid: 2a4522672d96972c75bdbd296730efcf
+    search: []
+  - css: bluetooth_searching
+    code: 0xf0233
+    uid: e2dce287a9262394a8580cbfbd00f8f8
+    search: []
+  - css: blur_circular
+    code: 0xf0236
+    uid: 9f46658437e1b7f4015dd9b453b385a7
+    search: []
+  - css: blur_linear
+    code: 0xf0241
+    uid: 13ea06f98b172749356615c04b646876
+    search: []
+  - css: blur_off
+    code: 0xf0246
+    uid: 723805d2a957f824ccc18d46c5010bbe
+    search: []
+  - css: blur_on
+    code: 0xf0253
+    uid: 9bf3d984043fadadf564c77ddaeaacf5
+    search: []
+  - css: book
+    code: 0xf0261
+    uid: cd919e3a05d6a5269520859d580a1c96
+    search: []
+  - css: bookmark
+    code: 0xf0263
+    uid: b3a0a09d7ac054ed3653b0d05cabf45d
+    search: []
+  - css: bookmark_border
+    code: 0xf0265
+    uid: df39f38683007b0c7598b7b99da8e75d
+    search: []
+  - css: border_all
+    code: 0xf0267
+    uid: ffff30e34cad5adeec4d8a07aa7143c2
+    search: []
+  - css: border_bottom
+    code: 0xf0269
+    uid: 827f08ed1c24eb2cf4aa044f7bdee536
+    search: []
+  - css: border_clear
+    code: 0xf0272
+    uid: 2bb5cd6154c8065aeaebf972629d0a8e
+    search: []
+  - css: border_color
+    code: 0xf0275
+    uid: 90713c20f01b6b0f1e275357e87a1468
+    search: []
+  - css: border_horizontal
+    code: 0xf0277
+    uid: 1629f5db4f0fef778b2baf351d1f23f6
+    search: []
+  - css: border_inner
+    code: 0xf0280
+    uid: 8231dc1b0daad07d8be36168cb26b2c1
+    search: []
+  - css: border_left
+    code: 0xf0283
+    uid: 88af8081b9e0792bb5566852e4e1d8d0
+    search: []
+  - css: border_outer
+    code: 0xf0286
+    uid: 7fb0983efd1625d389078e44f9fe7b99
+    search: []
+  - css: border_right
+    code: 0xf0288
+    uid: acf60158e7f80cb7fce6b985d149f87b
+    search: []
+  - css: border_style
+    code: 0xf0291
+    uid: 2cf08d868c10bb7c4854bab410a14e78
+    search: []
+  - css: border_top
+    code: 0xf0293
+    uid: be3b4e5f5525071035e10b303c2a4e24
+    search: []
+  - css: border_vertical
+    code: 0xf0296
+    uid: 6372f8619efb4508f1a78c5b6291c340
+    search: []
+  - css: branding_watermark
+    code: 0xf0299
+    uid: 3222653a9f81549c60834352d1e67cf9
+    search: []
+  - css: brightness_1
+    code: 0xf0301
+    uid: 91cd7bfefaa503edc18546d68faec5a4
+    search: []
+  - css: brightness_2
+    code: 0xf0303
+    uid: 33681d76ecf4d2641489832ee3b2ce97
+    search: []
+  - css: brightness_3
+    code: 0xf0305
+    uid: b378dbe1c25bccd2221886fe366c2899
+    search: []
+  - css: brightness_4
+    code: 0xf0307
+    uid: 645bb819f138e7e5bbe234497ac00a2d
+    search: []
+  - css: brightness_5
+    code: 0xf0309
+    uid: a9a88559466c1d0bac8b50426974bd6c
+    search: []
+  - css: brightness_6
+    code: 0xf0311
+    uid: e47a9c01f1a64c67e90f77663a17b4be
+    search: []
+  - css: brightness_7
+    code: 0xf0313
+    uid: 8ce77d18602eeaff39bc3b3ed73913e9
+    search: []
+  - css: brightness_auto
+    code: 0xf0316
+    uid: baa89ab50d120e5123351b961555e55c
+    search: []
+  - css: brightness_high
+    code: 0xf0318
+    uid: f8b500333c665b93ad0902bb45e5b7df
+    search: []
+  - css: brightness_low
+    code: 0xf0321
+    uid: 6b16455b35fe7cb18e39cfacceab1212
+    search: []
+  - css: brightness_medium
+    code: 0xf0323
+    uid: 182232959c2c3f8f2670e11c467385ca
+    search: []
+  - css: broken_image
+    code: 0xf0325
+    uid: 3443b3fae123d146be9c47ed8c3c326f
+    search: []
+  - css: brush
+    code: 0xf0327
+    uid: 10a04d4ca6b7f8bd5dc4e9ed7d3487ba
+    search: []
+  - css: bubble_chart
+    code: 0xf0329
+    uid: 77fd5ada31991e40795330df0ec286da
+    search: []
+  - css: bug_report
+    code: 0xf0331
+    uid: a0f0c53759f74b3c2e4ea6a9fbceb198
+    search: []
+  - css: build
+    code: 0xf0334
+    uid: 845a5f8658f2cae0fc65301be5dfc843
+    search: []
+  - css: burst_mode
+    code: 0xf0336
+    uid: f28922ab1e94bf1e70c913e20024ecdd
+    search: []
+  - css: business
+    code: 0xf0338
+    uid: 18541753426886f923a03b5e790bb20c
+    search: []
+  - css: business_center
+    code: 0xf0341
+    uid: 3005963be4bb574cc7d7ed5c767ab8e1
+    search: []
+  - css: cached
+    code: 0xf0344
+    uid: a827d04978d19c8a30c1503df5a89aed
+    search: []
+  - css: cake
+    code: 0xf0346
+    uid: 97a6bef785d3f4b39a96301d0fab3b03
+    search: []
+  - css: call
+    code: 0xf0349
+    uid: ced40a8ef70557b686a6ee3cb4740cbb
+    search: []
+  - css: call_end
+    code: 0xf0351
+    uid: a5e4060ae0989cc608739297af07844b
+    search: []
+  - css: call_made
+    code: 0xf0354
+    uid: 253067d29b0c98e0db8e86e009134234
+    search: []
+  - css: call_merge
+    code: 0xf0356
+    uid: ed7457e9d02cb3e04e37a4ce1e68c548
+    search: []
+  - css: call_missed
+    code: 0xf0358
+    uid: 6a03b55511b99d7034f2907e24310f31
+    search: []
+  - css: call_missed_outgoing
+    code: 0xf0360
+    uid: 98e6568e29d697815985daec65074bd3
+    search: []
+  - css: call_received
+    code: 0xf0362
+    uid: f5431cc379f3d6c163ff3f2a546ccf1b
+    search: []
+  - css: call_split
+    code: 0xf0364
+    uid: 76dfd54554c096fa154459ba2d7ae6a5
+    search: []
+  - css: call_to_action
+    code: 0xf0366
+    uid: 42f3ff2229b97633b8033dc7b3c91bf6
+    search: []
+  - css: camera
+    code: 0xf0368
+    uid: 8a5b0b491454cfb18a5c38a9a1e82bf3
+    search: []
+  - css: camera_alt
+    code: 0xf0371
+    uid: 22804e6c3af50e397aa6cc01c956a370
+    search: []
+  - css: camera_enhance
+    code: 0xf0374
+    uid: 3d74ab80ccbd0f64b6abd2e86efde0f8
+    search: []
+  - css: camera_front
+    code: 0xf0377
+    uid: a68aa9e08a1616ee8f3343e37e29ca0b
+    search: []
+  - css: camera_rear
+    code: 0xf0380
+    uid: e0e2e8c15d2f6b8151c6e668eb5eede4
+    search: []
+  - css: camera_roll
+    code: 0xf0382
+    uid: bd94bfbee8c7d8899d7660a28fd14df6
+    search: []
+  - css: cancel
+    code: 0xf0385
+    uid: a08fa7e7a1ce22ec5c7988e6b5e975ee
+    search: []
+  - css: card_giftcard
+    code: 0xf0387
+    uid: 597ddffd7c1a9ce8c22f27eab6d113a2
+    search: []
+  - css: card_membership
+    code: 0xf0391
+    uid: 3ca72ab996dc7d97acc7bc948351d0c8
+    search: []
+  - css: card_travel
+    code: 0xf0393
+    uid: c0e4e1d974a3b8edab49048f8a478e78
+    search: []
+  - css: casino
+    code: 0xf0396
+    uid: 85cfd1f6d0d4d98cddc4b1827f9628ef
+    search: []
+  - css: cast
+    code: 0xf0399
+    uid: a404c1624feb7ff3d659e66131799f1f
+    search: []
+  - css: cast_connected
+    code: 0xf0402
+    uid: bdc4fd84f3c2b04f7e2f0b61f1f8e995
+    search: []
+  - css: center_focus_strong
+    code: 0xf0405
+    uid: 0b25c59efb260f4ef8993039d29ba92d
+    search: []
+  - css: center_focus_weak
+    code: 0xf0408
+    uid: 644ca39fd6e170085849c7a19c695550
+    search: []
+  - css: change_history
+    code: 0xf0411
+    uid: 874c7c938126de283ef1d2176e2f99c8
+    search: []
+  - css: chat
+    code: 0xf0413
+    uid: c42cc8614419b562885e3bf4319df490
+    search: []
+  - css: chat_bubble
+    code: 0xf0415
+    uid: 1d8797b24d911c4c2b7c8f82f73ed177
+    search: []
+  - css: chat_bubble_outline
+    code: 0xf0417
+    uid: 0cfe3ba1497065ea5f31e4d9c9761be1
+    search: []
+  - css: check
+    code: 0xf0419
+    uid: 83b1dd96a1760c9d049edbba9b96f2b2
+    search: []
+  - css: check_box
+    code: 0xf0421
+    uid: 1c860d40c1bc780d6a8da2e5d2ed6630
+    search: []
+  - css: check_box_outline_blank
+    code: 0xf0423
+    uid: 4fddedbeb89b99e001b768f6cc01d1b6
+    search: []
+  - css: check_circle
+    code: 0xf0425
+    uid: eb77c8027d60e595b6787551564ddf3b
+    search: []
+  - css: chevron_left
+    code: 0xf0427
+    uid: 13a49a07f56790c4da941d505aa378d8
+    search: []
+  - css: chevron_right
+    code: 0xf0429
+    uid: 7d85bab52016c1a1834e13bfeee98b1c
+    search: []
+  - css: child_care
+    code: 0xf0431
+    uid: 72410939ceb1abb283547f2ffb2544e7
+    search: []
+  - css: child_friendly
+    code: 0xf0436
+    uid: 4b60bc7b3645b13fd738a1831b5d34ec
+    search: []
+  - css: chrome_reader_mode
+    code: 0xf0439
+    uid: e9df1eea69edd5459c0e4db2347f2f61
+    search: []
+  - css: class
+    code: 0xf0441
+    uid: c522ed4c5ea598b0e3f0a5afc50a2816
+    search: []
+  - css: clear
+    code: 0xf0443
+    uid: 55df818c163c6195231a3ba2a4159310
+    search: []
+  - css: clear_all
+    code: 0xf0445
+    uid: af05e9a046b7ea6e6fe5be07675ef0e8
+    search: []
+  - css: close
+    code: 0xf0447
+    uid: 5eb07554925705653f5a05894271d8d3
+    search: []
+  - css: closed_caption
+    code: 0xf0449
+    uid: 230c6986f6b3989e4b248ad9cfc56aa8
+    search: []
+  - css: cloud
+    code: 0xf0452
+    uid: 44e035628ee60455a84023969f7a43e1
+    search: []
+  - css: cloud_circle
+    code: 0xf0454
+    uid: d0967450e874ea38fc95389311abd45f
+    search: []
+  - css: cloud_done
+    code: 0xf0456
+    uid: c2907be493bc2725322e954809882070
+    search: []
+  - css: cloud_download
+    code: 0xf0458
+    uid: 30fa13c9651049b9215c307ef37b88b3
+    search: []
+  - css: cloud_off
+    code: 0xf0460
+    uid: 6d45b68dfa7ff841bb792803946a91a6
+    search: []
+  - css: cloud_queue
+    code: 0xf0463
+    uid: 14557a90831e862a5b6dbce938d54fc1
+    search: []
+  - css: cloud_upload
+    code: 0xf0466
+    uid: ed61ac9690ecef2ccf19879929b718d9
+    search: []
+  - css: code
+    code: 0xf0468
+    uid: 7c5cbb4be0c79cc7f64da33f17efc402
+    search: []
+  - css: collections
+    code: 0xf0470
+    uid: 2a2ee188a0f5c77c4f491abec3de77ba
+    search: []
+  - css: collections_bookmark
+    code: 0xf0472
+    uid: 5f5af0ab92f103238ff37eaa122dca7d
+    search: []
+  - css: color_lens
+    code: 0xf0474
+    uid: 018f68326d31d9e824282f953a16e5e3
+    search: []
+  - css: colorize
+    code: 0xf0477
+    uid: d68dfe8c3731359b12b6a61ad80a7d43
+    search: []
+  - css: comment
+    code: 0xf0479
+    uid: 577e4a6b2b204b10f7d33c9f0cfad5f2
+    search: []
+  - css: compare
+    code: 0xf0481
+    uid: fa64bb897a1c0bc43a408871d2a02a81
+    search: []
+  - css: compare_arrows
+    code: 0xf0483
+    uid: 65b38892a106dca1e9c50fefb427d963
+    search: []
+  - css: computer
+    code: 0xf0485
+    uid: 98da747e98be9e1b3d87d166154cf89d
+    search: []
+  - css: confirmation_number
+    code: 0xf0487
+    uid: eb36f66eb42077b48bae9ab87243c5a6
+    search: []
+  - css: contact_mail
+    code: 0xf0489
+    uid: bee5c37c73cc9a26c5a42fb70f14db35
+    search: []
+  - css: contact_phone
+    code: 0xf0492
+    uid: b365d35131f3113dc130bb5544f4da1e
+    search: []
+  - css: contacts
+    code: 0xf0495
+    uid: 985f7b34452044f4c46e80f5f906692b
+    search: []
+  - css: content_copy
+    code: 0xf0498
+    uid: 95535e598dca8b1eaaa7f79acd105086
+    search: []
+  - css: content_cut
+    code: 0xf0500
+    uid: fa4e5de7dde3a7d5504169f09b2bffb4
+    search: []
+  - css: content_paste
+    code: 0xf0503
+    uid: db0ced95901bc474d8550cefae38f870
+    search: []
+  - css: control_point
+    code: 0xf0505
+    uid: 83af5e6c1348118445587939344d646d
+    search: []
+  - css: control_point_duplicate
+    code: 0xf0507
+    uid: 6a3c928e985b3154b8f3a933cf993a08
+    search: []
+  - css: copyright
+    code: 0xf0510
+    uid: 62f1ff4cf2eed7aacee840e01dc447e1
+    search: []
+  - css: create
+    code: 0xf0514
+    uid: 2cf95a8f9a8d5ebdc664deea0e2e09ff
+    search: []
+  - css: create_new_folder
+    code: 0xf0516
+    uid: 0d8df34924b7dc893fbbe70d344ea746
+    search: []
+  - css: credit_card
+    code: 0xf0518
+    uid: 7a6c574dde44c0d57ff9d792a27630e3
+    search: []
+  - css: crop
+    code: 0xf0520
+    uid: bfadb2f4011a24615c5c7b08d9261ff7
+    search: []
+  - css: crop_16_9
+    code: 0xf0522
+    uid: d77716b2d5da3baffb986d1e5ed8d139
+    search: []
+  - css: crop_3_2
+    code: 0xf0524
+    uid: 8cace91ae3b098a7c7b4d2c10c3a0e93
+    search: []
+  - css: crop_5_4
+    code: 0xf0526
+    uid: 494d1cf1d708a910fc605aa2cb3f7e46
+    search: []
+  - css: crop_7_5
+    code: 0xf0528
+    uid: 58072313e80be2e36c48d91293eab40d
+    search: []
+  - css: crop_din
+    code: 0xf0530
+    uid: 2cfaa2f16473b799fd0c796ce554c3f3
+    search: []
+  - css: crop_free
+    code: 0xf0532
+    uid: 4eae8fd476a77b039a089a1cad8da827
+    search: []
+  - css: crop_landscape
+    code: 0xf0534
+    uid: 7d26b97f92d0ee1c0973dfc402e475b4
+    search: []
+  - css: crop_original
+    code: 0xf0536
+    uid: 0474735aaf40d983a3e0622831f87948
+    search: []
+  - css: crop_portrait
+    code: 0xf0538
+    uid: 36eb9809f5a88fb79950de52ab94ce6d
+    search: []
+  - css: crop_rotate
+    code: 0xf0540
+    uid: 34629b2f476e68443185a5e30a3a2a7f
+    search: []
+  - css: crop_square
+    code: 0xf0543
+    uid: 9f53e40210318966cd7102989063daa9
+    search: []
+  - css: dashboard
+    code: 0xf0545
+    uid: b9a6db551f628450d723cf22797111d2
+    search: []
+  - css: data_usage
+    code: 0xf0547
+    uid: 28fc580a7abb9d03102a793f4b83a6c7
+    search: []
+  - css: date_range
+    code: 0xf0550
+    uid: 4cbb0ef55486a20d7d413a47a473d522
+    search: []
+  - css: dehaze
+    code: 0xf0552
+    uid: d2b18743865e4d72c3558fa50e5939a6
+    search: []
+  - css: delete
+    code: 0xf0554
+    uid: 99c96cc7791531f1d18a221a6fc77d27
+    search: []
+  - css: delete_forever
+    code: 0xf0556
+    uid: f3fcaa1bc1489844ef7e5a378905d9c6
+    search: []
+  - css: delete_sweep
+    code: 0xf0558
+    uid: bf6d67ec47e619b23d774f41b62682a6
+    search: []
+  - css: description
+    code: 0xf0560
+    uid: 2b36a3f13b678c09b0a473a838a9a16d
+    search: []
+  - css: desktop_mac
+    code: 0xf0562
+    uid: 035e7fae7579578ea21c991122923fb9
+    search: []
+  - css: desktop_windows
+    code: 0xf0564
+    uid: 8579685fdb857d67ac8c24a2fa378ac8
+    search: []
+  - css: details
+    code: 0xf0566
+    uid: b68120f9f2852490f62e86cc62345b18
+    search: []
+  - css: developer_board
+    code: 0xf0568
+    uid: 9f2a863ecadc5e9e80254f8a23806f7d
+    search: []
+  - css: developer_mode
+    code: 0xf0571
+    uid: 630dd339e7147db1050c3058331bdb86
+    search: []
+  - css: device_hub
+    code: 0xf0573
+    uid: a25a4d020f6da0f264c02003213c2cbb
+    search: []
+  - css: devices
+    code: 0xf0575
+    uid: 19e84cbff2ce70f3226f6a2fd15bedf2
+    search: []
+  - css: devices_other
+    code: 0xf0577
+    uid: d5fb7c2f92b5575ba2e7bc65cf846c19
+    search: []
+  - css: dialer_sip
+    code: 0xf0580
+    uid: 46ee981b6294493ec99b2fe829f950d0
+    search: []
+  - css: dialpad
+    code: 0xf0583
+    uid: d632ea7b86cdc23171ca59351a503d0f
+    search: []
+  - css: directions
+    code: 0xf0587
+    uid: 8c96c2ab6d9b6e4a8c78f35f29dc0f54
+    search: []
+  - css: directions_bike
+    code: 0xf0589
+    uid: 8d3c5a615d4f09862f26d7e620eed1a7
+    search: []
+  - css: directions_boat
+    code: 0xf0593
+    uid: e172e45b96902b3b60df8622dfc9bc47
+    search: []
+  - css: directions_bus
+    code: 0xf0596
+    uid: dfc97263d6458ea4cf288c85543325b8
+    search: []
+  - css: directions_car
+    code: 0xf0599
+    uid: a56ea4350d1401dbba8d99e793d9f6df
+    search: []
+  - css: directions_railway
+    code: 0xf0602
+    uid: 5f285a99e7d96182ee8cb7b6803ba8a2
+    search: []
+  - css: directions_run
+    code: 0xf0604
+    uid: 03b2757fc1149194db8e5b75459351e1
+    search: []
+  - css: directions_subway
+    code: 0xf0607
+    uid: d310e6ade191d2a37557a909f802f273
+    search: []
+  - css: directions_transit
+    code: 0xf0610
+    uid: 5c399a5d2b7a71205c7736ce60676427
+    search: []
+  - css: directions_walk
+    code: 0xf0613
+    uid: a6d4cb043657a701baa51cdbbfbcef4f
+    search: []
+  - css: disc_full
+    code: 0xf0616
+    uid: 9bc7ba2d97a3e6f319f3879f58f9aaab
+    search: []
+  - css: dns
+    code: 0xf0618
+    uid: 7aeb59ce729624c8c8052bac541e4a71
+    search: []
+  - css: do_not_disturb
+    code: 0xf0621
+    uid: f8486bc544434f032c53dca426ce108e
+    search: []
+  - css: do_not_disturb_alt
+    code: 0xf0623
+    uid: be5bee1bc58ce9fca875ae583081aee7
+    search: []
+  - css: do_not_disturb_off
+    code: 0xf0625
+    uid: b78f9aeaf357cd5e1e3f11e25b0d84b3
+    search: []
+  - css: do_not_disturb_on
+    code: 0xf0627
+    uid: baa3d7264783c3100cd45c594ce5183c
+    search: []
+  - css: dock
+    code: 0xf0629
+    uid: 89d568621941b8304ca36a72b9736863
+    search: []
+  - css: domain
+    code: 0xf0631
+    uid: 9934be7203cf20c24bdf864443d307a6
+    search: []
+  - css: done
+    code: 0xf0634
+    uid: 2886f427135aea7721a198a2a4a67bd4
+    search: []
+  - css: done_all
+    code: 0xf0636
+    uid: de21dfb4ab7f345124066413950526b0
+    search: []
+  - css: donut_large
+    code: 0xf0638
+    uid: 9ddf51ba562a838cab208b790404a88a
+    search: []
+  - css: donut_small
+    code: 0xf0640
+    uid: 29dc29915aad60c2ec552119a21a63e3
+    search: []
+  - css: drafts
+    code: 0xf0642
+    uid: af521b2fd170591470df91475f3131e6
+    search: []
+  - css: drag_handle
+    code: 0xf0644
+    uid: c154f0f9f9d3f9b41ead5c23e878c7e2
+    search: []
+  - css: drive_eta
+    code: 0xf0646
+    uid: 686a18a78c3cde536f24b92d341a86a9
+    search: []
+  - css: dvr
+    code: 0xf0649
+    uid: 2ddbfd83b4767aece6255dde73c6212c
+    search: []
+  - css: edit
+    code: 0xf0652
+    uid: 67897933d14dccc8984781dbdaff21af
+    search: []
+  - css: edit_location
+    code: 0xf0654
+    uid: 5ac4f74523c132634a93a025bd80a1e3
+    search: []
+  - css: eject
+    code: 0xf0656
+    uid: 77b1e2d7682eb85e28bb514192f01def
+    search: []
+  - css: email
+    code: 0xf0658
+    uid: 7831bbc6ddae8fc18e6593d3e2883669
+    search: []
+  - css: enhanced_encryption
+    code: 0xf0660
+    uid: 96fe5513fea857623db6621781ddd927
+    search: []
+  - css: equalizer
+    code: 0xf0663
+    uid: 71af9e2797ad620a207b600125995abb
+    search: []
+  - css: error
+    code: 0xf0665
+    uid: 830b6d2375dcc686ba61ed166e4166f7
+    search: []
+  - css: error_outline
+    code: 0xf0667
+    uid: 075315079e104dc58d9e4a364cea4be2
+    search: []
+  - css: euro_symbol
+    code: 0xf0669
+    uid: 4fe2f09b42ef9807b7af9f17d2532cab
+    search: []
+  - css: ev_station
+    code: 0xf0672
+    uid: 6d858b8d438cefc63ce1cffb8b35f3cd
+    search: []
+  - css: event
+    code: 0xf0675
+    uid: 3af746147c486fda4019d71908eec2a2
+    search: []
+  - css: event_available
+    code: 0xf0677
+    uid: 8e9da58133adebe8e5ccce864282ac4b
+    search: []
+  - css: event_busy
+    code: 0xf0679
+    uid: 486c1ac23ac6b75924d2ea41903f05d2
+    search: []
+  - css: event_note
+    code: 0xf0681
+    uid: e471c18b29f1046a084d29d4d574ee63
+    search: []
+  - css: event_seat
+    code: 0xf0683
+    uid: 894a5ab7169278fbfbf908a0e2e69df6
+    search: []
+  - css: exit_to_app
+    code: 0xf0685
+    uid: aaf75809ac0342c81ff433bc87019072
+    search: []
+  - css: expand_less
+    code: 0xf0687
+    uid: e6e205dc46b365475927f6b6e46a05ea
+    search: []
+  - css: expand_more
+    code: 0xf0689
+    uid: f7099fde2a1ba8216602ed7c3a45e596
+    search: []
+  - css: explicit
+    code: 0xf0691
+    uid: 7e2e2ada6e89ca3de5f12c3e7ce6cb2a
+    search: []
+  - css: explore
+    code: 0xf0693
+    uid: 8b7f62d1956d108110c62bb3ef614f3f
+    search: []
+  - css: exposure
+    code: 0xf0695
+    uid: f9dca74217d0427a5e911f052663a3dc
+    search: []
+  - css: exposure_neg_1
+    code: 0xf0697
+    uid: 71bce2c59bece5198a2c66a37d7eb39d
+    search: []
+  - css: exposure_neg_2
+    code: 0xf0699
+    uid: 895d99795db04fe3156f66e4e090e487
+    search: []
+  - css: exposure_plus_1
+    code: 0xf0702
+    uid: 1ea52cba20c642411aa4e08f78a0a6e1
+    search: []
+  - css: exposure_plus_2
+    code: 0xf0704
+    uid: 279f8d63d8ed79b3777b657ca09c5e44
+    search: []
+  - css: exposure_zero
+    code: 0xf0708
+    uid: db76be79090b52ae154e7da80b008e04
+    search: []
+  - css: extension
+    code: 0xf0712
+    uid: 30fe66a5e53803bf4d0868447eeaf4f3
+    search: []
+  - css: face
+    code: 0xf0715
+    uid: 4b0e8023fe49a8ec3f640a4e58fda969
+    search: []
+  - css: fast_forward
+    code: 0xf0718
+    uid: 9644475e033f5f20ad6560f1314c40bc
+    search: []
+  - css: fast_rewind
+    code: 0xf0720
+    uid: e1ac0df9be6e18285bac15f45bc59def
+    search: []
+  - css: favorite
+    code: 0xf0722
+    uid: bb949f02bd55a4b012c03a9b8651f1b7
+    search: []
+  - css: favorite_border
+    code: 0xf0724
+    uid: b964cb13964ea8fcef0754bcc1c6fbad
+    search: []
+  - css: featured_play_list
+    code: 0xf0727
+    uid: 5387667811a68af841f122838f9df499
+    search: []
+  - css: featured_video
+    code: 0xf0729
+    uid: 382b348b55b46ba96df46ebd0fa91454
+    search: []
+  - css: feedback
+    code: 0xf0731
+    uid: ae9ba050784ea522ea8e0bf55a2a6f27
+    search: []
+  - css: fiber_dvr
+    code: 0xf0733
+    uid: 368915977129425387c90899c706caf1
+    search: []
+  - css: fiber_manual_record
+    code: 0xf0736
+    uid: 855ed37cea338f261895109fa691afc0
+    search: []
+  - css: fiber_new
+    code: 0xf0738
+    uid: ce8ae48d7c8c9555066413167c75983f
+    search: []
+  - css: fiber_pin
+    code: 0xf0741
+    uid: 9c4e2f27e9743f41a9a2591cdceec4d7
+    search: []
+  - css: fiber_smart_record
+    code: 0xf0744
+    uid: 422acb91a310b9cd7d9058f806bd439e
+    search: []
+  - css: file_download
+    code: 0xf0746
+    uid: 41a48eecc95e7f6cf8bb4820dc99d2f3
+    search: []
+  - css: file_upload
+    code: 0xf0748
+    uid: d17b889bedeb6a337f7191020f376064
+    search: []
+  - css: filter
+    code: 0xf0750
+    uid: 37b783f2b8530001144f54c6462b822e
+    search: []
+  - css: filter_1
+    code: 0xf0752
+    uid: a9f65797258bc47bc71dbcfec86a5f84
+    search: []
+  - css: filter_2
+    code: 0xf0754
+    uid: 7ddcd80919c4c56cca98ab4962b2aa4a
+    search: []
+  - css: filter_3
+    code: 0xf0757
+    uid: 437dc066d4286b91e66e2ece1da9bb89
+    search: []
+  - css: filter_4
+    code: 0xf0760
+    uid: 9c7e468fcc9085ed952c929f07001360
+    search: []
+  - css: filter_5
+    code: 0xf0762
+    uid: fd73cecd810359afed690e6c5a438fd1
+    search: []
+  - css: filter_6
+    code: 0xf0765
+    uid: ef347116ddce1891a48289069f08fc05
+    search: []
+  - css: filter_7
+    code: 0xf0768
+    uid: 5d8a29dd2a8dbcf66d17ef5f7043b2d8
+    search: []
+  - css: filter_8
+    code: 0xf0770
+    uid: 8b22ac8c1b3cea5f0461704f8d6c0736
+    search: []
+  - css: filter_9
+    code: 0xf0773
+    uid: ba280f0af67d97b88da42c9f3cff9380
+    search: []
+  - css: filter_9_plus
+    code: 0xf0776
+    uid: 94f16d315d3d0b3b8f6f111237c586c3
+    search: []
+  - css: filter_b_and_w
+    code: 0xf0779
+    uid: 876536826cf451e07a852cd83dd40b49
+    search: []
+  - css: filter_center_focus
+    code: 0xf0781
+    uid: 2f6c683eeb43ac787e07cf522475d496
+    search: []
+  - css: filter_drama
+    code: 0xf0784
+    uid: dcacec67ba3bdaec96dd48b9760bb806
+    search: []
+  - css: filter_frames
+    code: 0xf0787
+    uid: 454c19e42e4cec322804be59105bd4d3
+    search: []
+  - css: filter_hdr
+    code: 0xf0789
+    uid: f07a1026648e4f015c3c350b09a8519a
+    search: []
+  - css: filter_list
+    code: 0xf0791
+    uid: db8dec6c3127cf52382817f10b3331ad
+    search: []
+  - css: filter_none
+    code: 0xf0793
+    uid: 005fd8786a2a8ad03dc428fb5dda2ed0
+    search: []
+  - css: filter_tilt_shift
+    code: 0xf0795
+    uid: 4bebb6a1d971725f56f2045350ff3ce2
+    search: []
+  - css: filter_vintage
+    code: 0xf0799
+    uid: d438fd494159b699a88b76448d004f76
+    search: []
+  - css: find_in_page
+    code: 0xf0803
+    uid: 8c16667a24a043e05994630e7367eec6
+    search: []
+  - css: find_replace
+    code: 0xf0806
+    uid: ecfb7283fc9a001dd36919d204b16a82
+    search: []
+  - css: fingerprint
+    code: 0xf0809
+    uid: e3733d2994c711c1d2390c2938e0a434
+    search: []
+  - css: first_page
+    code: 0xf0816
+    uid: 12d27eb77151efdc329e83e6ba840325
+    search: []
+  - css: fitness_center
+    code: 0xf0818
+    uid: 9978cefb458e167ad8ab7841b297130e
+    search: []
+  - css: flag
+    code: 0xf0820
+    uid: 720b0654747bb842567106cbfc332eb6
+    search: []
+  - css: flare
+    code: 0xf0822
+    uid: c156a9db4117d5a34edfa45da9dc230a
+    search: []
+  - css: flash_auto
+    code: 0xf0825
+    uid: 2a19573eccff56a44421a58a893e3a02
+    search: []
+  - css: flash_off
+    code: 0xf0827
+    uid: dd947575cd02870e288edb6f01a71b6d
+    search: []
+  - css: flash_on
+    code: 0xf0829
+    uid: 0ebafcb46192a04ed320d005473efe65
+    search: []
+  - css: flight
+    code: 0xf0831
+    uid: 924f2260e26e8da5c5979a2e41f5265b
+    search: []
+  - css: flight_land
+    code: 0xf0833
+    uid: dd80379dd7c82c626f7a999b4d59240d
+    search: []
+  - css: flight_takeoff
+    code: 0xf0835
+    uid: 25c30067278bd22a91e4dc5a29b63116
+    search: []
+  - css: flip
+    code: 0xf0837
+    uid: 460247a24cda5b687e6a3cc4e79e7569
+    search: []
+  - css: flip_to_back
+    code: 0xf0840
+    uid: 607e34bbe9fe0732f016d9e3b5bf2491
+    search: []
+  - css: flip_to_front
+    code: 0xf0843
+    uid: 35395aa94737fed3fa8932d0107afe5f
+    search: []
+  - css: folder
+    code: 0xf0846
+    uid: d7d68af5fe9baafab59d0aa7fe47d9d6
+    search: []
+  - css: folder_open
+    code: 0xf0848
+    uid: fb071437a00c16314f8adec5f979b56e
+    search: []
+  - css: folder_shared
+    code: 0xf0850
+    uid: d70cd3f995daaeea1d45a5be5b78db5a
+    search: []
+  - css: folder_special
+    code: 0xf0852
+    uid: f53231a860bc73a44531dd9bbc7530b9
+    search: []
+  - css: font_download
+    code: 0xf0854
+    uid: fefc485994e353ea75715fdffc7b33f1
+    search: []
+  - css: format_align_center
+    code: 0xf0856
+    uid: 85e7b5ed199fba8bff32c8daef19d0a2
+    search: []
+  - css: format_align_justify
+    code: 0xf0858
+    uid: add58b1d48e90c392e27d480bfe8d4ee
+    search: []
+  - css: format_align_left
+    code: 0xf0860
+    uid: 022aa81f128f4f238e87bf81d0448166
+    search: []
+  - css: format_align_right
+    code: 0xf0862
+    uid: 826571262fbe927235054887e5995b62
+    search: []
+  - css: format_bold
+    code: 0xf0864
+    uid: d83a6ab5142d7ae8ccc9b25a2cf04e84
+    search: []
+  - css: format_clear
+    code: 0xf0866
+    uid: 24f0a31685098492d41d669e091e40e7
+    search: []
+  - css: format_color_fill
+    code: 0xf0868
+    uid: 7fba27714c9cd423ae56dbd2df2f2091
+    search: []
+  - css: format_color_reset
+    code: 0xf0870
+    uid: 975a75e31ffdf90b5fde0c6dea783384
+    search: []
+  - css: format_color_text
+    code: 0xf0872
+    uid: 56af7b52b7513db07af854d0158f68d5
+    search: []
+  - css: format_indent_decrease
+    code: 0xf0874
+    uid: 81e9be3667acc20fe69ce51ed420cbd4
+    search: []
+  - css: format_indent_increase
+    code: 0xf0876
+    uid: ff4bce104e415985b328c50642d2c7ef
+    search: []
+  - css: format_italic
+    code: 0xf0878
+    uid: 23547a282b7e4d42bb8d4c8a344f180a
+    search: []
+  - css: format_line_spacing
+    code: 0xf0880
+    uid: 5857ded79afef9b6ad0d1788c3d31c2e
+    search: []
+  - css: format_list_bulleted
+    code: 0xf0882
+    uid: 8b477a390fca32fdefa0ca0c1f280ba5
+    search: []
+  - css: format_list_numbered
+    code: 0xf0885
+    uid: 3723c9c7aeb3a975c531abf97bd58e1c
+    search: []
+  - css: format_paint
+    code: 0xf0887
+    uid: c96f0f67998d61f532020fea703e16da
+    search: []
+  - css: format_quote
+    code: 0xf0889
+    uid: 71b7215440ea4bdefe1ad194726ab596
+    search: []
+  - css: format_shapes
+    code: 0xf0891
+    uid: 311873cc13f759da2293c218fac14fef
+    search: []
+  - css: format_size
+    code: 0xf0894
+    uid: cc4a87e27bc4fe6249c243e657a5f7ef
+    search: []
+  - css: format_strikethrough
+    code: 0xf0896
+    uid: 289032a4595f636fcb606f9b8d1c7f61
+    search: []
+  - css: format_textdirection_l_to_r
+    code: 0xf0898
+    uid: 24af5a172a53e833167f7cd613bf0764
+    search: []
+  - css: format_textdirection_r_to_l
+    code: 0xf0900
+    uid: f1da67c6f6ad95172c9ec0c80fc6a1ca
+    search: []
+  - css: format_underlined
+    code: 0xf0902
+    uid: 6c1ce62ee3e62a038c6fcb42c1af71e3
+    search: []
+  - css: forum
+    code: 0xf0904
+    uid: b02e3b673f9e8f0a09673fcd0d82e7b3
+    search: []
+  - css: forward
+    code: 0xf0906
+    uid: b2860d7ee74f4bc7f6f3d6f5dfc3bd8e
+    search: []
+  - css: forward_10
+    code: 0xf0908
+    uid: 032c04daefda3212f1f09fb4bb846e21
+    search: []
+  - css: forward_30
+    code: 0xf0912
+    uid: 0006e90430ea573ab7e03c18ad178a15
+    search: []
+  - css: forward_5
+    code: 0xf0917
+    uid: 5bef929ba8d7a157b65cb8f73501f58d
+    search: []
+  - css: free_breakfast
+    code: 0xf0921
+    uid: effe82b3535b2444b7e1f1f99324a198
+    search: []
+  - css: fullscreen
+    code: 0xf0923
+    uid: d258f2328cc2be68737886af74bbaa63
+    search: []
+  - css: fullscreen_exit
+    code: 0xf0925
+    uid: 7f83bf676ae62ed191cee23968d6afc9
+    search: []
+  - css: functions
+    code: 0xf0927
+    uid: 260ec9f818472847a9b264f071b03b2f
+    search: []
+  - css: g_translate
+    code: 0xf0929
+    uid: 54be066ec31fe8426cb5a311714e9ca0
+    search: []
+  - css: gamepad
+    code: 0xf0933
+    uid: 2eed4176c93a48b1ca045ed60435d7b5
+    search: []
+  - css: games
+    code: 0xf0935
+    uid: 0c6c53b89f24e93a094c31d516612e6b
+    search: []
+  - css: gavel
+    code: 0xf0937
+    uid: f22c7d0f53da6149318928e2c3deb805
+    search: []
+  - css: gesture
+    code: 0xf0939
+    uid: 7f8f6f42a69000ea09e045dc839807c1
+    search: []
+  - css: get_app
+    code: 0xf0943
+    uid: f021baa986028b65accf0a873dc669c1
+    search: []
+  - css: gif
+    code: 0xf0945
+    uid: cb1ded729a1fbd3b848ea1c1e5f834f9
+    search: []
+  - css: goat
+    code: 0xf0947
+    uid: 4be166feeb95ae3a380f23f05758cfe3
+    search: []
+  - css: golf_course
+    code: 0xf0951
+    uid: 7f4f1490811a804bb18eecb98df46094
+    search: []
+  - css: gps_fixed
+    code: 0xf0953
+    uid: 7a93f7721b52309893e371ceda497ec9
+    search: []
+  - css: gps_not_fixed
+    code: 0xf0956
+    uid: f4c21ef17c10a6d07f256f1048888340
+    search: []
+  - css: gps_off
+    code: 0xf0958
+    uid: be25a41e3b1973809ca8c10bbebba12c
+    search: []
+  - css: grade
+    code: 0xf0961
+    uid: a97726926f80d6b78fc924730a000820
+    search: []
+  - css: gradient
+    code: 0xf0963
+    uid: b27843a44b8ee61f6a9836142019c728
+    search: []
+  - css: grain
+    code: 0xf0966
+    uid: 3cce69b099575abea7f212e3529b747b
+    search: []
+  - css: graphic_eq
+    code: 0xf0970
+    uid: 08c3dd4f46e9ad3fbf4c1674bc8abedb
+    search: []
+  - css: grid_off
+    code: 0xf0972
+    uid: 5b90d4b8002f8cfc7d4f38035cf4163e
+    search: []
+  - css: grid_on
+    code: 0xf0975
+    uid: 4ac88e9ea65fe9097a058694714ac991
+    search: []
+  - css: group
+    code: 0xf0978
+    uid: 7739901883068f4b46d7d1a3149b4e86
+    search: []
+  - css: group_add
+    code: 0xf0981
+    uid: a1a42e81921d847e58d7ce1e17c7db50
+    search: []
+  - css: group_work
+    code: 0xf0984
+    uid: 35170e7777bcd3a21e53cf0436347916
+    search: []
+  - css: hd
+    code: 0xf0987
+    uid: c4d8d361ecab518f36d2251b520fd5cc
+    search: []
+  - css: hdr_off
+    code: 0xf0989
+    uid: ea2bfc47990f369e5d7a82741531e8ff
+    search: []
+  - css: hdr_on
+    code: 0xf0992
+    uid: d1f05364532bead0c44591e5cb946982
+    search: []
+  - css: hdr_strong
+    code: 0xf0995
+    uid: e820ac16a803ee40607a24703cf48121
+    search: []
+  - css: hdr_weak
+    code: 0xf0997
+    uid: 2b99cb44f9edddfb59137f8d1dd6bbfe
+    search: []
+  - css: headset
+    code: 0xf0999
+    uid: a983d7afbaf99075f3e6a1926ab4ae1c
+    search: []
+  - css: headset_mic
+    code: 0xf1001
+    uid: fc5717625bc827d89e1ad906a524aa7d
+    search: []
+  - css: healing
+    code: 0xf1003
+    uid: 24c187947d706d5cfa172df53eecec69
+    search: []
+  - css: hearing
+    code: 0xf1007
+    uid: 3496bad5c09ca8b82acfa486646645ae
+    search: []
+  - css: help
+    code: 0xf1011
+    uid: 2b243604ce43a6aaa55b55fb74f27b22
+    search: []
+  - css: help_outline
+    code: 0xf1014
+    uid: 7ad7dd2e1853cb6523e487895b45d45b
+    search: []
+  - css: high_quality
+    code: 0xf1017
+    uid: 6b1a1968d6b2a5bceab226eb891b2ec4
+    search: []
+  - css: highlight
+    code: 0xf1020
+    uid: d18117af79c0e28e8db0735089b38341
+    search: []
+  - css: highlight_off
+    code: 0xf1022
+    uid: 43e6aa64e828f70054db30da8568ee78
+    search: []
+  - css: history
+    code: 0xf1025
+    uid: cb1b97054eb9c5139256f73f840dc610
+    search: []
+  - css: home
+    code: 0xf1027
+    uid: ca150bc10f3a816413c7687c59dbe118
+    search: []
+  - css: hot_tub
+    code: 0xf1029
+    uid: 5daa45236556ee12d9901dabd5cf2c74
+    search: []
+  - css: hotel
+    code: 0xf1033
+    uid: 1a1a23f05ffed94d89014715be84238d
+    search: []
+  - css: hourglass_empty
+    code: 0xf1035
+    uid: 111c5af2a7558a1b610f4d3028a024b7
+    search: []
+  - css: hourglass_full
+    code: 0xf1037
+    uid: 0225785643202c9bddf6feba6fd86687
+    search: []
+  - css: http
+    code: 0xf1039
+    uid: f929516cbfe204354c65a7ad5521afdf
+    search: []
+  - css: https
+    code: 0xf1041
+    uid: 654ea230241c7345ba5223fb4970ec78
+    search: []
+  - css: image
+    code: 0xf1044
+    uid: 6cd21ddf9215c2ec02a349141122a4e7
+    search: []
+  - css: image_aspect_ratio
+    code: 0xf1046
+    uid: 72a2bb6626b88f91a0ecacf43f93883e
+    search: []
+  - css: import_contacts
+    code: 0xf1048
+    uid: 70767648d6c51ec60b79716456c1de1a
+    search: []
+  - css: import_export
+    code: 0xf1051
+    uid: b5e812abecffdc10b7ae2f0d14a66c9c
+    search: []
+  - css: important_devices
+    code: 0xf1053
+    uid: 485a9fb4adb5f49b337393cf2c306a8c
+    search: []
+  - css: inbox
+    code: 0xf1056
+    uid: 56006ea0053ba68eeea9f0ffa9b7100a
+    search: []
+  - css: indeterminate_check_box
+    code: 0xf1058
+    uid: 183d3348ee2b569b313d2000e2daaef7
+    search: []
+  - css: info
+    code: 0xf1060
+    uid: a0b1df4cea23f22c55b25fb4ebc28075
+    search: []
+  - css: info_outline
+    code: 0xf1062
+    uid: a42812e03059244a58cd9f15efd1a394
+    search: []
+  - css: input
+    code: 0xf1064
+    uid: 0106f31d400899d362cd38a9f4f42328
+    search: []
+  - css: insert_chart
+    code: 0xf1066
+    uid: 5e22ef9c7c7002922e61e5c88cb3c27b
+    search: []
+  - css: insert_comment
+    code: 0xf1068
+    uid: 1a7b9f720b7020c340ed5cbcf523dacc
+    search: []
+  - css: insert_drive_file
+    code: 0xf1070
+    uid: 4d19a43c50cd460fb71ebe0678af4694
+    search: []
+  - css: insert_emoticon
+    code: 0xf1072
+    uid: c0e462614d37d9b6282659fc6ee962a8
+    search: []
+  - css: insert_invitation
+    code: 0xf1075
+    uid: 8140375449d4a2edcc64306250b9014f
+    search: []
+  - css: insert_link
+    code: 0xf1077
+    uid: d97994d038f6c85d67117c0e273a3aa9
+    search: []
+  - css: insert_photo
+    code: 0xf1079
+    uid: 212348dd16c6ce274b74bb4e34500abb
+    search: []
+  - css: invert_colors
+    code: 0xf1081
+    uid: 1d1eb62d6a83e6b81cac34d386691208
+    search: []
+  - css: invert_colors_off
+    code: 0xf1083
+    uid: f9d70ba99a2b0774c7a9dcc2c88d91e9
+    search: []
+  - css: iso
+    code: 0xf1086
+    uid: da9bd6cf70bc794e6320105a142d65e3
+    search: []
+  - css: keyboard
+    code: 0xf1088
+    uid: 2fec8b3a64c4b34668b033808c834aa8
+    search: []
+  - css: keyboard_arrow_down
+    code: 0xf1091
+    uid: 30ef2b318acc1392a3a939ee7935e959
+    search: []
+  - css: keyboard_arrow_left
+    code: 0xf1093
+    uid: af76421f7827c9b8dbf4330d596be014
+    search: []
+  - css: keyboard_arrow_right
+    code: 0xf1095
+    uid: 5a2e0f80f343a57e27915d85fefa82c6
+    search: []
+  - css: keyboard_arrow_up
+    code: 0xf1097
+    uid: 66f12ff8652e1a0174b9fad60e9e4288
+    search: []
+  - css: keyboard_backspace
+    code: 0xf1099
+    uid: 4f2eb00181b68499923dd8fd07f9b981
+    search: []
+  - css: keyboard_capslock
+    code: 0xf1101
+    uid: b1f068de63b1e2a81309c5ed3c9a5c04
+    search: []
+  - css: keyboard_hide
+    code: 0xf1103
+    uid: 61455fd825b0d25ce3b0cbd0f4b9e739
+    search: []
+  - css: keyboard_return
+    code: 0xf1106
+    uid: 36c2c5a4cc6eb9e9b13e3707b8959722
+    search: []
+  - css: keyboard_tab
+    code: 0xf1108
+    uid: 657bd03117a18ebd7a01ae2a26879ebf
+    search: []
+  - css: keyboard_voice
+    code: 0xf1110
+    uid: 0a734ab270742f52fdebc7eac6183f32
+    search: []
+  - css: kitchen
+    code: 0xf1112
+    uid: 4b5f64a4f1318aaa53a03429122caa50
+    search: []
+  - css: label
+    code: 0xf1114
+    uid: 94eb2de20eb6da21d078ab7ed40cdd20
+    search: []
+  - css: label_outline
+    code: 0xf1116
+    uid: 14a5c956494815ca68f98a1a975ceb2f
+    search: []
+  - css: landscape
+    code: 0xf1118
+    uid: d96e4c793ea532c251c05daccc24c0ee
+    search: []
+  - css: language
+    code: 0xf1120
+    uid: 87f4758ee5aa9b99e6a61d8460413fee
+    search: []
+  - css: laptop
+    code: 0xf1124
+    uid: fd7b33db7acef5b1c9958b6680294310
+    search: []
+  - css: laptop_chromebook
+    code: 0xf1126
+    uid: 1b1327a7839754b55b34329002005a16
+    search: []
+  - css: laptop_mac
+    code: 0xf1128
+    uid: 007eb673c547d61426490e1e3f105494
+    search: []
+  - css: laptop_windows
+    code: 0xf1130
+    uid: 8125f2690b30cd1abf329a3e660f3532
+    search: []
+  - css: last_page
+    code: 0xf1132
+    uid: 70f643dd6483e1a56350e3fe0ae292b3
+    search: []
+  - css: launch
+    code: 0xf1134
+    uid: 0e84bca553b2a5374781e31c8800a153
+    search: []
+  - css: layers
+    code: 0xf1136
+    uid: 7e4d5eddfbe24b10953a4112c61142db
+    search: []
+  - css: layers_clear
+    code: 0xf1138
+    uid: 74b71a02b0085c160ea4924f2135d7d6
+    search: []
+  - css: leak_add
+    code: 0xf1140
+    uid: 76916fa90f4335017389208c3b056787
+    search: []
+  - css: leak_remove
+    code: 0xf1143
+    uid: 8a9b269fb3c1f9b41ecf7c43c30e70ae
+    search: []
+  - css: lens
+    code: 0xf1146
+    uid: 482fef7333d8cdcb66c23ccc6d41bcf2
+    search: []
+  - css: library_add
+    code: 0xf1148
+    uid: a93e9855e45f1ca35d09aa7edcd97a51
+    search: []
+  - css: library_books
+    code: 0xf1150
+    uid: 5d4f6620d71883b47c2d73eaf19e2fba
+    search: []
+  - css: library_music
+    code: 0xf1152
+    uid: 43494d29cbd31bc36e1695e6acf60748
+    search: []
+  - css: lightbulb_outline
+    code: 0xf1155
+    uid: 0015c73e21701e77b536b2ffea458426
+    search: []
+  - css: line_style
+    code: 0xf1158
+    uid: 2c25088947f884734c5e639e06711b23
+    search: []
+  - css: line_weight
+    code: 0xf1161
+    uid: 95be5bc865b52adf003b3c746422e25d
+    search: []
+  - css: linear_scale
+    code: 0xf1163
+    uid: 97ed9f560cbbc8bf9ec53092e7e8dcc7
+    search: []
+  - css: link
+    code: 0xf1165
+    uid: 2903cf6712b9ee9d6778508c6f9ef966
+    search: []
+  - css: linked_camera
+    code: 0xf1167
+    uid: dd7dd16e5d19f0dd71e3c3520e424c4c
+    search: []
+  - css: list
+    code: 0xf1170
+    uid: 6b8c17c7f153f4fbd4537ddf612b9222
+    search: []
+  - css: live_help
+    code: 0xf1172
+    uid: c8fda1f4c2739cc27d9a52deb12f1c41
+    search: []
+  - css: live_tv
+    code: 0xf1175
+    uid: 1a86e41b4d6626d8a91602f0fe39955f
+    search: []
+  - css: local_activity
+    code: 0xf1177
+    uid: 1205061ee5e9dda235d5e8540b0b94a7
+    search: []
+  - css: local_airport
+    code: 0xf1180
+    uid: 01ca0ca7fbaba738921710cc4b7982a8
+    search: []
+  - css: local_atm
+    code: 0xf1182
+    uid: 51ac007b26b87805b7c9caee069c069c
+    search: []
+  - css: local_bar
+    code: 0xf1185
+    uid: 421eb95632f24a439190d15f6b43f3e0
+    search: []
+  - css: local_cafe
+    code: 0xf1187
+    uid: 5d92fbd0154af8cdba421057ff4dc104
+    search: []
+  - css: local_car_wash
+    code: 0xf1189
+    uid: 1a160c93b4eafa60a8a358c086a6f04e
+    search: []
+  - css: local_convenience_store
+    code: 0xf1193
+    uid: 0dba57d206172991309895e72d3e45d8
+    search: []
+  - css: local_dining
+    code: 0xf1195
+    uid: 484f35073f9a1de912a6fedadd2eac89
+    search: []
+  - css: local_drink
+    code: 0xf1197
+    uid: 10f39837ff779771e347105e92af75e5
+    search: []
+  - css: local_florist
+    code: 0xf1199
+    uid: 75812aa3562e4f2d3c67e80043f44e00
+    search: []
+  - css: local_gas_station
+    code: 0xf1203
+    uid: 79eee32b88cce02d394e417dbd209443
+    search: []
+  - css: local_grocery_store
+    code: 0xf1206
+    uid: f1f588dbae8b8a6f65926afaef3b9c63
+    search: []
+  - css: local_hospital
+    code: 0xf1209
+    uid: 9528ced9649390aa6400dc8e8a992036
+    search: []
+  - css: local_hotel
+    code: 0xf1211
+    uid: 897dd2ef353df307fdfe9d605a747f08
+    search: []
+  - css: local_laundry_service
+    code: 0xf1213
+    uid: 085da0b82c06b77ff5844fe087df6672
+    search: []
+  - css: local_library
+    code: 0xf1216
+    uid: a50d8f91a56c31259bf9649d1555b8de
+    search: []
+  - css: local_mall
+    code: 0xf1218
+    uid: a261f1ae1802bc0633dd3ce9e20a8590
+    search: []
+  - css: local_movies
+    code: 0xf1221
+    uid: 79e8d1abf94974745fff7fe23cfa4c28
+    search: []
+  - css: local_offer
+    code: 0xf1223
+    uid: b837ac09f392bfc1ca08333402db1ed2
+    search: []
+  - css: local_parking
+    code: 0xf1225
+    uid: 49e1fb37f31483fc297bff4787ebdd63
+    search: []
+  - css: local_pharmacy
+    code: 0xf1227
+    uid: ef4f1d62f8573d371633d0f632c7a4cf
+    search: []
+  - css: local_phone
+    code: 0xf1229
+    uid: 5e1f48083ee2a8386273ae4bf633bb54
+    search: []
+  - css: local_pizza
+    code: 0xf1231
+    uid: b3410f420c93dbe6b75834305a5068df
+    search: []
+  - css: local_play
+    code: 0xf1233
+    uid: fd747d49c9f7c4934ad0b60349eac4f1
+    search: []
+  - css: local_post_office
+    code: 0xf1236
+    uid: 1c42a1c4832a9ee5c426e416b65271e0
+    search: []
+  - css: local_printshop
+    code: 0xf1238
+    uid: a8f44e7d3e6f576ce417dfd327d3b2f4
+    search: []
+  - css: local_see
+    code: 0xf1240
+    uid: a525a9780636e1ff7073b2212cd2c2c6
+    search: []
+  - css: local_shipping
+    code: 0xf1243
+    uid: e62c4e6ee75042870c9e70500fd30a44
+    search: []
+  - css: local_taxi
+    code: 0xf1246
+    uid: 60f6c9a37f38c7964ef35a19bc0e7225
+    search: []
+  - css: location_city
+    code: 0xf1249
+    uid: 51b479a1d99b0b0a28714bf2339490cc
+    search: []
+  - css: location_disabled
+    code: 0xf1252
+    uid: fa839bf0bc3a3d48da1e5bdf574c3984
+    search: []
+  - css: location_off
+    code: 0xf1255
+    uid: e51e39345aef223433ebaf5625e7a873
+    search: []
+  - css: location_on
+    code: 0xf1258
+    uid: 4033b8c9e88aa3ea14b84508393a188b
+    search: []
+  - css: location_searching
+    code: 0xf1260
+    uid: ebf66f0ffcf344f22121d51f20483473
+    search: []
+  - css: lock
+    code: 0xf1262
+    uid: 4d260d751193b149f8059e33edb76c90
+    search: []
+  - css: lock_open
+    code: 0xf1265
+    uid: cfb5ae64996993cf80d45d12a29008d1
+    search: []
+  - css: lock_outline
+    code: 0xf1268
+    uid: 552429e70bf6761e29a91584a3c1c6d6
+    search: []
+  - css: looks
+    code: 0xf1271
+    uid: 060ed9f176cc6eb23011a8c90d5a996b
+    search: []
+  - css: looks_3
+    code: 0xf1273
+    uid: af8452cdd5a0c81c6291845ad4ee12d5
+    search: []
+  - css: looks_4
+    code: 0xf1275
+    uid: c4c5343b14f2e070d778d76f1bf6ae5d
+    search: []
+  - css: looks_5
+    code: 0xf1277
+    uid: 749713cc4727871c0b62cfdfdaeb4b12
+    search: []
+  - css: looks_6
+    code: 0xf1279
+    uid: c0b4e22514c57501076005018bca0b54
+    search: []
+  - css: looks_one
+    code: 0xf1281
+    uid: b5545ed95f9c54fb9b1b7c6237e79422
+    search: []
+  - css: looks_two
+    code: 0xf1283
+    uid: bd2a3f02de3a43e2986600c02b52d597
+    search: []
+  - css: loop
+    code: 0xf1285
+    uid: c3ad0ad87aa31ddad74dc554938d4af0
+    search: []
+  - css: loupe
+    code: 0xf1287
+    uid: 1b23b0701c59519bd314e06ef59087ff
+    search: []
+  - css: low_priority
+    code: 0xf1289
+    uid: cb2680a4fec8a01050f0b6f4216876d3
+    search: []
+  - css: loyalty
+    code: 0xf1291
+    uid: 2057999ca0cce2fb0a658401b9a71c1e
+    search: []
+  - css: mail
+    code: 0xf1294
+    uid: 9d2c9ba1ded3f98f0565429f80d16842
+    search: []
+  - css: mail_outline
+    code: 0xf1296
+    uid: 8486605acad5af293679d4607fd47e87
+    search: []
+  - css: map
+    code: 0xf1298
+    uid: 8128fbaeb760c11ea85184a24e9420dd
+    search: []
+  - css: markunread
+    code: 0xf1300
+    uid: f2718de94939afa97ccb873b4f664046
+    search: []
+  - css: markunread_mailbox
+    code: 0xf1302
+    uid: 325e15bd0e56d7083563ea78c7450ff2
+    search: []
+  - css: memory
+    code: 0xf1304
+    uid: c1c10b27d751cf5aa735403d0be29741
+    search: []
+  - css: menu
+    code: 0xf1307
+    uid: cd7c413a8d3b5744e558253329124516
+    search: []
+  - css: merge_type
+    code: 0xf1309
+    uid: cbc7f3bfa4e047f6621cae6cd87bdc4a
+    search: []
+  - css: message
+    code: 0xf1311
+    uid: 779c5d0ac38ccb1cc8c91ff11f788d0d
+    search: []
+  - css: mic
+    code: 0xf1313
+    uid: 197e25f28a8c35b0ea8b3ba553ae3677
+    search: []
+  - css: mic_none
+    code: 0xf1315
+    uid: f8606dda7b982f691e1ff24ab29138ab
+    search: []
+  - css: mic_off
+    code: 0xf1318
+    uid: 2c133741b54f45f7ba5c75995303168b
+    search: []
+  - css: mms
+    code: 0xf1321
+    uid: 814741025ab861e06c163f2ab9d9a850
+    search: []
+  - css: mode_comment
+    code: 0xf1323
+    uid: 234afec157ce211a1b8d84d765399935
+    search: []
+  - css: mode_edit
+    code: 0xf1325
+    uid: 8e3920c41870c94feb6409cd508f6338
+    search: []
+  - css: monetization_on
+    code: 0xf1327
+    uid: 213d42c6a29d8b77c812f8fa7ab402e3
+    search: []
+  - css: money_off
+    code: 0xf1330
+    uid: 41ba324e664245317d2ef8e0e8629dea
+    search: []
+  - css: monochrome_photos
+    code: 0xf1333
+    uid: dc3a3c478ed7dc0765d70e69c03636c7
+    search: []
+  - css: mood
+    code: 0xf1336
+    uid: 8422959eee2fc651e22f5ec56000a93e
+    search: []
+  - css: mood_bad
+    code: 0xf1339
+    uid: 9a00067fdc593fc0fbcde410ea4b5e5f
+    search: []
+  - css: more
+    code: 0xf1342
+    uid: c89138a866c514932094fb62459aad5b
+    search: []
+  - css: more_horiz
+    code: 0xf1345
+    uid: d1f738181afef6e0fc564368153dadcf
+    search: []
+  - css: more_vert
+    code: 0xf1347
+    uid: 50e3766928de027392d54955c492ba86
+    search: []
+  - css: motorcycle
+    code: 0xf1349
+    uid: 462c0b79480cfad4b0400d4ab11da865
+    search: []
+  - css: mouse
+    code: 0xf1352
+    uid: 1cd89580261561b2948343fa97fb41c5
+    search: []
+  - css: move_to_inbox
+    code: 0xf1354
+    uid: af877921fc2dd333d8c67e632a42f3b1
+    search: []
+  - css: movie
+    code: 0xf1356
+    uid: d0f354b6168416a617c4cd5477d3a980
+    search: []
+  - css: movie_creation
+    code: 0xf1358
+    uid: 829137c481f1e8af147a068347ce56c9
+    search: []
+  - css: movie_filter
+    code: 0xf1360
+    uid: be9c394c9086f0a5e3183d402559f443
+    search: []
+  - css: multiline_chart
+    code: 0xf1363
+    uid: 0ba7c018a1b1a9a17981322762095613
+    search: []
+  - css: music_note
+    code: 0xf1365
+    uid: 498fb7be4dd0f37dde190eba35b0f12b
+    search: []
+  - css: music_video
+    code: 0xf1367
+    uid: 922bd4722ea1d191b45bf1b87538be1b
+    search: []
+  - css: my_location
+    code: 0xf1369
+    uid: 02cc88e2f8688852e1ba07c645ff54bc
+    search: []
+  - css: nature
+    code: 0xf1372
+    uid: 7768c50573067ad5bed958ee8502b9d2
+    search: []
+  - css: nature_people
+    code: 0xf1374
+    uid: 35cea8ba2a7f1275cb6366fd1bf847f7
+    search: []
+  - css: navigate_before
+    code: 0xf1377
+    uid: 2deb4ec1f87cc6db938eb0a437ec58e3
+    search: []
+  - css: navigate_next
+    code: 0xf1379
+    uid: 4e03b6e1bb42b6ba85d2a2adf662399f
+    search: []
+  - css: navigation
+    code: 0xf1381
+    uid: ef1c7e793560e794596745eb5cf7f3d6
+    search: []
+  - css: near_me
+    code: 0xf1383
+    uid: 8e754501af008d9641760cb37ab9be9a
+    search: []
+  - css: network_cell
+    code: 0xf1385
+    uid: 7b4eecc77a6684a1d8e75a195a08b230
+    search: []
+  - css: network_check
+    code: 0xf1387
+    uid: 2afb8bf50075799a904aee923b494819
+    search: []
+  - css: network_locked
+    code: 0xf1390
+    uid: 04b03f2c460943e6e10d0fcdd967e76b
+    search: []
+  - css: network_wifi
+    code: 0xf1393
+    uid: ed62d7010757f3e4bbb31bece7a39b12
+    search: []
+  - css: new_releases
+    code: 0xf1395
+    uid: ba70cd4740fac49abacee9826a929c27
+    search: []
+  - css: next_week
+    code: 0xf1397
+    uid: bbff89c95cd1d5adfde9fadc5d17f1f4
+    search: []
+  - css: nfc
+    code: 0xf1399
+    uid: e5676930bbfa541f682a4dc2a019f393
+    search: []
+  - css: no_encryption
+    code: 0xf1402
+    uid: 0e92badf4c15f3970785e1c6eacaf44e
+    search: []
+  - css: no_sim
+    code: 0xf1404
+    uid: 3826d2c8d73bbee8d0e423b34a9aac8f
+    search: []
+  - css: not_interested
+    code: 0xf1406
+    uid: 90f006cf9e843093cc74205d33f8115f
+    search: []
+  - css: note
+    code: 0xf1408
+    uid: fff400c9442a6c6006c42672ab112a7d
+    search: []
+  - css: note_add
+    code: 0xf1410
+    uid: 6f6c0e230719b9c9dbb83c193ed2bde2
+    search: []
+  - css: notifications
+    code: 0xf1412
+    uid: 7c31fffa1d140a037558f328c8c1a54d
+    search: []
+  - css: notifications_active
+    code: 0xf1414
+    uid: 16f2e72c8abede7252db03c3361fd2f0
+    search: []
+  - css: notifications_none
+    code: 0xf1417
+    uid: 62044d17f75c72656f1757f13b752432
+    search: []
+  - css: notifications_off
+    code: 0xf1419
+    uid: 890c6b869c2f26667c1a6e56a1d30c20
+    search: []
+  - css: notifications_paused
+    code: 0xf1422
+    uid: 423b1047d63b2330dd0cfdaeb7b1ce79
+    search: []
+  - css: offline_pin
+    code: 0xf1424
+    uid: dfbb950d36639bda49f39d30e37e7572
+    search: []
+  - css: ondemand_video
+    code: 0xf1426
+    uid: dfa872c33f19b3faefdb28b894572d9b
+    search: []
+  - css: opacity
+    code: 0xf1428
+    uid: 769626059791350cffa6685b7ecc22e5
+    search: []
+  - css: open_in_browser
+    code: 0xf1430
+    uid: 0a4787970d0a139b50ec463ebe88fce7
+    search: []
+  - css: open_in_new
+    code: 0xf1432
+    uid: 7a09fabab201dcefc06e6d124073e5c6
+    search: []
+  - css: open_with
+    code: 0xf1434
+    uid: 8d5e8806779585f76a9a35e9f4f615db
+    search: []
+  - css: pages
+    code: 0xf1436
+    uid: 6bba8ae79d342eb294e8cfa5b83be49c
+    search: []
+  - css: pageview
+    code: 0xf1438
+    uid: 15ece3c61fb80093a32c7da70302ba65
+    search: []
+  - css: palette
+    code: 0xf1441
+    uid: 9f496cba29c4f35573419acb679934f1
+    search: []
+  - css: pan_tool
+    code: 0xf1444
+    uid: 0b49246f1dfbab281b1e47b25b77413f
+    search: []
+  - css: panorama
+    code: 0xf1447
+    uid: 535872c80c91725c9aa7973f0f7bb19d
+    search: []
+  - css: panorama_fish_eye
+    code: 0xf1449
+    uid: d51e3cb95a6814d6f5e45ecf0db8e16c
+    search: []
+  - css: panorama_horizontal
+    code: 0xf1451
+    uid: 93f5eed9f36e1e6aa1ccf91ad9670b0f
+    search: []
+  - css: panorama_vertical
+    code: 0xf1454
+    uid: 9618918c699a010402ffd147f2a1c62e
+    search: []
+  - css: panorama_wide_angle
+    code: 0xf1457
+    uid: 62099b50f6289364ba074a876810ed67
+    search: []
+  - css: party_mode
+    code: 0xf1460
+    uid: aa6301bcb4c2515d2b10ab3d65bd9930
+    search: []
+  - css: pause
+    code: 0xf1463
+    uid: f51f2a12a1df8bf2958cefabdec30806
+    search: []
+  - css: pause_circle_filled
+    code: 0xf1465
+    uid: 8dd43f55602a2f66022ec16f3d730f13
+    search: []
+  - css: pause_circle_outline
+    code: 0xf1467
+    uid: e022244e0ded050dc70fa2a7bf0a7ad6
+    search: []
+  - css: payment
+    code: 0xf1469
+    uid: 0ce389f1e7e6ee5bd73c2e9d1d56c0fe
+    search: []
+  - css: people
+    code: 0xf1471
+    uid: bf61d54d22a6df8303a8e0b54ea9dbd9
+    search: []
+  - css: people_outline
+    code: 0xf1474
+    uid: 4030ba7762283cc2edebc1578ab2fdf2
+    search: []
+  - css: perm_camera_mic
+    code: 0xf1478
+    uid: 0b7be0203b2e93e61e07b939ef3c3e7d
+    search: []
+  - css: perm_contact_calendar
+    code: 0xf1481
+    uid: 42e6087ab2fa3431bd2c357139f23a76
+    search: []
+  - css: perm_data_setting
+    code: 0xf1484
+    uid: 6688ea388bc9ccc557b8f9477a16b9e2
+    search: []
+  - css: perm_device_information
+    code: 0xf1488
+    uid: 2e6a9c09dd8d91c782a317b47b22ca5d
+    search: []
+  - css: perm_identity
+    code: 0xf1490
+    uid: a01116440d1c35f62757ae62f98352b6
+    search: []
+  - css: perm_media
+    code: 0xf1493
+    uid: af72b178562d0afcfb9d83e468d95704
+    search: []
+  - css: perm_phone_msg
+    code: 0xf1495
+    uid: f9280b28f6c829d67febdd1a56cd2ab9
+    search: []
+  - css: perm_scan_wifi
+    code: 0xf1498
+    uid: a6d204ec659db562f946b2a77ad12afe
+    search: []
+  - css: person
+    code: 0xf1500
+    uid: 3392068839495c421c04eff00fc39cc2
+    search: []
+  - css: person_add
+    code: 0xf1502
+    uid: fb40641aff75d46bacf49e793f369a92
+    search: []
+  - css: person_outline
+    code: 0xf1504
+    uid: 06ccc9733fe579f3f55271f69a54223b
+    search: []
+  - css: person_pin
+    code: 0xf1507
+    uid: 0b3a17373eca397aa9c3328a003ddd97
+    search: []
+  - css: person_pin_circle
+    code: 0xf1510
+    uid: 7fb4f9db44602d6e93660918db5cd83b
+    search: []
+  - css: personal_video
+    code: 0xf1513
+    uid: d5e4a19393e899e2832e4bf15720388e
+    search: []
+  - css: pets
+    code: 0xf1515
+    uid: abc49dd05fe42991d7048bdbbec55b78
+    search: []
+  - css: phone
+    code: 0xf1519
+    uid: d816ec534a30be75b5be04c70a5ba7b1
+    search: []
+  - css: phone_android
+    code: 0xf1521
+    uid: aff4ac9a489845c253da144743733f21
+    search: []
+  - css: phone_bluetooth_speaker
+    code: 0xf1523
+    uid: fe99d538c22db07b15945250f28d674c
+    search: []
+  - css: phone_forwarded
+    code: 0xf1526
+    uid: 86fad214c1a5b51e63b8df3b55e1233a
+    search: []
+  - css: phone_in_talk
+    code: 0xf1529
+    uid: 8c4037b4f2e76a32056d40d3779acb21
+    search: []
+  - css: phone_iphone
+    code: 0xf1532
+    uid: f5dbc933299a579b3a1fb0702082c992
+    search: []
+  - css: phone_locked
+    code: 0xf1534
+    uid: a9632b639b4be0d71ca16c69a97c2820
+    search: []
+  - css: phone_missed
+    code: 0xf1537
+    uid: 70e14e0f78995311c22bb465bb35c11b
+    search: []
+  - css: phone_paused
+    code: 0xf1540
+    uid: 0092843b779fb4d9801c0fd898c9154a
+    search: []
+  - css: phonelink
+    code: 0xf1543
+    uid: 1e11d5868071596b976833f024ac770d
+    search: []
+  - css: phonelink_erase
+    code: 0xf1545
+    uid: afa125249a75a7326140d2b2cc301c34
+    search: []
+  - css: phonelink_lock
+    code: 0xf1547
+    uid: 9615c86e461b73ce2f1670aceff0b75d
+    search: []
+  - css: phonelink_off
+    code: 0xf1550
+    uid: 1a12244c7abdbbc0f5b17a66a18a077e
+    search: []
+  - css: phonelink_ring
+    code: 0xf1553
+    uid: 193394d953e956b94902e23708f3135b
+    search: []
+  - css: phonelink_setup
+    code: 0xf1555
+    uid: 7d333471e3d35c3f150eb2268c85e53a
+    search: []
+  - css: photo
+    code: 0xf1559
+    uid: 9bd4455b671b8faad01376a00a5e2f7f
+    search: []
+  - css: photo_album
+    code: 0xf1561
+    uid: 79eb7f54573b4ba497afc35a41f0cb06
+    search: []
+  - css: photo_camera
+    code: 0xf1563
+    uid: 8d412f99728de6ff468ab63f0af90aea
+    search: []
+  - css: photo_filter
+    code: 0xf1566
+    uid: 5a6babb397d35d7b3d87e1135ad51d65
+    search: []
+  - css: photo_library
+    code: 0xf1568
+    uid: 571dec803400087f149ae2441a9c12cb
+    search: []
+  - css: photo_size_select_actual
+    code: 0xf1570
+    uid: 39d764c095e98a606f2e40f475cde512
+    search: []
+  - css: photo_size_select_large
+    code: 0xf1572
+    uid: 7b2ad09200f183c7d58d1108792c8062
+    search: []
+  - css: photo_size_select_small
+    code: 0xf1575
+    uid: abdfbd9e4770a20fa1e23999e6300867
+    search: []
+  - css: picture_as_pdf
+    code: 0xf1578
+    uid: e223f7d2f51d5e488ba734952c792913
+    search: []
+  - css: picture_in_picture
+    code: 0xf1581
+    uid: 3912d4b9a59f670960933861f034f5e1
+    search: []
+  - css: picture_in_picture_alt
+    code: 0xf1583
+    uid: 95951c2f3fac094faa4daf9faefa17a8
+    search: []
+  - css: pie_chart
+    code: 0xf1585
+    uid: b14c9b0f55b191add34ba7cc2488a4df
+    search: []
+  - css: pie_chart_outlined
+    code: 0xf1587
+    uid: 98c8883b82c875c3c660291827a8b351
+    search: []
+  - css: pin_drop
+    code: 0xf1589
+    uid: e9e415be4de05dd7a977a5dac445be24
+    search: []
+  - css: place
+    code: 0xf1591
+    uid: c6627578c788203e59230fd86b275436
+    search: []
+  - css: play_arrow
+    code: 0xf1593
+    uid: a3db7958361388c3edc2c05dca204ee3
+    search: []
+  - css: play_circle_filled
+    code: 0xf1595
+    uid: 2dc974ad287cdeb3d46d8f55d9acf71f
+    search: []
+  - css: play_circle_outline
+    code: 0xf1597
+    uid: 6f81c782bf072a88bff4f51162daa299
+    search: []
+  - css: play_for_work
+    code: 0xf1599
+    uid: fe061b8fa53fa9a4ad3d4666edb794b1
+    search: []
+  - css: playlist_add
+    code: 0xf1601
+    uid: 3adf65eaea51a88f9c3a5fc219be5389
+    search: []
+  - css: playlist_add_check
+    code: 0xf1603
+    uid: d86c660494cea604e37b95769aa9b18c
+    search: []
+  - css: playlist_play
+    code: 0xf1605
+    uid: 5528c8af11781e91e7630482ad3330b1
+    search: []
+  - css: plus_one
+    code: 0xf1607
+    uid: 51b152b61803383f25bb6fee398b7723
+    search: []
+  - css: poll
+    code: 0xf1609
+    uid: 9be71dd7e89ce49522374e42237d91a8
+    search: []
+  - css: polymer
+    code: 0xf1611
+    uid: f42157cc0fe1ed15a389eb9ce1106c57
+    search: []
+  - css: pool
+    code: 0xf1613
+    uid: 2584fad298b6622b35ff1147a0c92901
+    search: []
+  - css: portable_wifi_off
+    code: 0xf1619
+    uid: 3876e550be40a302b5f35005962a495b
+    search: []
+  - css: portrait
+    code: 0xf1623
+    uid: 010a25415cf61fafe967ddc1dcf94a79
+    search: []
+  - css: power
+    code: 0xf1626
+    uid: 74f103e7ebc0d6cc068d491a1d827504
+    search: []
+  - css: power_input
+    code: 0xf1628
+    uid: 24a2a32c1f49507fc3251ff3f0d67729
+    search: []
+  - css: power_settings_new
+    code: 0xf1630
+    uid: 456269d7808904b960032630156fe808
+    search: []
+  - css: pregnant_woman
+    code: 0xf1632
+    uid: 58a56f05d12d8aecd7a12b345da27cd6
+    search: []
+  - css: present_to_all
+    code: 0xf1634
+    uid: 52bb3f6efb0e9ce9269d5d53e38aabf3
+    search: []
+  - css: print
+    code: 0xf1636
+    uid: d31ffaf52eeaf395bfb728381bdedee5
+    search: []
+  - css: priority_high
+    code: 0xf1638
+    uid: b7236dcb05fcbc27d0a94ab203af2261
+    search: []
+  - css: public
+    code: 0xf1640
+    uid: 3be28f66142b88c3543b83aac24ea876
+    search: []
+  - css: publish
+    code: 0xf1643
+    uid: da9db5d67d8cbd3218c0f74fe309f23e
+    search: []
+  - css: query_builder
+    code: 0xf1645
+    uid: d4f8b024a3137a1a725627e2ec3a9fee
+    search: []
+  - css: question_answer
+    code: 0xf1647
+    uid: d5f9be781307ba170cd419ebfb47fea1
+    search: []
+  - css: queue
+    code: 0xf1649
+    uid: e38cf63d6c9f1772f14bfb74052ccc75
+    search: []
+  - css: queue_music
+    code: 0xf1651
+    uid: aaf9c6987fe2849a3df0df34ce7a1750
+    search: []
+  - css: queue_play_next
+    code: 0xf1653
+    uid: 110905560da329c0ea6f798b94e1a503
+    search: []
+  - css: radio
+    code: 0xf1655
+    uid: 19aea7ce5625a587177e04b9361f3beb
+    search: []
+  - css: radio_button_checked
+    code: 0xf1657
+    uid: b0fdde0aafd799470296946b837a6f35
+    search: []
+  - css: radio_button_unchecked
+    code: 0xf1659
+    uid: 456e575f474d861ddee113e586ffec21
+    search: []
+  - css: rate_review
+    code: 0xf1661
+    uid: f12535eac650e8f6f7556c3fc5849767
+    search: []
+  - css: receipt
+    code: 0xf1663
+    uid: d96244b8d8e38cee2957add6bd457a33
+    search: []
+  - css: recent_actors
+    code: 0xf1666
+    uid: d6e1eacfb0a95aa60f7af063ae555a60
+    search: []
+  - css: record_voice_over
+    code: 0xf1669
+    uid: 6a6bda472aad052563c8a1b1a4a01ef7
+    search: []
+  - css: redeem
+    code: 0xf1671
+    uid: 0184b7c9437b54865f09c4e486ad5cff
+    search: []
+  - css: redo
+    code: 0xf1675
+    uid: facdd4ec3e6b99e4797159e78e7d50c0
+    search: []
+  - css: refresh
+    code: 0xf1677
+    uid: 29e4c384a2f3dcfa2b0015bb31085056
+    search: []
+  - css: remove
+    code: 0xf1679
+    uid: de5987c88a5421ab11984f646c09a235
+    search: []
+  - css: remove_circle
+    code: 0xf1681
+    uid: ef3c2915fca045694390b17d58a4cd39
+    search: []
+  - css: remove_circle_outline
+    code: 0xf1683
+    uid: 73bef5f9212f5d5ce27182aa2f30a474
+    search: []
+  - css: remove_from_queue
+    code: 0xf1685
+    uid: 4f0c7bb31739bba3260262f5e31340cf
+    search: []
+  - css: remove_red_eye
+    code: 0xf1687
+    uid: 4c5059e4620586826c9edc6ed4f6adf0
+    search: []
+  - css: remove_shopping_cart
+    code: 0xf1690
+    uid: d0637752ed36ea8943b4749669dbf513
+    search: []
+  - css: reorder
+    code: 0xf1693
+    uid: d47d64c2da656a10a598191ef343f4ef
+    search: []
+  - css: repeat
+    code: 0xf1695
+    uid: 6ae8da1f711ddcc03db4d46e62c36f92
+    search: []
+  - css: repeat_one
+    code: 0xf1697
+    uid: 7be41f897870058d6701711b7f4b05fa
+    search: []
+  - css: replay
+    code: 0xf1699
+    uid: f0ea43fc665e33eb600d76e541bdae8b
+    search: []
+  - css: replay_10
+    code: 0xf1701
+    uid: 903a98364be33657fc25454fcec4d76e
+    search: []
+  - css: replay_30
+    code: 0xf1705
+    uid: 4ec1afac587f37e4514e0111b576504f
+    search: []
+  - css: replay_5
+    code: 0xf1710
+    uid: e4ee20411dfefa8a03606baccfd05a08
+    search: []
+  - css: reply
+    code: 0xf1714
+    uid: 582520599c1742e915f9e47ca5856833
+    search: []
+  - css: reply_all
+    code: 0xf1716
+    uid: 31a231a96e79e2122d5eaef5d44f8dd4
+    search: []
+  - css: report
+    code: 0xf1718
+    uid: c8f4f027d1b40042a2a5c137809ff364
+    search: []
+  - css: report_problem
+    code: 0xf1720
+    uid: 3d0535be98d5163e6b28ae3597559d24
+    search: []
+  - css: restaurant
+    code: 0xf1722
+    uid: 835bce410edec458807d827b0a2b136c
+    search: []
+  - css: restaurant_menu
+    code: 0xf1724
+    uid: 37b78d4b18e18a0f04c47146c2e54eb8
+    search: []
+  - css: restore
+    code: 0xf1726
+    uid: ecaaecf7e6bf690f1e91812527e30134
+    search: []
+  - css: restore_page
+    code: 0xf1728
+    uid: 367872db40e0897f68450f819aab9e8b
+    search: []
+  - css: ring_volume
+    code: 0xf1731
+    uid: a98bc1881281bdd2bd8d35bbe9700ba6
+    search: []
+  - css: room
+    code: 0xf1734
+    uid: aeab4be20e8dfc9a7630738ab910c592
+    search: []
+  - css: room_service
+    code: 0xf1736
+    uid: c998ec6d5a31d7b3c979696df9a4e3d8
+    search: []
+  - css: rotate_90_degrees_ccw
+    code: 0xf1738
+    uid: 138c07a7c2aabdf7a1c3d4c4e0d57bf2
+    search: []
+  - css: rotate_left
+    code: 0xf1741
+    uid: e4b66f8fc51f1716e12c61c905b96722
+    search: []
+  - css: rotate_right
+    code: 0xf1744
+    uid: cc54a8f180e8391501c1120085ede748
+    search: []
+  - css: rounded_corner
+    code: 0xf1747
+    uid: 1ee344b90731a8f293055c13a218b0e8
+    search: []
+  - css: router
+    code: 0xf1750
+    uid: 786de3c6b0f58447980e98de968554e6
+    search: []
+  - css: rowing
+    code: 0xf1753
+    uid: 7d4a4fec374a31574a64f97284447c2f
+    search: []
+  - css: rss_feed
+    code: 0xf1756
+    uid: d4e988e4df06d2a01e0b91ac16dc79f2
+    search: []
+  - css: rv_hookup
+    code: 0xf1758
+    uid: db445dec88edf948552bd794c1d50fcf
+    search: []
+  - css: satellite
+    code: 0xf1761
+    uid: 034a7ce834f0c4c6834eda64a42a496f
+    search: []
+  - css: save
+    code: 0xf1763
+    uid: 2a5ab134af3be5a2c721857dd43b9dc5
+    search: []
+  - css: scanner
+    code: 0xf1765
+    uid: 1ae98eb6f9d9b185aefbeb4efe2a5fb8
+    search: []
+  - css: schedule
+    code: 0xf1767
+    uid: 41fce4cb5f9c4045946538436f568857
+    search: []
+  - css: school
+    code: 0xf1769
+    uid: 7433315d35a311b6f62f019a12f443b0
+    search: []
+  - css: screen_lock_landscape
+    code: 0xf1771
+    uid: da1abf239da3c0f286befd958e24b176
+    search: []
+  - css: screen_lock_portrait
+    code: 0xf1774
+    uid: 8e62f45c537c1c5685dff3f3472c1441
+    search: []
+  - css: screen_lock_rotation
+    code: 0xf1777
+    uid: 68798495ccbeb4a87c620cc862c11f5d
+    search: []
+  - css: screen_rotation
+    code: 0xf1780
+    uid: 4deddc8d88d64e84b0398ec508a9b5c1
+    search: []
+  - css: screen_share
+    code: 0xf1783
+    uid: a19b10a14fb45eee344fed644ea762d8
+    search: []
+  - css: sd_card
+    code: 0xf1785
+    uid: 088054c873450aa769cd1ea8464960b3
+    search: []
+  - css: sd_storage
+    code: 0xf1787
+    uid: d92a52b5bd288354409e7b36bb995ea8
+    search: []
+  - css: search
+    code: 0xf1789
+    uid: 4dffe5e59760395857c5e7cbf7e2d20a
+    search: []
+  - css: security
+    code: 0xf1791
+    uid: 82433b0fa8677df356e37b5d08e06f69
+    search: []
+  - css: select_all
+    code: 0xf1793
+    uid: 9474e37554e2388b7da8ca8119e3131c
+    search: []
+  - css: send
+    code: 0xf1796
+    uid: 33e246f3f2079b4119cd414914a96c00
+    search: []
+  - css: sentiment_dissatisfied
+    code: 0xf1798
+    uid: dedb5f383f780c032543327476815524
+    search: []
+  - css: sentiment_neutral
+    code: 0xf1801
+    uid: 3d1f90fffb3eb4f17375515b06ad6390
+    search: []
+  - css: sentiment_satisfied
+    code: 0x73
+    uid: 24f339a1393bceca402fb4c4d92b54a6
+    search: []
+  - css: sentiment_very_dissatisfied
+    code: 0xf1807
+    uid: 4f59634dbde92e5cab1dc69612119024
+    search: []
+  - css: sentiment_very_satisfied
+    code: 0xf1810
+    uid: a4d30e79986ba0acf74ce9e6edc43c55
+    search: []
+  - css: settings
+    code: 0xf1813
+    uid: b2270284ed38dffa576900a69b320faa
+    search: []
+  - css: settings_applications
+    code: 0xf1817
+    uid: 22109bddae809ffd3ecf72f6d8616c8c
+    search: []
+  - css: settings_backup_restore
+    code: 0xf1821
+    uid: a1d0a4ee40e88505ec9d4f0e79e557fc
+    search: []
+  - css: settings_bluetooth
+    code: 0xf1824
+    uid: 5c06caf0fcb91252eaede1f520987d86
+    search: []
+  - css: settings_brightness
+    code: 0xf1826
+    uid: cb0fcb0755a91a2279104a0b72708f98
+    search: []
+  - css: settings_cell
+    code: 0xf1829
+    uid: aa32064bc916194c5336531ad47b7bb7
+    search: []
+  - css: settings_ethernet
+    code: 0xf1831
+    uid: a518a9f14d09f85832689b8c08ac6074
+    search: []
+  - css: settings_input_antenna
+    code: 0xf1833
+    uid: 6376bc160a00f249e324b3e680e00cbe
+    search: []
+  - css: settings_input_component
+    code: 0xf1836
+    uid: cbd58944d64f0e3a47d7cc39b4850302
+    search: []
+  - css: settings_input_composite
+    code: 0xf1839
+    uid: 3f2e14f6b1bef46b2d77ea1f2c1c729a
+    search: []
+  - css: settings_input_hdmi
+    code: 0xf1842
+    uid: 5581a72de0364ed03b2d253f7ad15748
+    search: []
+  - css: settings_input_svideo
+    code: 0xf1844
+    uid: 5d3c2da76982e789d5d569e4e801abb7
+    search: []
+  - css: settings_overscan
+    code: 0xf1848
+    uid: 6e24a21823179fc6623dea6e9b9d0398
+    search: []
+  - css: settings_phone
+    code: 0xf1850
+    uid: ce16997090f88bcdd006dd8b1b229397
+    search: []
+  - css: settings_power
+    code: 0xf1853
+    uid: 29efe08a4b56a06d84d860b63bdc2914
+    search: []
+  - css: settings_remote
+    code: 0xf1856
+    uid: 229ba429dbec0d24df65a2212de8b298
+    search: []
+  - css: settings_system_daydream
+    code: 0xf1859
+    uid: 0f22219efaf9004217f73a862582219e
+    search: []
+  - css: settings_voice
+    code: 0xf1862
+    uid: d96624f1a472f8d325d71bcc7ffc9d35
+    search: []
+  - css: share
+    code: 0xf1865
+    uid: 0ef9cd9bbfceb82f2fffc065f5af6643
+    search: []
+  - css: shop
+    code: 0xf1868
+    uid: 95a2fdabfd0fda1494f0282a885bbb8c
+    search: []
+  - css: shop_two
+    code: 0xf1870
+    uid: 1af10c3bfcd30ae5a19de152a8bba9d5
+    search: []
+  - css: shopping_basket
+    code: 0xf1872
+    uid: 5ffbce69b475282f9069a122eac173ed
+    search: []
+  - css: shopping_cart
+    code: 0xf1875
+    uid: d2fb362ab2a935c30da2afd66a9dc1b7
+    search: []
+  - css: short_text
+    code: 0xf1878
+    uid: c10b3b42421b13bbcabdbb957fb5eadd
+    search: []
+  - css: show_chart
+    code: 0xf1880
+    uid: 6554979f258a7b6c5c96b11e7c854029
+    search: []
+  - css: shuffle
+    code: 0xf1882
+    uid: b7663bebc126debb4588c11b4cafcb6a
+    search: []
+  - css: signal_cellular_4_bar
+    code: 0xf1884
+    uid: f5deb81c612bf5b356eff5f1443beb7d
+    search: []
+  - css: signal_cellular_connected_no_internet_4_bar
+    code: 0xf1886
+    uid: 843f4b8320bbca9a0be280982dd09d0c
+    search: []
+  - css: signal_cellular_no_sim
+    code: 0xf1888
+    uid: bd1e114e53cddc67303416edc3ed4e18
+    search: []
+  - css: signal_cellular_null
+    code: 0xf1890
+    uid: ed87fb2162999d37aa83fb50f52a2f98
+    search: []
+  - css: signal_cellular_off
+    code: 0xf1892
+    uid: 784631931a5d935bf67aabb716c2d8f4
+    search: []
+  - css: signal_wifi_4_bar
+    code: 0xf1894
+    uid: 7a29753c05b35dbbf4dfa5640337b94b
+    search: []
+  - css: signal_wifi_4_bar_lock
+    code: 0xf1896
+    uid: b682362b78ae141580a37bd643a068bd
+    search: []
+  - css: signal_wifi_off
+    code: 0xf1899
+    uid: ce75fc1c562e3db02bf864a47dc2ab87
+    search: []
+  - css: sim_card
+    code: 0xf1901
+    uid: 34be7f411c441ff9c2d0c21cca98250f
+    search: []
+  - css: sim_card_alert
+    code: 0xf1903
+    uid: 62fceac05173b19b93edb40baba70fb7
+    search: []
+  - css: skip_next
+    code: 0xf1905
+    uid: 0f666a4a786b9ee9a39c7a6e493b9f93
+    search: []
+  - css: skip_previous
+    code: 0xf1907
+    uid: b04ccc85b664a1d8902b196f7f531c1c
+    search: []
+  - css: slideshow
+    code: 0xf1909
+    uid: 6db86ea9413fa1b0d642f487fa50c8f3
+    search: []
+  - css: slow_motion_video
+    code: 0xf1911
+    uid: 01ea67737b85b7b157b5db13188a5269
+    search: []
+  - css: smartphone
+    code: 0xf1914
+    uid: f8d155b8efc5e1891177808278483fbd
+    search: []
+  - css: smoke_free
+    code: 0xf1916
+    uid: c0d245046d1af27f8c69aacdb25093fb
+    search: []
+  - css: smoking_rooms
+    code: 0xf1919
+    uid: 99e0d89cd763a94cc43551b046b4d113
+    search: []
+  - css: sms
+    code: 0xf1922
+    uid: 9472d2ffde894cccda091544b5f5636a
+    search: []
+  - css: sms_failed
+    code: 0xf1924
+    uid: 8651022a935484a3e308a361389e9a55
+    search: []
+  - css: snooze
+    code: 0xf1926
+    uid: 7fa9c75330db185577abe5b0d290151f
+    search: []
+  - css: sort
+    code: 0xf1929
+    uid: c5caf024e8a634c1b2df8e6dcbf3be28
+    search: []
+  - css: sort_by_alpha
+    code: 0xf1931
+    uid: 453db6946f7a8e9df0755806a310d6bd
+    search: []
+  - css: spa
+    code: 0xf1933
+    uid: 40004c6932c066a9a108efda46358f72
+    search: []
+  - css: space_bar
+    code: 0xf1936
+    uid: 0cce52febb327046f7e68384447a91c8
+    search: []
+  - css: speaker
+    code: 0xf1938
+    uid: 1f4b6e08c9bc0f3b3794ddf3347c5044
+    search: []
+  - css: speaker_group
+    code: 0xf1941
+    uid: 46c49f45d7f88fab8e4e34f03de2b4d6
+    search: []
+  - css: speaker_notes
+    code: 0xf1944
+    uid: bd46dca7e8560b4fc8a46722067e60e1
+    search: []
+  - css: speaker_notes_off
+    code: 0xf1946
+    uid: f1e0256b3535242832f2d800e8d01d7a
+    search: []
+  - css: speaker_phone
+    code: 0xf1948
+    uid: 3f5ad7a7a7f2f12d2e3b46956f5c17c6
+    search: []
+  - css: spellcheck
+    code: 0xf1951
+    uid: e698bf51bf292f345ae0978abd3083b9
+    search: []
+  - css: star
+    code: 0xf1953
+    uid: a4cbef22bb105b753b1812bb4dbb954b
+    search: []
+  - css: star_border
+    code: 0xf1955
+    uid: 5a79eed97fae4b71456036d4c1692013
+    search: []
+  - css: star_half
+    code: 0xf1957
+    uid: f4e40c3fc8c109378f9c03b6a9dda973
+    search: []
+  - css: stars
+    code: 0xf1959
+    uid: 178b0836ed3805d37af64bf4c902005b
+    search: []
+  - css: stay_current_landscape
+    code: 0xf1961
+    uid: 7548657898c6be36f0c15189977c2d19
+    search: []
+  - css: stay_current_portrait
+    code: 0xf1963
+    uid: 1b8e73e9fa569e6fc8b77c025dda6dec
+    search: []
+  - css: stay_primary_landscape
+    code: 0xf1965
+    uid: 92534a68fb8d80cb187bbb6dc0c54191
+    search: []
+  - css: stay_primary_portrait
+    code: 0xf1967
+    uid: 9cc036663b40a43fa98a1824ac60627e
+    search: []
+  - css: stop
+    code: 0xf1969
+    uid: 6fdde26fcb4a86dd9f91f38fcec4c825
+    search: []
+  - css: stop_screen_share
+    code: 0xf1971
+    uid: 02ebca48c8932b46c37f404f337a1cc9
+    search: []
+  - css: storage
+    code: 0xf1974
+    uid: 203cfa1de60fbeecdd62039e9ddfa144
+    search: []
+  - css: store
+    code: 0xf1976
+    uid: abe5a8ddf0f76bf7855f962175a71c6d
+    search: []
+  - css: store_mall_directory
+    code: 0xf1978
+    uid: 9c3e1ecf508d99da1e5b514fcc204f39
+    search: []
+  - css: straighten
+    code: 0xf1980
+    uid: 7ba3777d9d98c31982829d0093c7bc23
+    search: []
+  - css: streetview
+    code: 0xf1982
+    uid: fee97968abb26da1508d4d4c35869b0f
+    search: []
+  - css: strikethrough_s
+    code: 0xf1985
+    uid: f24cd36212690d83ae6914cb62a4f678
+    search: []
+  - css: style
+    code: 0xf1989
+    uid: f78cbb181c1ba539b5323d6dbfbe2d98
+    search: []
+  - css: subdirectory_arrow_left
+    code: 0xf1992
+    uid: d7eb2b3235098f752b8249936aca7c42
+    search: []
+  - css: subdirectory_arrow_right
+    code: 0xf1994
+    uid: a0d0ae1c602b86645f14c357cd8c6574
+    search: []
+  - css: subject
+    code: 0xf1996
+    uid: 414700104a46dfef54353521e513533a
+    search: []
+  - css: subscriptions
+    code: 0xf1998
+    uid: 135e54389718ef2f69b37b14dfe6966f
+    search: []
+  - css: subtitles
+    code: 0xf2000
+    uid: 61d4ad3f4133b903df61567afe83d5ef
+    search: []
+  - css: subway
+    code: 0xf2002
+    uid: 018758a7e407722dd3561fec0909a302
+    search: []
+  - css: supervisor_account
+    code: 0xf2005
+    uid: 59577ef5e6074827966cf15667601b34
+    search: []
+  - css: surround_sound
+    code: 0xf2008
+    uid: 1625c79469d9bc77fd1ebb64b8d0f076
+    search: []
+  - css: swap_calls
+    code: 0xf2011
+    uid: c1eb130e4c2e6a209e80c2c67bcd99af
+    search: []
+  - css: swap_horiz
+    code: 0xf2013
+    uid: 11f68386bb7e17e5d1a13e5a97080ec1
+    search: []
+  - css: swap_vert
+    code: 0xf2015
+    uid: b9e4e86d40cccb0a0ee78576ecafd2e6
+    search: []
+  - css: swap_vertical_circle
+    code: 0xf2017
+    uid: 6a79f1233d8080d9cf712aa51810d15b
+    search: []
+  - css: switch_camera
+    code: 0xf2019
+    uid: 4e4c369ad3cfd2d96e75990bbf116190
+    search: []
+  - css: switch_video
+    code: 0xf2021
+    uid: 9bc9fffc37cd2d826d19a7baac6f044d
+    search: []
+  - css: sync
+    code: 0xf2023
+    uid: 6b5883a5c502373482dc792c9b537dfc
+    search: []
+  - css: sync_disabled
+    code: 0xf2025
+    uid: eed07791a1c724087f1e4014f71f702d
+    search: []
+  - css: sync_problem
+    code: 0xf2028
+    uid: d22a484753d52e4d33c9f582af7dd34f
+    search: []
+  - css: system_update
+    code: 0xf2031
+    uid: e6a53393506dcbd29dae29fb0679c54b
+    search: []
+  - css: system_update_alt
+    code: 0xf2033
+    uid: 1da34778aa980e667d6f2543f699e8e3
+    search: []
+  - css: tab
+    code: 0xf2035
+    uid: 865a70aa641486c4055ec0fe473dc038
+    search: []
+  - css: tab_unselected
+    code: 0xf2037
+    uid: 3601676b89fc8b2d878dccc269f3ddc7
+    search: []
+  - css: tablet
+    code: 0xf2040
+    uid: 1a009cb168bfaadf8ef6b1d495d18bce
+    search: []
+  - css: tablet_android
+    code: 0xf2042
+    uid: a5e7ca8ffad0dcb048d924c58d9dca2d
+    search: []
+  - css: tablet_mac
+    code: 0xf2044
+    uid: f704e40496ca9d3691c602cdf8ac1b9b
+    search: []
+  - css: tag_faces
+    code: 0xf2046
+    uid: abb6678e6660180ce27a487c465ea1ca
+    search: []
+  - css: tap_and_play
+    code: 0xf2049
+    uid: b13222bd59ea4fcf0fd0105ef07fd3c3
+    search: []
+  - css: terrain
+    code: 0xf2052
+    uid: e09593e876d5451e8e1955a1ce5b9a62
+    search: []
+  - css: text_fields
+    code: 0xf2054
+    uid: ca4cd8c35be13cdc09ad051455c61358
+    search: []
+  - css: text_format
+    code: 0xf2056
+    uid: 3cf5bcb805c8be7ce7d34175d8f2367c
+    search: []
+  - css: textsms
+    code: 0xf2058
+    uid: 79a7a10f197c1927dd44888ca3e7120c
+    search: []
+  - css: texture
+    code: 0xf2060
+    uid: 4fd86f30550e6f834e59bcba6878f1d9
+    search: []
+  - css: theaters
+    code: 0xf2062
+    uid: b10691faf57423ccc0121202d2b8df76
+    search: []
+  - css: thumb_down
+    code: 0xf2064
+    uid: 51414b8770a8c69e941c1f46bfa0ecb8
+    search: []
+  - css: thumb_up
+    code: 0xf2066
+    uid: 20ce67632aacfff70654129ab8cc098c
+    search: []
+  - css: thumbs_up_down
+    code: 0xf2068
+    uid: 9e665249a938eea2b4de56d087d4a470
+    search: []
+  - css: time_to_leave
+    code: 0xf2071
+    uid: 4bccf8a2b7053037960c41d1833dec0e
+    search: []
+  - css: timelapse
+    code: 0xf2074
+    uid: f08cba2eb5b82126989e07deb374f415
+    search: []
+  - css: timeline
+    code: 0xf2076
+    uid: 08155495a2730cca732becac67f009af
+    search: []
+  - css: timer
+    code: 0xf2079
+    uid: 2de52a661fda0ed6ae4d3232c1b2c62f
+    search: []
+  - css: timer_10
+    code: 0xf2082
+    uid: 530f914154eb0e38f5e72609e42d6eb2
+    search: []
+  - css: timer_3
+    code: 0xf2088
+    uid: 943e3af521aed05edcbe030eae2ceff6
+    search: []
+  - css: timer_off
+    code: 0xf2094
+    uid: ec5ab93028e5036b90878592d22b1f51
+    search: []
+  - css: title
+    code: 0xf2097
+    uid: 63964085bcda15e531a161440f3d9357
+    search: []
+  - css: toc
+    code: 0xf2099
+    uid: db2e5b3bf38026592583887311fed567
+    search: []
+  - css: today
+    code: 0xf2101
+    uid: 88d2f7c9f5205deb3b3df40d3f3586b7
+    search: []
+  - css: toll
+    code: 0xf2103
+    uid: f13ba019bc6ff1ef2a19baf52d6df0e9
+    search: []
+  - css: tonality
+    code: 0xf2106
+    uid: 32595b23ca652c6c41b972edad24cafa
+    search: []
+  - css: touch_app
+    code: 0xf2109
+    uid: 55d8f35f53cc54662ad7458781b842b4
+    search: []
+  - css: toys
+    code: 0xf2112
+    uid: 82550b31fac81bd88067b6e4694a35f9
+    search: []
+  - css: track_changes
+    code: 0xf2114
+    uid: b269db09dfb3a914bfbe3b50d87115e1
+    search: []
+  - css: traffic
+    code: 0xf2117
+    uid: 51e217d33c90520cbd39a00d7e45b9f0
+    search: []
+  - css: train
+    code: 0xf2121
+    uid: 5f3a4eba7c468d17a7e36c936a60b714
+    search: []
+  - css: tram
+    code: 0xf2124
+    uid: 02188ccf31f68b9393a90ad29aede676
+    search: []
+  - css: transfer_within_a_station
+    code: 0xf2127
+    uid: b2842d5b03a5ac2b26cd3dfbe71eb100
+    search: []
+  - css: transform
+    code: 0xf2130
+    uid: 59af65cd194ad470ee2eec3cee8374db
+    search: []
+  - css: translate
+    code: 0xf2132
+    uid: 84460dfda55e6e086be30687dd159d7c
+    search: []
+  - css: trending_down
+    code: 0xf2135
+    uid: 05fbfb6c8c5e27f7a1a8fcd654d18717
+    search: []
+  - css: trending_flat
+    code: 0xf2137
+    uid: 97ca1b80e95549140cd9ed2dfa1b8a48
+    search: []
+  - css: trending_up
+    code: 0xf2139
+    uid: a869aa5b1f1d3dadfdf39d9222c6e122
+    search: []
+  - css: tune
+    code: 0xf2141
+    uid: 11b58316d8ac4415965cbbb6a09f3047
+    search: []
+  - css: turned_in
+    code: 0xf2143
+    uid: a594d6bca45d0f59a082eaf9fc992fbe
+    search: []
+  - css: turned_in_not
+    code: 0xf2145
+    uid: 140003576b49c04993089745d0f48fd7
+    search: []
+  - css: tv
+    code: 0xf2147
+    uid: 58a86ca1cc9ca67846e627cde2750eec
+    search: []
+  - css: unarchive
+    code: 0xf2149
+    uid: d9ed6926524dd84984f2e3b27f3dee73
+    search: []
+  - css: undo
+    code: 0xf2151
+    uid: 4035aed352e79aa913905cb76071e812
+    search: []
+  - css: unfold_less
+    code: 0xf2153
+    uid: 8d4855b69863f48eee5dcd1e492331ac
+    search: []
+  - css: unfold_more
+    code: 0xf2155
+    uid: 686432d74896227553f3f21528c82f3c
+    search: []
+  - css: update
+    code: 0xf2157
+    uid: 20df4bd887638e2a04c76bc4c23977f8
+    search: []
+  - css: usb
+    code: 0xf2159
+    uid: d86469228d768b41e08f5d7af7a47b24
+    search: []
+  - css: verified_user
+    code: 0xf2162
+    uid: aece56f5aaf6c8aa83e7713969cfedcb
+    search: []
+  - css: vertical_align_bottom
+    code: 0xf2164
+    uid: 1ab9e73fcecf3661bd7981e17a2b491e
+    search: []
+  - css: vertical_align_center
+    code: 0xf2166
+    uid: d102e28bb97a11117b85f290ca81aa5b
+    search: []
+  - css: vertical_align_top
+    code: 0xf2168
+    uid: 27d106aece0430bafd715ace9c45fa44
+    search: []
+  - css: vibration
+    code: 0xf2170
+    uid: 9d77dd3f8a8a12cae9c1c35d65fb8c2a
+    search: []
+  - css: video_call
+    code: 0xf2172
+    uid: 500c8e884bbeb86f02ae28c4574814ab
+    search: []
+  - css: video_label
+    code: 0xf2174
+    uid: 790d48632649b25dc39244bec84678a8
+    search: []
+  - css: video_library
+    code: 0xf2176
+    uid: 9c51ee93bd70618020a28a6ef215b158
+    search: []
+  - css: videocam
+    code: 0xf2178
+    uid: da2ee4aad4dc2a964fe908d852c46527
+    search: []
+  - css: videocam_off
+    code: 0xf2180
+    uid: ca55545499474fdae02fbcfbc0ec731d
+    search: []
+  - css: videogame_asset
+    code: 0xf2182
+    uid: 46f8473be162608f189ed0d98ca97d83
+    search: []
+  - css: view_agenda
+    code: 0xf2185
+    uid: 955ddffaeec1142befb100001eaa403a
+    search: []
+  - css: view_array
+    code: 0xf2187
+    uid: 19d318bd50e96ff8aa8ccee5588561d2
+    search: []
+  - css: view_carousel
+    code: 0xf2189
+    uid: 788be24ae07bc3d4539a371de72831a8
+    search: []
+  - css: view_column
+    code: 0xf2191
+    uid: 3094f1332ec0ec466942cb3962b51952
+    search: []
+  - css: view_comfy
+    code: 0xf2193
+    uid: 65d1be341236eeac4ba9a5a4484c05d0
+    search: []
+  - css: view_compact
+    code: 0xf2196
+    uid: 3009ae7d08df41cdfd37928f908d1ed9
+    search: []
+  - css: view_day
+    code: 0xf2198
+    uid: e247525a7712da00328b7a6041d81193
+    search: []
+  - css: view_headline
+    code: 0xf2200
+    uid: fd1dcdf721bb41e702316de33566ffa9
+    search: []
+  - css: view_list
+    code: 0xf2202
+    uid: 10977ddc7d96373873ac51b22caa27ca
+    search: []
+  - css: view_module
+    code: 0xf2204
+    uid: 4b3f6c171b1528782df370ad29efdadc
+    search: []
+  - css: view_quilt
+    code: 0xf2206
+    uid: 7677a660c079abe5ae9e8bec02626a75
+    search: []
+  - css: view_stream
+    code: 0xf2208
+    uid: 1684c2c3c04d0230805eeffd8330c934
+    search: []
+  - css: view_week
+    code: 0xf2210
+    uid: 89391e984f01494db25b34ee4ddee3ce
+    search: []
+  - css: vignette
+    code: 0xf2213
+    uid: 71ca186fb8231b315da9e294993f687c
+    search: []
+  - css: visibility
+    code: 0xf2215
+    uid: 1fa886ec7daec6fd948b7c83064b9bdc
+    search: []
+  - css: visibility_off
+    code: 0xf2218
+    uid: 4d0e0a48ab862e68143543174c68c45e
+    search: []
+  - css: voice_chat
+    code: 0xf2222
+    uid: b51b80652a0969446713d153c5439dc6
+    search: []
+  - css: voicemail
+    code: 0xf2224
+    uid: 984fc0637008d2eaeb2a82e6c4d3751a
+    search: []
+  - css: volume_down
+    code: 0xf2227
+    uid: c0259be1286da44ceaefa01cbe0027d2
+    search: []
+  - css: volume_mute
+    code: 0xf2229
+    uid: 96e56d422cbfb65c01b0b3808863fda8
+    search: []
+  - css: volume_off
+    code: 0xf2231
+    uid: ee970735e773a93fb5a17eefb13a6792
+    search: []
+  - css: volume_up
+    code: 0xf2234
+    uid: f76a27e5bdc52e2f08ee56fd49679040
+    search: []
+  - css: vpn_key
+    code: 0xf2236
+    uid: 5164d4d14c71c2340bd9b3096fbf96ce
+    search: []
+  - css: vpn_lock
+    code: 0xf2238
+    uid: 016d5f3e7ccdce695b697869216ba80c
+    search: []
+  - css: wallpaper
+    code: 0xf2242
+    uid: 43789fe377eae980188120ce20467d12
+    search: []
+  - css: warning
+    code: 0xf2245
+    uid: db1d5199f54b1f1dea3a70f4f3ce768b
+    search: []
+  - css: watch
+    code: 0xf2247
+    uid: 09cc76a490b56a796db90fe1b2cb60ef
+    search: []
+  - css: watch_later
+    code: 0xf2249
+    uid: b9c37545d6948bd9e961a9a472f1da62
+    search: []
+  - css: wb_auto
+    code: 0xf2251
+    uid: 52ef5222d1022e84a68c9b8ce7fe6cee
+    search: []
+  - css: wb_cloudy
+    code: 0xf2253
+    uid: fc66b139e89b990c43d258ccbfbfe5a0
+    search: []
+  - css: wb_incandescent
+    code: 0xf2255
+    uid: 6830db4b737fe5488000f667826d2980
+    search: []
+  - css: wb_iridescent
+    code: 0xf2257
+    uid: 7dc09c139fd891377376b1c4e35fa72c
+    search: []
+  - css: wb_sunny
+    code: 0xf2259
+    uid: 969c05f502a83a6a3ef968f5d425c748
+    search: []
+  - css: wc
+    code: 0xf2262
+    uid: 7666f777e7328471269050d3e6369a6d
+    search: []
+  - css: web
+    code: 0xf2265
+    uid: 31bea6c98a243f5acc190b2158ff79eb
+    search: []
+  - css: web_asset
+    code: 0xf2267
+    uid: eb36161a1804396a223b56e2390a6892
+    search: []
+  - css: weekend
+    code: 0xf2269
+    uid: 5925dc2cd793a72e6bbe4313d6449f12
+    search: []
+  - css: whatshot
+    code: 0xf2272
+    uid: 2b3fe7347baa54bf2f95bc4da4c8f6d0
+    search: []
+  - css: widgets
+    code: 0xf2275
+    uid: 7f85dc488759130cd55bf15671f5920f
+    search: []
+  - css: wifi
+    code: 0xf2277
+    uid: 7a625c0725459ce8c3557bc9aecce50a
+    search: []
+  - css: wifi_lock
+    code: 0xf2279
+    uid: 78549d9c81b884f4a0a56661bde2d13b
+    search: []
+  - css: wifi_tethering
+    code: 0xf2281
+    uid: 5ebda9d85afb893965103c1aa039c731
+    search: []
+  - css: work
+    code: 0xf2283
+    uid: 6f9f56800554e8962c650836a15d63e7
+    search: []
+  - css: wrap_text
+    code: 0xf2285
+    uid: a05f900096203ead52bdb9ce9a7fdfd0
+    search: []
+  - css: youtube_searched_for
+    code: 0xf2287
+    uid: 8f363ffa9778c09191034df0f98a3165
+    search: []
+  - css: zoom_in
+    code: 0xf2289
+    uid: d23553c8a750f10ae87a639a3b3acc9c
+    search: []
+  - css: zoom_out
+    code: 0xf2292
+    uid: da2e09391dae25b624dd521c6e33fc5e
+    search: []
+  - css: zoom_out_map
+    code: 0xf2294
+    uid: 887022a39cdd3bd73eb057799dc22ed0
+    search: []
+
