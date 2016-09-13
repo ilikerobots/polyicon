@@ -1,3 +1,4 @@
+FONTS         += material-design-icons.font
 FONTS         += fontelico.font
 FONTS         += awesome-uni.font
 FONTS         += entypo

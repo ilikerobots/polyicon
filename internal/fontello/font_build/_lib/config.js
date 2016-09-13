@@ -163,7 +163,7 @@ module.exports = function fontConfig(clientConfig) {
   if (!_.isEmpty(clientConfig.name)) {
     fontname = String(clientConfig.name).replace(/[^a-z0-9\-_]+/g, '-');
   } else {
-    fontname = 'fontello';
+    fontname = 'my-iconset';
   }
 
   glyphsInfo = collectGlyphsInfo(clientConfig);
