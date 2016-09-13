@@ -10,7 +10,7 @@ var ko = require('knockout');
 //
 function reset_font() {
   N.app.fontName('');
-  N.app.cssPrefixText('icon-');
+  N.app.cssPrefixText('');
   N.app.cssUseSuffix(false);
   N.app.fontUnitsPerEm(1000);
   N.app.fontAscent(850);

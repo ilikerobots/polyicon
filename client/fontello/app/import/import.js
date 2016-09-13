@@ -50,7 +50,7 @@ function import_config(str, file) {
     var allocatedRefCode = (!maxRef) ? 0xe800 : utils.fixedCharCodeAt(maxRef.charRef) + 1;
 
     N.app.fontName(config.name || '');
-    N.app.cssPrefixText(String(config.css_prefix_text || 'icon-'));
+    N.app.cssPrefixText(String(config.css_prefix_text || ''));
     N.app.cssUseSuffix(config.css_use_suffix === true);
     N.app.hinting(config.hinting !== false);  // compatibility with old configs
 

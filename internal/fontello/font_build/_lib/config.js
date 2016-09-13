@@ -151,7 +151,7 @@ module.exports = function fontConfig(clientConfig) {
   //
 
   clientConfig.css_use_suffix   = Boolean(clientConfig.css_use_suffix);
-  clientConfig.css_prefix_text  = clientConfig.css_prefix_text || 'icon-';
+  clientConfig.css_prefix_text  = clientConfig.css_prefix_text || '';
   clientConfig.hinting          = (clientConfig.hinting !== false);
   clientConfig.units_per_em     = +clientConfig.units_per_em || 1000;
   clientConfig.ascent           = +clientConfig.ascent || 850;
@@ -190,7 +190,7 @@ module.exports = function fontConfig(clientConfig) {
     meta: {
       columns: 4, // Used by the demo page.
       // Set defaults if fields not exists in config
-      css_prefix_text: clientConfig.css_prefix_text || 'icon-',
+      css_prefix_text: clientConfig.css_prefix_text || '',
       css_use_suffix:  Boolean(clientConfig.css_use_suffix)
     },
     glyphs: glyphsInfo,
