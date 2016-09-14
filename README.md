@@ -15,6 +15,17 @@ your own svg art.
 Please report all issues on the [GitHub issue tracker](https://github.com/ilikerobots/polyicon/issues)
 including request for additional fonts.
 
+## API Mode
+
+To be documented.  
+
+The quick answer is to use [fontello-cli](https://github.com/paulyoung/fontello-cli)
+and set the `--host` option to `polyicon.com`.  Example to download a font:
+
+```sh
+./fontello-cli --config ~/Downloads/config.json  --host polyicon.com install
+```
+
 ## Authors
 
 - Mike Hoolehan ([ilikerobots](https://github.com/ilikerobots))

@@ -129,16 +129,15 @@ N.wire.once('navigate.done', { priority: -10 }, function page_setup() {
     });
   });
 
-  // TODO disabled polymer
   // Try to load config before everything (tweak priority)
-  // if (!_.isEmpty(N.runtime.page_data && N.runtime.page_data.sid)) {
-  //   N.app.apiSessionId = N.runtime.page_data.sid;
-  //   N.app.apiMode(true);
-  //   N.app.apiUrl(N.runtime.page_data.url || '');
-  //   N.wire.emit('import.obj', N.runtime.page_data.config);
-  // } else {
-  N.wire.emit('session_load');
-  //}
+  if (!_.isEmpty(N.runtime.page_data && N.runtime.page_data.sid)) {
+    N.app.apiSessionId = N.runtime.page_data.sid;
+    N.app.apiMode(true);
+    N.app.apiUrl(N.runtime.page_data.url || '');
+    N.wire.emit('import.obj', N.runtime.page_data.config);
+  } else {
+    N.wire.emit('session_load');
+  }
 
   //
   // Basic commands
