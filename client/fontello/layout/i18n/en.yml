@@ -1,5 +1,5 @@
 en-US:
-  title: TBD - Polymer iconset generator
+  title: PolyIcon - Polymer iconset generator
   description: Build custom polymer iconsets from popular webfonts.
   desc_long: >
     Build a Polymer custom iron-iconset-svg containing selected glyphs
