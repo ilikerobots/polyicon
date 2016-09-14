@@ -1,9 +1,9 @@
 PolyIcon - iron-iconset-svg generator
 =====================================
 
-[![Build Status](https://travis-ci.org/ilikerobots/fontello.png)](https://travis-ci.org/ilikerobots/fontello)
+[![Build Status](https://travis-ci.org/ilikerobots/polyicon.png)](https://travis-ci.org/ilikerobots/polyicon)
 
-website: [polyicon.com](http://polyicon.com/), help: [wiki](https://github.com/ilikerobots/fontello/wiki/Help)
+website: [polyicon.com](http://polyicon.com/), help: [wiki](https://github.com/ilikerobots/polyicon/wiki/Help)
 
 PolyIcon is a web-based generator of Polymer iron-iconset-svg elements.
 Customized iconset can be produced from not only Material Design Icons,
@@ -12,7 +12,7 @@ your own svg art.
 
 ## Contacts
  
-Please report all issues on the [GitHub issue tracker](https://github.com/ilikerobots/fontello/issues)
+Please report all issues on the [GitHub issue tracker](https://github.com/ilikerobots/polyicon/issues)
 including request for additional fonts.
 
 ## Authors
@@ -37,7 +37,7 @@ Many thanks to the authors of Fontello for their excellent work.
 ## License
 
 PolyIcon's code (all files, except fonts) is distributed under MIT license. See
-[LICENSE](https://github.com/ilikerobots/fontello/blob/master/LICENSE) file for details.
+[LICENSE](https://github.com/ilikerobots/polyicon/blob/master/LICENSE) file for details.
 
 Embedded fonts are distributed under their primary licenses (SIL OFL / CC BY / CC BY-SA, Apache 2.0).
 See fonts info on PolyIcon.com for credits & links to homepages. This info is also
