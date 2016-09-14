@@ -63,34 +63,12 @@ html.no-js(lang='en', itemscope, itemtype='http://schema.org/WebPage')
                   data-container='.layout__fixed'
                   data-delay='{"show":500,"hide":100}'
                 )
-                  //li: a(href="https://groups.google.com/group/fontello", target="_blank")= self.t('menu_discuss')
-                  //li: a(href="https://github.com/ilikerobots/polyicon/wiki/How-to-help", target="_blank")= self.t('menu_how_to_help')
                   li: a(href="https://github.com/ilikerobots/polyicon/issues", target="_blank")= self.t('menu_bugreports')
                   li: a(href='https://github.com/ilikerobots/polyicon/wiki/Help', target='_blank')= self.t('menu_help')
-
-              //li: a(href='https://github.com/ilikerobots/polyicon/wiki/Help', target='_blank')= self.t('menu_help')
-              //li: a(href="https://github.com/ilikerobots/polyicon#developers-api", target="_blank") API
-              //li: a(href="https://github.com/ilikerobots/polyicon", target="_blank") GitHub
-
-            //ul.nav.navbar-nav.hidden-sm
-              li: a.twitter-follow-button(href="https://twitter.com/puzrin", data-show-count="false", data-show-screen-name="false")= self.t('twitter_follow')
-              li: a.twitter-share-button(href="https://twitter.com/share", data-url="http://fontello.com", data-text="#{self.t('twitter_text')}")= self.t('twitter_share')
-              li.gplus
-                .g-plusone(data-size="medium")
 
             ul.nav.navbar-nav.navbar-right
               .btn-group(style="font-size: 28px")
                 li: a(href="https://github.com/ilikerobots/polyicon", target="_blank"): i.icon-github-circled
-              //li: a(
-                target='_blank',
-                href='https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=575L9QR4V5TNU',
-                data-content=self.t('menu_donate_help'),
-                data-placement='bottom',
-                data-trigger='hover',
-                data-container='.layout__fixed'
-                data-delay='{"show":500,"hide":100}'
-              //)._popover= self.t('menu_donate')
-
           .notifications
 
       .container
@@ -102,10 +80,7 @@ html.no-js(lang='en', itemscope, itemtype='http://schema.org/WebPage')
                 span.icon-bar
                 span.icon-bar
             .navbar-collapse.collapse.navbar-responsive-collapse(style="overflow:visible")
-              //- top toolbar/tabs
-              //.tabs-container.container
               != self.partial('@fontello.blocks.tabs')
-              //.toolbar-container.container
               != self.partial('@fontello.blocks.toolbar')
 
     != self.content

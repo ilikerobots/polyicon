@@ -6,7 +6,6 @@
       .preview-glyph-drop.form-group.form-group-sm(style="margin-top: 0px")
         span.icon(draggable="true" data-bind='attr: { "data-id": uid }, text: charRef, css: (font.fontname === "custom_icons") ? "font-custom_icons" : "font-fontello"')
         span.prefix(data-bind='visible: !$parent.cssUseSuffix(), text: $parent.cssPrefixText')
-        //input.glyph-name.form-control(data-bind='value: name', style="height: auto")
         input.glyph-name.form-control(data-bind='value: name')
         span.suffix(data-bind='visible: $parent.cssUseSuffix, text: $parent.cssPrefixText')
         a.remove.icon-remove(

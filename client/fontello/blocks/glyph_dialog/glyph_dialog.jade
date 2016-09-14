@@ -21,12 +21,6 @@
               label.col-sm-4.control-label(for='gopt__css_name')= self.t('css_name')
               .col-sm-4
                 input#gopt__css_name.form-control(type='text', value=self.css_name)
-            //.form-group
-              label.col-sm-4.control-label(for='gopt__hex_code')= self.t('hex_code')
-              .col-sm-4
-                .input-group
-                  span.input-group-addon 0x
-                  input#gopt__code.form-control(type='text', value=self.hex_code)
 
           fieldset.glyph-dialog__fieldset
             legend= self.t('fieldset_search')

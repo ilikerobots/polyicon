@@ -1,16 +1,5 @@
-//ul#tabs.nav.nav-tabs
-// li: a(data-toggle='tab', data-target='#selector')= self.t('selector')
-// li: a(data-bind="css: { disabled: !selectedCount() }, attr: { 'data-toggle': selectedCount() ? 'tab' : '' }",
-//       data-target='#names-editor')= self.t('names_editor')
-// li: a(data-bind="css: { disabled: !selectedCount() }, attr: { 'data-toggle': selectedCount() ? 'tab' : '' }",
-//       data-target='#codes-editor')= self.t('codes_editor')
-// li: a(href='https://github.com/ilikerobots/polyicon/wiki/Help', target='_blank'): strong= self.t('help')
-
 ul#tabs.nav.navbar-nav
   li: a(data-toggle='tab', data-target='#selector')= self.t('selector')
   li: a(data-bind="css: { disabled: !selectedCount() }, attr: { 'data-toggle': selectedCount() ? 'tab' : '' }",
   data-target='#names-editor')= self.t('names_editor')
-  //li: a(data-bind="css: { disabled: !selectedCount() }, attr: { 'data-toggle': selectedCount() ? 'tab' : '' }",
-  //data-target='#codes-editor')= self.t('codes_editor')
-  //li: a(href='https://github.com/ilikerobots/polyicon/wiki/Help', target='_blank'): strong= self.t('help')
 
