@@ -30,7 +30,9 @@ const POLYMER_FONT_TEMPLATE = _.template(fs.readFileSync(path.join(TEMPLATES_DIR
 
 
 _.forEach({
-  'demo.jade':              'demo.html',
+  'demo.jade':              'demo/index.html',
+  'index.jade':             'index.html',
+  'bower.jade':             'bower.json',
   //'css/css.jade':           'css/${FONTNAME}.css',
   //'css/css-ie7.jade':       'css/${FONTNAME}-ie7.css',
   //'css/css-codes.jade':     'css/${FONTNAME}-codes.css',
@@ -106,7 +108,10 @@ module.exports = co.wrap(function* fontWorker(taskInfo) {
     //eot:         path.join(taskInfo.tmpDir, 'font', `${fontname}.eot`),
     //woff:        path.join(taskInfo.tmpDir, 'font', `${fontname}.woff`),
     //woff2:       path.join(taskInfo.tmpDir, 'font', `${fontname}.woff2`),
-    polymer:     path.join(taskInfo.tmpDir, `${fontname}-iconset-svg`, `${fontname}-iconset-svg.html`)
+    //polymer:     path.join(taskInfo.tmpDir, `${fontname}-iconset-svg`, `${fontname}-iconset-svg.html`)
+    //bower:       path.join(taskInfo.tmpDir, 'bower.json'),
+    //demo:        path.join(taskInfo.tmpDir, 'demo', 'index.html'),
+    polymer:     path.join(taskInfo.tmpDir, `${fontname}-iconset-svg.html`)
   };
 
 
@@ -122,6 +127,7 @@ module.exports = co.wrap(function* fontWorker(taskInfo) {
   //
   yield rimraf(taskInfo.tmpDir);
   yield mkdirp(taskInfo.tmpDir);
+  yield mkdirp(path.join(taskInfo.tmpDir, 'demo'));
   //yield mkdirp(path.join(taskInfo.tmpDir, 'font'));
   //yield mkdirp(path.join(taskInfo.tmpDir, 'css'));
   yield mkdirp(path.join(taskInfo.tmpDir, `${fontname}-iconset-svg`));

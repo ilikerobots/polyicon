@@ -171,7 +171,8 @@ module.exports = function fontConfig(clientConfig) {
 
   if (_.isEmpty(glyphsInfo)) return null;
 
-  let defaultCopyright = 'Copyright (C) ' + new Date().getFullYear() + ' by original authors @ fontello.com';
+  let defaultCopyright = 'Copyright (C) ' + new Date().getFullYear() + ' by original authors @ polyicon.com, '
+                         + 'fontello.com';
 
   return {
     font: {
