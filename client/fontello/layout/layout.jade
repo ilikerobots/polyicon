@@ -29,9 +29,8 @@ html.no-js(lang='en', itemscope, itemtype='http://schema.org/WebPage')
         !{JSON.stringify(self.head.assets)},
         '!{self.apiPath.split(".").shift()}'
       );
-
-    if self.inject_header
-      != self.inject_header
+    if self.inject_headers
+      != self.inject_headers
 
   body
     .layout__fixed
