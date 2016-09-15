@@ -41,5 +41,5 @@ N.wire.once('navigate.done', { priority: 10 }, function load_social_buttons() {
 });
 
 N.wire.once('navigate.done', { priority: 10 }, function init_material() {
-  $.material.init()
+  $.material.init();
 });
