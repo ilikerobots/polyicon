@@ -21,8 +21,8 @@ ${font.copyright}
 @pseudoElement ${font.fontname}-iconset-svg
 @demo demo/index.html
 -->
-<link rel="import" href="./bower_components/iron-icon/iron-icon.html">
-<link rel="import" href="./bower_components/iron-iconset-svg/iron-iconset-svg.html">
+<link rel="import" href="../iron-icon/iron-icon.html">
+<link rel="import" href="../iron-iconset-svg/iron-iconset-svg.html">
 
 <iron-iconset-svg size="${font.ascent - font.descent}" name="${font.fontname}">
 <svg xmlns="http://www.w3.org/2000/svg">
