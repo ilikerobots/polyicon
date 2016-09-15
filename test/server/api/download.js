@@ -41,14 +41,13 @@ describe('API.download', function () {
 
         return Promise.all([
           JSZip.loadAsync(res.body)
-            .then(zip => zip.file(/polymer-iconset-[0-9a-f]+\/font\/fontello\.svg/)[0].async('string')),
+            .then(zip => zip.file(/polymer-iconset-[0-9a-f]+\/my-iconset-iconset-svg\.html/)[0].async('string')),
           JSZip.loadAsync(fixture)
-            .then(zip => zip.file(/polymer-iconset-[0-9a-f]+\/font\/fontello\.svg/)[0].async('string'))
+            .then(zip => zip.file(/polymer-iconset-[0-9a-f]+\/my-iconset-iconset-svg\.html/)[0].async('string'))
         ]);
       })
       .then(values => assert.strictEqual(values[0], values[1]));
   });
-
 
   it('with fontelico icon', function () {
     return Promise.resolve()
@@ -68,9 +67,9 @@ describe('API.download', function () {
 
         return Promise.all([
           JSZip.loadAsync(res.body)
-            .then(zip => zip.file(/polymer-iconset-[0-9a-f]+\/font\/fontello\.svg/)[0].async('string')),
+            .then(zip => zip.file(/polymer-iconset-[0-9a-f]+\/my-iconset-iconset-svg\.html/)[0].async('string')),
           JSZip.loadAsync(fixture)
-            .then(zip => zip.file(/polymer-iconset-[0-9a-f]+\/font\/fontello\.svg/)[0].async('string'))
+            .then(zip => zip.file(/polymer-iconset-[0-9a-f]+\/my-iconset-iconset-svg\.html/)[0].async('string'))
         ]);
       })
       .then(values => assert.strictEqual(values[0], values[1]));
