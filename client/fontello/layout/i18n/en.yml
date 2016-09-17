@@ -1,8 +1,8 @@
 en-US:
   title: PolyIcon - Polymer iconset generator
-  description: Build custom polymer iconsets from popular webfonts.
+  description: Build custom polymer icons and iconsets from popular webfonts.
   desc_long: >
-    Build a Polymer custom iron-iconset-svg containing selected glyphs
+    Build a Polymer custom iron-iconset-svg containing selected icons
     from popular webfont, or include your own vector art.
 
   menu_feedback: Feedback
@@ -22,7 +22,7 @@ en-US:
 
   twitter_follow: Follow
   twitter_share: Tweet
-  twitter_text: Fontello - icon webfonts generator, open source
+  twitter_text: Polyicon - open source Polymer icon builder
 
   nojs: This site will not work without javascript!
   nocookies: This site will not work if cookies are completely disabled.
