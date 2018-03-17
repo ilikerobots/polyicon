@@ -73,7 +73,8 @@ function ToolbarModel() {
   this.getConfig      = N.app.getConfig;
 
   this.fontName.subscribe(function (value) {
-    var cleared = String(value).toLowerCase().replace(/[^a-z0-9_\-]/g, '');
+    var cleared = String(value).replace(/[^A-Za-z0-9_]/g, '');
+    cleared = cleared.charAt(0).toUpperCase() + cleared.slice(1);
     if (cleared !== value) { N.app.fontName(cleared); }
   });
 }

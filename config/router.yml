@@ -28,4 +28,4 @@ router:
 
     core.static:
       "/{file}":
-        file: /favicon.ico|snippet.png/
+        file: /favicon.png|favicon.ico|snippet.png/

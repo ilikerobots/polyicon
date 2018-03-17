@@ -16,7 +16,7 @@ describe('HTTP alive', function () {
   it('/ HEAD', function (done) {
     request
       .head('/')
-      .expect('')
+      .expect({})
       .expect(200, done);
   });
 });

@@ -1,10 +1,9 @@
 en-US:
-  title: PolyIcon - Polymer iconset generator
-  description: Build custom polymer icons and iconsets from popular webfonts.
+  title: FlutterIcon - Flutter icon font generator
+  description: Build custom Flutter icon fonts from popular webfonts.
   desc_long: >
-    Build a Polymer custom iron-iconset-svg containing selected icons
-    from popular webfont, or include your own vector art.
-
+    Build a truetype font for use with Flutter with the necessary
+    Dart code to use within your apps.
   menu_feedback: Feedback
   menu_discuss: Ask in Google Groups
   menu_bugreports: Report bugs at Github
@@ -22,7 +21,7 @@ en-US:
 
   twitter_follow: Follow
   twitter_share: Tweet
-  twitter_text: Polyicon - open source Polymer icon builder
+  twitter_text: FlutterICon - open source Flutter icon font builder
 
   nojs: This site will not work without javascript!
   nocookies: This site will not work if cookies are completely disabled.

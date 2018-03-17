@@ -27,7 +27,7 @@ const exists     = Promise.promisify(require('level-exists'));
 function getFontId(versionHash, config) {
   let hash = crypto.createHash('md5');
 
-  hash.update('polymer-iconset' + versionHash);
+  hash.update('flutter-icons' + versionHash);
   hash.update(JSON.stringify(config));
 
   return hash.digest('hex');
@@ -72,7 +72,7 @@ module.exports = function (N, apiPath) {
       clientConfig: data.config,
       builderConfig,
       cwdDir: N.mainApp.root,
-      tmpDir: path.join(os.tmpDir(), 'polymer-iconset', `polymer-iconset-${data.fontId.substr(0, 8)}`),
+      tmpDir: path.join(os.tmpDir(), 'flutter-icons', `flutter-icons-${data.fontId.substr(0, 8)}`),
       timestamp: Date.now(),
       result: null,
       logger

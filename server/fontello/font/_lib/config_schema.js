@@ -9,7 +9,7 @@ module.exports = {
   additionalProperties: false,
   required: true,
   properties: {
-    name:             { type: 'string',   required: false, 'default': 'my-iconset' },
+    name:             { type: 'string',   required: false, 'default': 'MyFlutterApp' },
     css_prefix_text:  { type: 'string',   required: false, 'default': 'icon-' },
     css_use_suffix:   { type: 'boolean',  required: false, 'default': false },
     hinting:          { type: 'boolean',  required: false, 'default': false },

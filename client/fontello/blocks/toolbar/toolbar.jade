@@ -1,136 +1,129 @@
 //.container
 .navbar-form.navbar-left.hidden-sm.hidden-xs
 
-  li.form-group
-    //label.control-label( for="search" )= self.t('search')
-    input#search.form-control.col-sm-8.toolbar__search(
-      type='text',
-      placeholder='Search',
-      autocomplete='off'
-    )
-
-
-  div
-    a.search-permalink.btn.btn-link._popover(
-      data-bind="visible: searchMode(), attr: { 'href': '/#search=' + searchWord() }",
-      style='display:none',
-      data-content=self.t('search_permalink_help'),
-      data-placement='bottom',
-      data-trigger='hover',
-      data-container='.layout__fixed'
-      data-delay='{"show":500,"hide":100}'
-    )
-      i.icon-link
-  
-
-#toolbar.navbar-form.navbar-right
-  ul.nav
-    li.form-group.dropdown
-  
-      //- Hidden
-      input#toolbar__import(
-        name='file'
-        type='file'
-        style='position: absolute; left: -2000px'
-        data-on-change='import.start'
-      )
- 
     li.form-group
-      //label.control-label( for="result-fontname" )= 'Iconset Name'
-      input#result-fontname.form-control._popover(
-        placeholder=self.t('file_name_placeholder'),
-        autocomplete='off',
-        pattern='[a-z0-9_\-]*',
-        data-bind='value: fontName',
+        //label.control-label( for="search" )= self.t('search')
+        input#search.form-control.col-sm-8.toolbar__search(
+        type='text',
+        placeholder='Search',
+        autocomplete='off'
         )
-      p.help-block=self.t('file_name_help')
- 
-    .btn-group(data-bind='visible: apiMode() && apiUrl()', style='display:none')
-      //- API mode, with URL - `Export font` button
-      button.btn.btn-warning.btn-raised.disabled.navbar-btn(
-        data-on-click='api.export',
-        data-bind='css: { disabled: !selectedCount() }'): strong
-        i.icon-download(data-bind='visible: !saving()')
-        i.icon-load.animate-spin(style='display:none', data-bind='visible: saving()')
-        span.hidden-xs.hidden-sm
-          |  
-        = self.t('export')
-        |  (
-        span#selected-glyphs-count(data-bind='text: selectedCount()') 0
-        | )
-      button.btn.btn-danger.disabled.dropdown-toggle.navbar-btn(
-        data-toggle='dropdown',
-        data-bind='css: { disabled: !selectedCount() }'
-        )
-          span.caret
-      ul.dropdown-menu
-        li: a(href='#' data-on-click='build_font')= self.t('download_webfont')
-        li: a(download='config.json'
-          data-bind='attr: { href: "data:application/octet-stream," + encodeURIComponent(JSON.stringify(getConfig(), null, "  ")) } '
-        )= self.t('download_config')
-  
-  
-    .btn-group(data-bind='visible: apiMode() && !apiUrl()', style='display:none; margin:0; float:right;')
-      //- API mode, without URL - `Save session` button
-      button.btn.btn-warning.btn-raised.disabled.navbar-btn(
-        data-on-click='api.update',
-        data-bind='css: {disabled: !selectedCount()}'): strong
-        i.icon-download(data-bind='visible: !saving()')
-        i.icon-load.animate-spin(style='display:none', data-bind='visible: saving()')
-        span.hidden-xs.hidden-sm
-          |  
-        = self.t('save')
-        |  (
-        span#selected-glyphs-count(data-bind='text: selectedCount()') 0
-        | )
-      li.dropdown.btn.btn-primary.btn-raised.disabled.dropdown-toggle(data-toggle='dropdown' data-bind='css: { disabled: !selectedCount() }')
-        span.icon-settings
-      ul.dropdown-menu
-        li: a(href='#' data-on-click='build_font')= self.t('download_webfont')
-        li: a(download='config.json'
-          data-bind='attr: { href: "data:application/octet-stream," + encodeURIComponent(JSON.stringify(getConfig(), null, "  ")) } '
-        )= self.t('download_config')
 
-        
-  
-    //- Show button, depending on mode
-    .btn-group(data-bind='visible: !apiMode()', style="margin:0; float:right;")
-      //- Standard mode - `Download` button
-      button.btn.btn-success.btn-raised.disabled(
-        data-on-click='build_font',
-        data-bind='css: {disabled: !selectedCount()}'): strong
-        i.icon-download(data-bind='visible: !building()')
-        i.icon-load.animate-spin(style='display:none', data-bind='visible: building()')
-        span.hidden-xs.hidden-sm
-          |  
-          = self.t('download_webfont')
-        |  (
-        span#selected-glyphs-count(data-bind='text: selectedCount()') 0
-        | )
-      li.dropdown.btn.btn-primary.btn-raised.disabled.dropdown-toggle(data-toggle='dropdown' data-bind='css: { disabled: false }')
-        span.icon-settings
-      ul.dropdown-menu
-        li: a(download='config.json'
-          data-bind='attr: { href: "data:application/octet-stream," + encodeURIComponent(JSON.stringify(getConfig(), null, "  ")) } '
-        )= self.t('download_config')
-        li: a(
-        href='#',
-        onClick='document.getElementById("toolbar__import").click()'
-        data-content=self.t('menu_import_help'),
-        data-placement='left',
+
+    div
+        a.search-permalink.btn.btn-link._popover(
+        data-bind="visible: searchMode(), attr: { 'href': '/#search=' + searchWord() }",
+        style='display:none',
+        data-content=self.t('search_permalink_help'),
+        data-placement='bottom',
         data-trigger='hover',
         data-container='.layout__fixed'
         data-delay='{"show":500,"hide":100}'
-        )._popover= self.t('menu_import')
-        li.divider
-        li: a(href='#', data-on-click='cmd:reset_selected')= self.t('menu_unselect_all')
-        li: a(href='#', data-on-click='cmd:reset_all')= self.t('menu_reset_all')
-        li.divider
-        li.dropdown-header="Icon size"
-        .form-group.hidden-xs.hidden-sm(style="margin-top:0px; margin-bottom: 0px;")
-          input#glyph-size-slider(
-            type='range',
-            data-bind='value: fontSize, valueUpdate: "input", attr: { min: fontSizeMin, max: fontSizeMax }'
-          )
-          #glyph-size-value.toolbar__size-indicator(data-bind="text: fontSize() + 'px'")
+        )
+            i.icon-link
+
+
+#toolbar.navbar-form.navbar-right
+    ul.nav
+        li.form-group.dropdown
+
+            //- Hidden
+            input#toolbar__import(
+            name='file'
+            type='file'
+            style='position: absolute; left: -2000px'
+            data-on-change='import.start'
+            )
+
+        li.form-group
+            //label.control-label( for="result-fontname" )= 'Iconset Name'
+            input#result-fontname.form-control._popover(
+            placeholder=self.t('file_name_placeholder'),
+            autocomplete='off',
+            pattern='[A-Z][A-Za-z0-9_]*',
+            data-bind='value: fontName',
+            )
+            p.help-block=self.t('file_name_help')
+
+        .btn-group(data-bind='visible: apiMode() && apiUrl()', style='display:none')
+            //- API mode, with URL - `Export font` button
+            button.btn.btn-warning.btn-raised.disabled.navbar-btn(
+            data-on-click='api.export',
+            data-bind='css: { disabled: !selectedCount() }'): strong
+                i.icon-download(data-bind='visible: !saving()')
+                i.icon-load.animate-spin(style='display:none', data-bind='visible: saving()')
+                span.hidden-xs.hidden-sm() = #{self.t('export')}
+                   span#selected-glyphs-count(data-bind='text: selectedCount()') 0
+            button.btn.btn-danger.disabled.dropdown-toggle.navbar-btn(
+            data-toggle='dropdown',
+            data-bind='css: { disabled: !selectedCount() }'
+            )
+                span.caret
+            ul.dropdown-menu
+                li: a(href='#' data-on-click='build_font')= self.t('download_webfont')
+                li: a(download='config.json'
+                data-bind='attr: { href: "data:application/octet-stream," + encodeURIComponent(JSON.stringify(getConfig(), null, "  ")) } '
+                )= self.t('download_config')
+
+
+        .btn-group(data-bind='visible: apiMode() && !apiUrl()', style='display:none; margin:0; float:right;')
+            //- API mode, without URL - `Save session` button
+            button.btn.btn-warning.btn-raised.disabled.navbar-btn(
+            data-on-click='api.update',
+            data-bind='css: {disabled: !selectedCount()}'): strong
+                i.icon-download(data-bind='visible: !saving()')
+                i.icon-load.animate-spin(style='display:none', data-bind='visible: saving()')
+                span.hidden-xs.hidden-sm
+                | = self.t('save')
+                |  (
+                span#selected-glyphs-count(data-bind='text: selectedCount()') 0
+                | )
+            li.dropdown.btn.btn-primary.btn-raised.disabled.dropdown-toggle(data-toggle='dropdown' data-bind='css: { disabled: !selectedCount() }')
+                span.icon-settings
+            ul.dropdown-menu
+                li: a(href='#' data-on-click='build_font')= self.t('download_webfont')
+                li: a(download='config.json'
+                data-bind='attr: { href: "data:application/octet-stream," + encodeURIComponent(JSON.stringify(getConfig(), null, "  ")) } '
+                )= self.t('download_config')
+
+
+
+        //- Show button, depending on mode
+        .btn-group(data-bind='visible: !apiMode()', style="margin:0; float:right;")
+            //- Standard mode - `Download` button
+            button.btn.btn-success.btn-raised.disabled(
+            data-on-click='build_font',
+            data-bind='css: {disabled: !selectedCount()}'): strong
+                i.icon-download(data-bind='visible: !building()')
+                i.icon-load.animate-spin(style='display:none', data-bind='visible: building()')
+                span.hidden-xs.hidden-sm #{self.t('download_webfont')}
+                |  (
+                span#selected-glyphs-count(data-bind='text: selectedCount()') 0
+                | )
+            li.dropdown.btn.btn-primary.btn-raised.disabled.dropdown-toggle(data-toggle='dropdown' data-bind='css: { disabled: false }')
+                span.icon-settings
+            ul.dropdown-menu
+                li: a(download='config.json'
+                data-bind='attr: { href: "data:application/octet-stream," + encodeURIComponent(JSON.stringify(getConfig(), null, "  ")) } '
+                )= self.t('download_config')
+                li: a(
+                href='#',
+                onClick='document.getElementById("toolbar__import").click()'
+                data-content=self.t('menu_import_help'),
+                data-placement='left',
+                data-trigger='hover',
+                data-container='.layout__fixed'
+                data-delay='{"show":500,"hide":100}'
+                )._popover= self.t('menu_import')
+                li.divider
+                li: a(href='#', data-on-click='cmd:reset_selected')= self.t('menu_unselect_all')
+                li: a(href='#', data-on-click='cmd:reset_all')= self.t('menu_reset_all')
+                li.divider
+                li.dropdown-header="Icon size"
+                .form-group.hidden-xs.hidden-sm(style="margin-top:0px; margin-bottom: 0px;")
+                    input#glyph-size-slider(
+                    type='range',
+                    data-bind='value: fontSize, valueUpdate: "input", attr: { min: fontSizeMin, max: fontSizeMax }'
+                    )
+                    #glyph-size-value.toolbar__size-indicator(data-bind="text: fontSize() + 'px'")
 

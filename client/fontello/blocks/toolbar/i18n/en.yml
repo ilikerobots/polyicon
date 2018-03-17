@@ -4,9 +4,9 @@ en-US:
   save: Save session
   export: Export Iconset
 
-  file_name_placeholder: my-iconset
+  file_name_placeholder: MyFlutterApp
   file_name_help: |
-    Lowercase a-z, digits, - and _
+    Use a ValidDartClassName
 
   search: Search
   search_permalink_help: Permanent link to these search results

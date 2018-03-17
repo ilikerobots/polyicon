@@ -161,9 +161,9 @@ module.exports = function fontConfig(clientConfig) {
   //
 
   if (!_.isEmpty(clientConfig.name)) {
-    fontname = String(clientConfig.name).replace(/[^a-z0-9\-_]+/g, '-');
+    fontname = String(clientConfig.name).replace(/[^A-Za-z0-9_]+/g, '-');
   } else {
-    fontname = 'my-iconset';
+    fontname = 'MyFlutterApp';
   }
 
   glyphsInfo = collectGlyphsInfo(clientConfig);
@@ -171,7 +171,7 @@ module.exports = function fontConfig(clientConfig) {
 
   if (_.isEmpty(glyphsInfo)) return null;
 
-  let defaultCopyright = 'Copyright (C) ' + new Date().getFullYear() + ' by original authors @ polyicon.com, '
+  let defaultCopyright = 'Copyright (C) ' + new Date().getFullYear() + ' by original authors @ fluttericon.com, '
                          + 'fontello.com';
 
   return {

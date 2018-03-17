@@ -18,7 +18,7 @@ html.no-js(lang='en', itemscope, itemtype='http://schema.org/WebPage')
         link(rel='stylesheet', href=cssPath)
 
     //- the fav and touch icons
-    link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+    link(rel="shortcut icon", href="/favicon.png")
 
     link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700", type="text/css")
     link(rel="stylesheet", href="//fonts.googleapis.com/icon?family=Material+Icons", type="text/css")
@@ -37,7 +37,7 @@ html.no-js(lang='en', itemscope, itemtype='http://schema.org/WebPage')
       nav.layout__navbar.navbar.navbar-inverse.navbar-static-top
         .container
           .navbar-header
-            button.navbar-toggle(
+            button.navbar-toggle.hidden(
               data-toggle='collapse',
               data-target='.navbar-collapse',
               type='button'
@@ -50,20 +50,20 @@ html.no-js(lang='en', itemscope, itemtype='http://schema.org/WebPage')
 
           //- top menu
           .navbar-collapse.collapse
-            ul.nav.navbar-nav
-              li.dropdown
-                a.dropdown-toggle(data-toggle='dropdown', href='#')
-                  = self.t('menu_feedback')
-                  b.caret
-                ul.dropdown-menu._popover(
-                  data-content=self.t('menu_bugreports_help'),
-                  data-placement='right',
-                  data-trigger='hover',
-                  data-container='.layout__fixed'
-                  data-delay='{"show":500,"hide":100}'
-                )
-                  li: a(href="https://github.com/ilikerobots/polyicon/issues", target="_blank")= self.t('menu_bugreports')
-                  li: a(href='https://github.com/ilikerobots/polyicon/wiki/Help', target='_blank')= self.t('menu_help')
+            //ul.nav.navbar-nav
+            //  li.dropdown
+            //    a.dropdown-toggle(data-toggle='dropdown', href='#')
+            //      = self.t('menu_feedback')
+            //      b.caret
+            //    ul.dropdown-menu._popover(
+            //      data-content=self.t('menu_bugreports_help'),
+            //      data-placement='right',
+            //      data-trigger='hover',
+            //      data-container='.layout__fixed'
+            //      data-delay='{"show":500,"hide":100}'
+            //    )
+            //      li: a(href="https://github.com/ilikerobots/fluttericon/issues", target="_blank")= self.t('menu_bugreports')
+            //      li: a(href='https://github.com/ilikerobots/fluttericon/wiki/Help', target='_blank')= self.t('menu_help')
 
             ul.nav.navbar-nav.navbar-right
               .btn-group(style="font-size: 28px")

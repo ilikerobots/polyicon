@@ -1,24 +1,350 @@
 {
+  "name": "MyFlutterIconFont",
+  "css_prefix_text": "",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
   "glyphs": [
     {
-      "search": [
-        "1456772478_12.file-copy"
-      ],
-      "svg": {
-        "width": 1000,
-        "path": "M770.8 979.2H229.2C183.1 979.2 145.8 941.9 145.8 895.8V104.2C145.8 58.1 183.1 20.8 229.2 20.8H624.4C624.5 20.8 624.5 20.8 624.6 20.8H625 625C631.7 20.8 637.4 24.2 641.2 29.1L845.9 233.8C850.8 237.6 854.2 243.3 854.2 250L854.2 250V250.4C854.2 250.5 854.2 250.5 854.2 250.5V895.8C854.2 941.9 816.9 979.2 770.8 979.2ZM645.8 91.3V229.2H783.7L645.8 91.3ZM812.5 270.8H625C613.5 270.8 604.2 261.5 604.2 250V62.5H229.2C206.2 62.5 187.5 81.2 187.5 104.2V895.8C187.5 918.8 206.2 937.5 229.2 937.5H770.8C793.8 937.5 812.5 918.8 812.5 895.8V270.8ZM687.5 812.5H312.5C301 812.5 291.7 803.2 291.7 791.7 291.7 780.2 301 770.8 312.5 770.8H687.5C699 770.8 708.3 780.2 708.3 791.7 708.3 803.2 699 812.5 687.5 812.5ZM687.5 645.8H312.5C301 645.8 291.7 636.5 291.7 625 291.7 613.5 301 604.2 312.5 604.2H687.5C699 604.2 708.3 613.5 708.3 625 708.3 636.5 699 645.8 687.5 645.8ZM687.5 479.2H312.5C301 479.2 291.7 469.9 291.7 458.3 291.7 446.8 301 437.5 312.5 437.5H687.5C699 437.5 708.3 446.8 708.3 458.3 708.3 469.9 699 479.2 687.5 479.2Z"
-      },
-      "selected": true,
-      "src": "custom_icons",
+      "uid": "88f6d42179107747b63d9847e2444e71",
+      "css": "airline_seat_individual_suite",
+      "code": 59393,
+      "src": "material"
+    },
+    {
+      "uid": "c522ed4c5ea598b0e3f0a5afc50a2816",
+      "css": "class",
+      "code": 59394,
+      "src": "material"
+    },
+    {
+      "uid": "31c3b3597f9afa4b92eab953fc00c150",
+      "css": "backspace",
+      "code": 59395,
+      "src": "material"
+    },
+    {
+      "uid": "fe0a068b93408b588b322c0e7653f21f",
+      "css": "airline_seat_legroom_normal",
+      "code": 59396,
+      "src": "material"
+    },
+    {
+      "uid": "01883ee97be852da18a1d0ffff28fe4f",
+      "css": "airline_seat_flat_angled",
       "code": 59397,
-      "css": "1456772478_12.file-copy",
-      "uid": "653b967a4c2850d6b09a7f29cf571e31"
+      "src": "material"
+    },
+    {
+      "uid": "a1a42e81921d847e58d7ce1e17c7db50",
+      "css": "group_add",
+      "code": 59400,
+      "src": "material"
+    },
+    {
+      "uid": "862d4faacb164c0412cb3249d43d5d39",
+      "css": "FSDFt-shirt",
+      "code": 59401,
+      "src": "linecons"
+    },
+    {
+      "uid": "db0ced95901bc474d8550cefae38f870",
+      "css": "content_paste",
+      "code": 59402,
+      "src": "material"
+    },
+    {
+      "uid": "c42cc8614419b562885e3bf4319df490",
+      "css": "chat",
+      "code": 59403,
+      "src": "material"
+    },
+    {
+      "uid": "f3fcaa1bc1489844ef7e5a378905d9c6",
+      "css": "delete_forever",
+      "code": 59404,
+      "src": "material"
+    },
+    {
+      "uid": "a404c1624feb7ff3d659e66131799f1f",
+      "css": "cast",
+      "code": 59405,
+      "src": "material"
+    },
+    {
+      "uid": "bdc4fd84f3c2b04f7e2f0b61f1f8e995",
+      "css": "cast_connected",
+      "code": 59406,
+      "src": "material"
+    },
+    {
+      "uid": "e11ab94dbc769068075eb4ae15839d07",
+      "css": "airplay",
+      "code": 59407,
+      "src": "material"
+    },
+    {
+      "uid": "bee5c37c73cc9a26c5a42fb70f14db35",
+      "css": "contact_mail",
+      "code": 59408,
+      "src": "material"
+    },
+    {
+      "uid": "af05e9a046b7ea6e6fe5be07675ef0e8",
+      "css": "clear_all",
+      "code": 59409,
+      "src": "material"
+    },
+    {
+      "uid": "a161638dea408d85ee26092048657318",
+      "css": "battery_full",
+      "code": 59410,
+      "src": "material"
+    },
+    {
+      "uid": "f3a92ff354e525e78fae6ee1b289a3b1",
+      "css": "attachment",
+      "code": 59411,
+      "src": "material"
+    },
+    {
+      "uid": "ffff30e34cad5adeec4d8a07aa7143c2",
+      "css": "border_all",
+      "code": 59412,
+      "src": "material"
+    },
+    {
+      "uid": "9c4e2f27e9743f41a9a2591cdceec4d7",
+      "css": "fiber_pin",
+      "code": 59413,
+      "src": "material"
+    },
+    {
+      "uid": "3e89ed7a1e6956c7e3ee6be343c89a4a",
+      "css": "arrow_upward",
+      "code": 59414,
+      "src": "material"
+    },
+    {
+      "uid": "baa89ab50d120e5123351b961555e55c",
+      "css": "brightness_auto",
+      "code": 59415,
+      "src": "material"
+    },
+    {
+      "uid": "182232959c2c3f8f2670e11c467385ca",
+      "css": "brightness_medium",
+      "code": 59416,
+      "src": "material"
+    },
+    {
+      "uid": "7f83bf676ae62ed191cee23968d6afc9",
+      "css": "fullscreen_exit",
+      "code": 59417,
+      "src": "material"
+    },
+    {
+      "uid": "4b60bc7b3645b13fd738a1831b5d34ec",
+      "css": "child_friendly",
+      "code": 59418,
+      "src": "material"
+    },
+    {
+      "uid": "65b38892a106dca1e9c50fefb427d963",
+      "css": "compare_arrows",
+      "code": 59419,
+      "src": "material"
+    },
+    {
+      "uid": "1dcd2b2148b7f086a4eb47f6a746bdee",
+      "css": "unlink",
+      "code": 61735,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "84cf1fcc3fec556e7eaeb19679ca2dc9",
+      "css": "star-half-alt",
+      "code": 61731,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "078fec38562c3f83a1201a908040c141",
+      "css": "emo-sunglasses",
+      "code": 59420,
+      "src": "fontelico"
+    },
+    {
+      "uid": "1400d5103edd2fa6d2d61688fee79a5a",
+      "css": "ok-squared",
+      "code": 61770,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "0225785643202c9bddf6feba6fd86687",
+      "css": "hourglass_full",
+      "code": 59421,
+      "src": "material"
+    },
+    {
+      "uid": "98e6568e29d697815985daec65074bd3",
+      "css": "call_missed_outgoing",
+      "code": 59422,
+      "src": "material"
+    },
+    {
+      "uid": "be3b4e5f5525071035e10b303c2a4e24",
+      "css": "border_top",
+      "code": 59423,
+      "src": "material"
+    },
+    {
+      "uid": "c385e93980fe5148a1f8891426086d06",
+      "css": "battery_std",
+      "code": 59424,
+      "src": "material"
+    },
+    {
+      "uid": "0ef9cd9bbfceb82f2fffc065f5af6643",
+      "css": "share",
+      "code": 59425,
+      "src": "material"
+    },
+    {
+      "uid": "83f6bdcc197c77417046c1951ac9734b",
+      "css": "aspect_ratio",
+      "code": 59427,
+      "src": "material"
+    },
+    {
+      "uid": "e172e45b96902b3b60df8622dfc9bc47",
+      "css": "directions_boat",
+      "code": 59428,
+      "src": "material"
+    },
+    {
+      "uid": "2c95002db8304b1e7cdb2b34f44c2fe3",
+      "css": "arrow_drop_up",
+      "code": 59429,
+      "src": "material"
+    },
+    {
+      "uid": "1b1a592d33fa26c37926cbe840eb60b8",
+      "css": "snapchat-ghost",
+      "code": 62124,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "9bf3d984043fadadf564c77ddaeaacf5",
+      "css": "blur_on",
+      "code": 59430,
+      "src": "material"
+    },
+    {
+      "uid": "22a893e7725504a4a3b8905fb20cac53",
+      "css": "account_circle",
+      "code": 59431,
+      "src": "material"
+    },
+    {
+      "uid": "f6f259a0c6c3af2f14b6942d4003a558",
+      "css": "adb",
+      "code": 59432,
+      "src": "material"
+    },
+    {
+      "uid": "34b1fe24d083539fd5d40ab2e57322b4",
+      "css": "add",
+      "code": 59433,
+      "src": "material"
+    },
+    {
+      "uid": "1f946f1677e2320edbdcfc40d3eef556",
+      "css": "add_a_photo",
+      "code": 59434,
+      "src": "material"
+    },
+    {
+      "uid": "4616162b8fcb1c5843241ed4d4931dfd",
+      "css": "airline_seat_recline_normal",
+      "code": 59426,
+      "src": "material"
+    },
+    {
+      "uid": "d15b48e87fe4ff0190fc1e683a8b5895",
+      "css": "airplanemode_inactive",
+      "code": 59392,
+      "src": "material"
+    },
+    {
+      "uid": "9548f8adbc5e7b2dc94633be2821cd1f",
+      "css": "access_alarm",
+      "code": 59435,
+      "src": "material"
+    },
+    {
+      "uid": "2b1bcd8b15d35599f6828e4f5eadfa30",
+      "css": "access_alarms",
+      "code": 59436,
+      "src": "material"
+    },
+    {
+      "uid": "82f44f1094ffd1d78093e76c33cc08cc",
+      "css": "access_time",
+      "code": 59437,
+      "src": "material"
+    },
+    {
+      "uid": "538114eb6d771c5f11738537ca077ddd",
+      "css": "add_to_queue",
+      "code": 59438,
+      "src": "material"
+    },
+    {
+      "uid": "ef31a40de565b5e5a48c78e2a2641dc0",
+      "css": "all_out",
+      "code": 59398,
+      "src": "material"
+    },
+    {
+      "uid": "0bf4594052a369ae069b85140f9418b6",
+      "css": "android",
+      "code": 59399,
+      "src": "material"
+    },
+    {
+      "uid": "1e278c6113fba0bc3ee06c25d0ba937c",
+      "css": "announcement",
+      "code": 59439,
+      "src": "material"
+    },
+    {
+      "uid": "f14102e17415428d6019dfe79008c575",
+      "css": "campfire",
+      "code": 59441,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M832.1 995.9C832.3 995.3 832.4 962 832.2 921.9L832 849.1 809.4 841.6 786.8 834.1 675.9 871C614.9 891.4 565.6 908.2 566.5 908.5 567.3 908.8 627.3 928.8 699.8 953 776.5 978.6 831.9 996.5 832.1 995.9ZM509.1 876.6C685.8 817.5 830.9 768.9 831.4 768.6 832.5 767.9 833 622.1 831.9 621 831.6 620.7 806.5 628.8 776.1 639 745.7 649.3 600.8 697.7 454.1 746.7L187.3 835.7 187.3 909.9C187.3 950.7 187.4 984.1 187.6 984.1 187.7 984 332.4 935.7 509.1 876.6ZM344.8 733.1C405.3 712.9 454.2 696.1 453.3 695.9 452.5 695.6 392.3 675.5 319.6 651.3L187.3 607.2 187.3 681.3 187.3 755.3 209.5 762.7C221.7 766.8 232.4 770 233.2 770 234 770 284.2 753.4 344.8 733.1ZM613.9 643.7C681.5 620.9 683.2 620.3 686.6 616.5 705.5 595 724.7 566.6 738.3 540.2 759.6 499 769.3 462.7 769.3 424 769.3 392.6 763.7 368.4 749.9 340.5 737.9 316 727.2 301.6 699.2 272.6 652.4 223.8 627.8 190.7 607.2 148.9 592.5 119.1 585.3 93.9 584.1 68.9 583 45.7 587.5 26.3 597.6 10.2L602.9 1.8 596.7 4.6C575.2 14.3 542.4 35 519.6 53.4 507.1 63.4 480.1 90.3 471.2 101.5 414.3 173.3 401.2 252.8 431.6 343 444.2 380.4 466.3 422.5 489.2 452.8 512.2 483.2 515.7 487.9 522.8 498.7 531.1 511.4 542.7 534.6 546.6 546.4 551.8 561.9 554.3 575.8 554.9 593.3 555.8 615.7 553.1 636.1 546.5 658.2 545.2 662.8 544.2 666.6 544.3 666.7 544.4 666.8 575.7 656.5 613.9 643.7ZM493 649.7C498.3 631.7 499.5 622.9 498.9 606 498.3 590.1 496.7 581.1 491.9 566.9 482.5 539 466.2 511.3 439 477.6 416.3 449.5 404 429.4 391.6 400.2 379.7 372.3 368.5 334.2 364 306.8 363 300.7 362.1 295.5 361.9 295.3 361.3 294.3 347 305.6 338.8 313.4 316.6 334.7 299.8 364.9 293.3 394.9 284.2 436.6 290.9 483.3 313.1 534.1 323.2 557.1 335.2 578.7 352.5 604.5L361.3 617.7 380.1 624C390.4 627.4 419.2 637.2 444 645.6 468.9 654.1 489.4 661 489.5 661 489.6 661 491.2 655.9 493 649.7Z",
+        "width": 1000
+      },
+      "search": [
+        "campfire"
+      ]
+    },
+    {
+      "uid": "1d3a80c59e3663f720ea037185ff6723",
+      "css": "camp_tent_rmk",
+      "code": 59442,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M94.6 23.2A70.5 70.2 90 0 0 24.3 93.8L24.3 749.5A70.5 70.2 90 0 0 94.6 820.1L236.3 820.1 371.3 955.7A70.5 70.2 90 0 0 470.6 955.7L605.7 820.1 747.5 820.1A70.5 70.2 90 0 0 817.8 749.5L817.8 93.8A70.5 70.2 90 0 0 747.5 23.2L94.6 23.2ZM79.6 732.8L79.6 707.8C107.2 707.7 75.7 707.6 103.4 707.6L251.5 452.9C338.5 303.1 399.6 197.7 399.6 197.2 399.6 196.5 388.8 178.4 369.8 147 353.4 120 339.9 97.6 339.8 97.3 339.6 96.8 342 96.7 357.5 96.7L375.4 96.7 376.2 97.8C376.6 98.4 386.1 113.9 397.2 132.3 408.3 150.7 417.5 165.9 417.7 166.1 418.2 166.6 420.3 163.2 440.6 129.4L460.1 97.1 478.2 97.1C494.9 97.1 496.3 97.2 496.1 97.8 495.9 98.1 482.6 120.3 466.3 147.1L436.8 195.7 439.6 200.5C441.2 203.2 507.9 318.3 587.9 456.5L733.3 707.6C761.4 707.6 730.2 707.7 758.3 707.8L758.3 732.8 758.3 757.8 418.9 757.8 79.6 757.8 79.6 732.8ZM577.4 706.8C575.2 702.6 419.1 432.8 418.9 432.8 418.7 432.8 260.3 707.1 260.3 707.5 260.3 707.6 331.8 707.8 419.1 707.8L578 707.8 577.4 706.8Z",
+        "width": 842
+      },
+      "search": [
+        "camp_tent_rmk"
+      ]
     }
-  ],
-  "ascent": 850,
-  "units_per_em": 1000,
-  "hinting": false,
-  "css_use_suffix": false,
-  "css_prefix_text": "icon-",
-  "name": ""
+  ]
 }

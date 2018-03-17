@@ -1,16 +1,16 @@
 {
+  "name": "MyIcons",
+  "css_prefix_text": "",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
   "glyphs": [
     {
-      "src": "fontelico",
-      "code": 59392,
-      "css": "emo-happy",
-      "uid": "c64623255a4a7c72436b199b05296c4f"
+      "uid": "4dd56d61fd0dab19277824da301424b3",
+      "css": "emo-devil",
+      "code": 59397,
+      "src": "fontelico"
     }
-  ],
-  "ascent": 850,
-  "units_per_em": 1000,
-  "hinting": false,
-  "css_use_suffix": false,
-  "css_prefix_text": "icon-",
-  "name": ""
+  ]
 }
