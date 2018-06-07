@@ -32,19 +32,18 @@ and set the `--host` option to `fluttericon.com`.  Example to download a font:
 
 ## Fontello
 
-This project is a fork of Fontello, an great product for producing 
+This project is a fork of Fontello, a great product for producing 
 webfonts.  The authors of that project declined a Merge Request to 
 support generation of polymer iconsets directly in Fontello, so 
 PolyIcon was spun off to handle that task exclusively.  I didn't 
 bother asking about Flutter icons. ;)
 
 Many thanks to the authors of Fontello for their excellent work.
-
--- Roman Shmelev ([shmelev](https://github.com/shmelev))
--- Vitaly Puzrin ([puzrin](https://github.com/puzrin)).
--- Aleksey Zapparov ([ixti](https://github.com/ixti)).
--- Evgeny Shkuropat ([shkuropat](https://github.com/shkuropat)).
--- Vladimir Zapparov ([dervus](https://github.com/dervus)).
+ * Roman Shmelev ([shmelev](https://github.com/shmelev))
+ * Vitaly Puzrin ([puzrin](https://github.com/puzrin)).
+ * Aleksey Zapparov ([ixti](https://github.com/ixti)).
+ * Evgeny Shkuropat ([shkuropat](https://github.com/shkuropat)).
+ * Vladimir Zapparov ([dervus](https://github.com/dervus)).
 
 ## License
 
@@ -55,7 +54,7 @@ Embedded fonts are distributed under their primary licenses (SIL OFL / CC BY / C
 See fonts info on FlutterIcon.com for credits & links to homepages. This info is also
 included in generated font archives for your convenience (see LICENSE.txt file).
 
-Generated fonts are intended for web usage, and should not be
+Generated fonts are intended for web or app usage, and should not be
 considered/distributed as independent artwork. 
 
 Crediting FlutterIcon is not required.
