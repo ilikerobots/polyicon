@@ -1,0 +1,13 @@
+{
+  "dependencies"    : {
+                        "svg-font-dump"     : "~ 0.0.1",
+                        "svg-font-create"   : "~ 0.0.1",
+                        "svg2ttf"           : "~ 4.0.2",
+                        "ttf2eot"           : "~ 1.2.0",
+                        "ttf2woff"          : "~ 1.0.1",
+                        "svgo"              : "~ 0.6.6",
+                        "js-yaml"           : "~ 2.0.5",
+                        "jade"              : "~ 0.30.0",
+                        "stylus"            : "~ 0.32.1"
+                      }
+}
