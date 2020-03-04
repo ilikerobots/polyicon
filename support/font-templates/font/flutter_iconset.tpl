@@ -24,5 +24,5 @@ class ${font.fontname} {
 
   static const _kFontFam = '${font.familyname}';
 <% glyphs.forEach(function(glyph) { %>
-  static const IconData ${glyph.dart} = const IconData(0x${glyph.code16}, fontFamily: _kFontFam);<% }); %>
+  static const IconData ${glyph.dart} = IconData(0x${glyph.code16}, fontFamily: _kFontFam);<% }); %>
 }
