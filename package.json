@@ -80,7 +80,7 @@
   },
   "devDependencies": {
     "acorn": "^6.0.2",
-    "eslint": "^3.19.0",
+    "eslint": "^6.8.0",
     "eslint-plugin-nodeca": "~1.0.3",
     "mocha": "^3.5.3",
     "supertest": "^2.0.1"
