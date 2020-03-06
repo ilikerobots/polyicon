@@ -29,7 +29,7 @@
     "base64-js": "~1.1.1",
     "bluebird": "^3.5.1",
     "bluebird-co": "^2.2.0",
-    "bootstrap": "3.2.0",
+    "bootstrap": "3.4.1",
     "bootstrap-material-design": "^4.1.1",
     "browser-pack": "^6.0.4",
     "browserify": "^13.3.0",
