@@ -27,5 +27,5 @@ router:
         path: /.+/
 
     core.static:
-      "/{file}":
-        file: /favicon.png|favicon.ico|snippet.png/
+      "/{path}":
+        path: /favicon|favicon.ico|snippet.png/

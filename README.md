@@ -23,7 +23,7 @@ The quick answer is to use [fontello-cli](https://github.com/paulyoung/fontello-
 and set the `--host` option to `fluttericon.com`.  Example to download a font:
 
 ```sh
-./fontello-cli --config ~/Downloads/config.json  --host fluttericon.com install
+./fontello-cli --config ~/Downloads/config.json  --host https://fluttericon.com install
 ```
 
 ## Authors

@@ -4,8 +4,8 @@ env:
   # Postponed: enable partially (less on server, more on client)
   es6: true
 
-plugins:
-    - nodeca
+parserOptions:
+  ecmaVersion: '2017'
 
 rules:
   accessor-pairs:         2
@@ -36,7 +36,7 @@ rules:
   handle-callback-err:    2
 
   # Postponed
-  #indent:                 [ 2, 2, { VariableDeclarator: { var: 2, let: 2, const: 3 }, SwitchCase: 1 } ]
+  indent-legacy:          [ 2, 2, { VariableDeclarator: { var: 2, let: 2, const: 3 }, SwitchCase: 1 } ]
 
   # key-spacing:            [ 2, { "align": "value" } ]
   keyword-spacing:        2
@@ -146,7 +146,7 @@ rules:
   #spaced-comment:         [ 1, always, { exceptions: [ '/', '=' ] } ]
   strict:                 [ 2, global ]
   quotes:                 [ 2, single, avoid-escape ]
-  quote-props:            [ 1, 'as-needed', { "keywords": true } ]
+  quote-props:            [ 1, 'as-needed' ]
   radix:                  2
   use-isnan:              2
   valid-typeof:           2
@@ -178,12 +178,3 @@ rules:
   # Postponed
   #prefer-template:        1
   require-yield:          1
-
-
-  #
-  # Our custom rules from plugin
-  #
-  #nodeca/no-lodash-aliases:   2
-  #nodeca/no-async-aliases:    2
-  nodeca/indent:              [2, spaces, 2]
-  nodeca/no-wire-anonymous: 1

@@ -4,16 +4,15 @@
 
 
 const Promise   = require('bluebird');
-const co        = require('bluebird-co').co;
 const _         = require('lodash');
 const path      = require('path');
 const mz        = require('mz');
 const fs        = require('fs');
-// const SvgPath   = require('svgpath');
 const svg2ttf   = require('svg2ttf');
-const jade      = require('jade');
+const pug       = require('pug');
+const b64       = require('base64-js');
 const rimraf    = Promise.promisify(require('rimraf'));
-const mkdirp    = Promise.promisify(require('mkdirp'));
+const mkdirp    = require('mkdirp');
 const glob      = Promise.promisify(require('glob'));
 const JSZip     = require('jszip');
 
@@ -32,15 +31,15 @@ const dart_reserved = [ 'abstract', 'deferred', 'if', 'super', 'as ', 'do', 'imp
     'covariant', 'for', 'set', 'yield', 'default', 'get', 'static', 'yield' ];
 
 _.forEach({
-  //'demo.jade':              'demo/index.html',
-  //'index.jade':             'index.html',
-  //'bower.jade':             'bower.json',
-  //'css/css.jade':           'css/${FONTNAME}.css',
-  //'css/css-ie7.jade':       'css/${FONTNAME}-ie7.css',
-  //'css/css-codes.jade':     'css/${FONTNAME}-codes.css',
-  //'css/css-ie7-codes.jade': 'css/${FONTNAME}-ie7-codes.css',
-  //'css/css-embedded.jade':  'css/${FONTNAME}-embedded.css',
-  //'LICENSE.jade':           'LICENSE.txt',
+  //'demo.pug':              'demo/index.html',
+  //'index.pug':             'index.html',
+  //'bower.pug':             'bower.json',
+  //'css/css.pug':           'css/${FONTNAME}.css',
+  //'css/css-ie7.pug':       'css/${FONTNAME}-ie7.css',
+  //'css/css-codes.pug':     'css/${FONTNAME}-codes.css',
+  //'css/css-ie7-codes.pug': 'css/${FONTNAME}-ie7-codes.css',
+  //'css/css-embedded.pug':  'css/${FONTNAME}-embedded.css',
+  //'LICENSE.pug':           'LICENSE.txt',
   //'css/animation.css':      'css/animation.css',
   //'README.txt':             'README.txt'
 }, (outputName, inputName) => {
@@ -49,10 +48,11 @@ _.forEach({
   let outputData;
 
   switch (path.extname(inputName)) {
-    case '.jade': // Jade template.
-      outputData = jade.compile(inputData, {
+    case '.pug': // Pug template.
+      outputData = pug.compile(inputData, {
         pretty: true,
-        filename: inputFile
+        filename: inputFile,
+        filters: [ require('jstransformer-stylus') ]
       });
       break;
 
@@ -82,7 +82,7 @@ function buildFlutterConfig(originalBuilderConfig) {
   return flutterBuilderConfig;
 }
 
-module.exports = co.wrap(function* fontWorker(taskInfo) {
+module.exports = async function fontWorker(taskInfo) {
   let logPrefix = '[font::' + taskInfo.fontId + ']';
   let timeStart = Date.now();
   let fontname = taskInfo.builderConfig.font.fontname;
@@ -124,10 +124,10 @@ module.exports = co.wrap(function* fontWorker(taskInfo) {
 
   // Prepare temporary working directory.
   //
-  yield rimraf(taskInfo.tmpDir);
-  yield mkdirp(taskInfo.tmpDir);
+  await rimraf(taskInfo.tmpDir);
+  await mkdirp(taskInfo.tmpDir);
   // yield mkdirp(path.join(taskInfo.tmpDir, 'demo'));
-  yield mkdirp(path.join(taskInfo.tmpDir, 'fonts'));
+  await mkdirp(path.join(taskInfo.tmpDir, 'fonts'));
   //yield mkdirp(path.join(taskInfo.tmpDir, 'css'));
   // yield mkdirp(path.join(taskInfo.tmpDir, `${fontname}-iconset-svg`));
 
@@ -136,17 +136,17 @@ module.exports = co.wrap(function* fontWorker(taskInfo) {
   //
   let configOutput = JSON.stringify(taskInfo.clientConfig, null, '  ');
 
-  yield mz.fs.writeFile(files.config, configOutput, 'utf8');
+  await mz.fs.writeFile(files.config, configOutput, 'utf8');
   // yield mz.fs.writeFile(files.svg, svgOutput, 'utf8');
   // yield mz.fs.writeFile(files.polymer, polymerOutput, 'utf8');
-  yield mz.fs.writeFile(files.flutter, flutterOutput, 'utf8');
+  await mz.fs.writeFile(files.flutter, flutterOutput, 'utf8');
 
 
   // Convert SVG to TTF
   //
   let ttf = svg2ttf(svgOutput, { copyright: taskInfo.builderConfig.font.copyright });
 
-  yield mz.fs.writeFile(files.ttf, new Buffer(ttf.buffer));
+  await mz.fs.writeFile(files.ttf, ttf.buffer);
 
 
   // Autohint the resulting TTF.
@@ -157,8 +157,8 @@ module.exports = co.wrap(function* fontWorker(taskInfo) {
   // Don't allow hinting if font has "strange" glyphs.
   // That's useless anyway, and can hang ttfautohint < 1.0
   // if (max_segments <= 500 && taskInfo.builderConfig.hinting) {
-  //   yield mz.fs.rename(files.ttf, files.ttfUnhinted);
-  //   yield mz.child_process.execFile('ttfautohint', [
+  //   await mz.fs.rename(files.ttf, files.ttfUnhinted);
+  //   await mz.child_process.execFile('ttfautohint', [
   //     '--no-info',
   //     '--windows-compatibility',
   //     '--symbol',
@@ -168,31 +168,33 @@ module.exports = co.wrap(function* fontWorker(taskInfo) {
   //     files.ttfUnhinted,
   //     files.ttf
   //   ], { cwd: taskInfo.cwdDir });
-  //   yield mz.fs.unlink(files.ttfUnhinted);
+  //   await mz.fs.unlink(files.ttfUnhinted);
   // }
 
 
   // Read the resulting TTF to produce EOT and WOFF.
   //
-  //let ttfOutput = new Uint8Array(yield mz.fs.readFile(files.ttf));
+  //let ttfOutput = new Uint8Array(await mz.fs.readFile(files.ttf));
 
 
   // Convert TTF to EOT.
   //
   //let eotOutput = ttf2eot(ttfOutput).buffer;
 
-  //yield mz.fs.writeFile(files.eot, new Buffer(eotOutput));
+  //await mz.fs.writeFile(files.eot, eotOutput);
 
 
   // Convert TTF to WOFF.
   //
   //let woffOutput = ttf2woff(ttfOutput).buffer;
 
-  //yield mz.fs.writeFile(files.woff, new Buffer(woffOutput));
+  // await mz.fs.writeFile(files.woff, woffOutput);
 
   // Convert TTF to WOFF2.
   //
-  //yield mz.fs.writeFile(files.woff2, ttf2woff2(ttfOutput));
+  // let woff2Output = await wawoff2.compress(ttfOutput);
+
+  // await mz.fs.writeFile(files.woff2, woff2Output);
 
 
   // Write template files. (generate dynamic and copy static)
@@ -216,29 +218,29 @@ module.exports = co.wrap(function* fontWorker(taskInfo) {
                     //.replace('%WOFF64%', b64.fromByteArray(woffOutput))
                     //.replace('%TTF64%', b64.fromByteArray(ttfOutput));
 
-    yield mz.fs.writeFile(outputFile, outputData, 'utf8');
+    await mz.fs.writeFile(outputFile, outputData, 'utf8');
   }
 
   //
   // Create zipball.
   //
 
-  let archiveFiles = yield glob(path.join(taskInfo.tmpDir, '**'), { nodir: true });
+  let archiveFiles = await glob(path.join(taskInfo.tmpDir, '**'), { nodir: true });
   let zip = new JSZip();
 
   for (var i = 0; i < archiveFiles.length; i++) {
-    let fileData = yield mz.fs.readFile(archiveFiles[i]);
+    let fileData = await mz.fs.readFile(archiveFiles[i]);
 
     zip.folder(path.basename(taskInfo.tmpDir)).file(path.relative(taskInfo.tmpDir, archiveFiles[i]), fileData);
   }
 
-  let zipData = yield zip.generateAsync({ type: 'nodebuffer', compression: 'DEFLATE' });
+  let zipData = await zip.generateAsync({ type: 'nodebuffer', compression: 'DEFLATE' });
 
   // TODO: force tmp dir cleanup on fail
 
   // Remove temporary files and directories.
   //
-  yield rimraf(taskInfo.tmpDir);
+  await rimraf(taskInfo.tmpDir);
 
 
   // Done.
@@ -249,4 +251,4 @@ module.exports = co.wrap(function* fontWorker(taskInfo) {
                        `(real: ${(timeEnd - taskInfo.timestamp) / 1000})`);
 
   return zipData;
-});
+};

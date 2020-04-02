@@ -5,8 +5,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-const _       = require('lodash');
-const Promise = require('bluebird');
+const _  = require('lodash');
 
 
 module.exports = function (N, apiPath) {
@@ -18,7 +17,7 @@ module.exports = function (N, apiPath) {
 
   // Process standerd GET/HEAD request
   //
-  N.wire.on(apiPath, function* app(env) {
+  N.wire.on(apiPath, async function app(env) {
     env.res.layout = 'fontello.layout';
 
     // No params - return main page
@@ -26,14 +25,16 @@ module.exports = function (N, apiPath) {
 
     // if requested page with config id - try te fetch data,
     // and redirect to main on error
-    let linkData = yield Promise.fromCallback(cb => N.shortlinks.get(
-      env.params.sid,
-      { valueEncoding: 'json' },
-      cb
-    ));
+    let linkData;
 
-    // if shortlink not found - redirect to root
-    if (!linkData) throw { code: N.io.REDIRECT, head: { Location: '/' } };
+    try {
+      linkData = await N.shortlinks.get(env.params.sid, { valueEncoding: 'json' });
+    } catch (err) {
+      // if shortlink not found - redirect to root
+      if (err.type === 'NotFoundError') throw { code: N.io.REDIRECT, head: { Location: '/' } };
+
+      throw err;
+    }
 
     // inject config to runtime & return main page
     env.runtime.page_data = _.pick(linkData, [ 'config', 'url' ]);
