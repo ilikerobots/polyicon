@@ -41,7 +41,7 @@ module.exports = function (N, apiPath) {
   let logger = N.logger.getLogger('font');
 
 
-  N.wire.on(apiPath, function* build_font(data) {
+  N.wire.on(apiPath, async function build_font(data) {
     let builderConfig = fontConfig(data.config);
 
     if (!builderConfig || builderConfig.glyphs.length <= 0) {
@@ -52,7 +52,7 @@ module.exports = function (N, apiPath) {
 
     // If same task is already done (result exists) - use it.
     //
-    if (yield exists(N.downloads, data.fontId)) return;
+    if (await exists(N.downloads, data.fontId)) return;
 
 
     // If task already exists - just return its promise.
@@ -85,14 +85,13 @@ module.exports = function (N, apiPath) {
     logger.info('New job created: %j', { font_id: data.fontId, queue_length: Object.keys(tasks).length });
 
     // Wait for task finished
-    let zipData = yield taskInfo.result;
+    let zipData = await taskInfo.result;
 
-    yield Promise.fromCallback(cb => N.downloads.put(
+    await N.downloads.put(
       taskInfo.fontId,
       zipData,
-      { ttl: 5 * 60 * 1000, valueEncoding: 'binary' },
-      cb
-    ));
+      { ttl: 5 * 60 * 1000, valueEncoding: 'binary' }
+    );
 
     delete tasks[data.fontId];
   });

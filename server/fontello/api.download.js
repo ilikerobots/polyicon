@@ -3,9 +3,6 @@
 'use strict';
 
 
-const Promise = require('bluebird');
-
-
 module.exports = function (N, apiPath) {
 
   N.validate(apiPath, {
@@ -13,23 +10,25 @@ module.exports = function (N, apiPath) {
   });
 
 
-  N.wire.on(apiPath, function* app_post(env) {
-    let sl = yield Promise.fromCallback(cb => N.shortlinks.get(
-      env.params.sid,
-      { valueEncoding: 'json' },
-      cb
-    ));
+  N.wire.on(apiPath, async function app_post(env) {
+    let sl;
 
-    // if session id (shortlink) not found - return 404
-    if (!sl) throw N.io.NOT_FOUND;
+    try {
+      sl = await N.shortlinks.get(env.params.sid, { valueEncoding: 'json' });
+    } catch (err) {
+      // if session id (shortlink) not found - return 404
+      if (err.type === 'NotFoundError') throw N.io.NOT_FOUND;
+
+      throw err;
+    }
 
     let params = { config: sl.config };
 
     // build font
-    yield N.wire.emit('internal:fontello.font_build', params);
+    await N.wire.emit('internal:fontello.font_build', params);
 
     // reuse `fontello.font.download` method
     env.params.id = params.fontId;
-    yield N.wire.emit('server:fontello.font.download', env);
+    await N.wire.emit('server:fontello.font.download', env);
   });
 };

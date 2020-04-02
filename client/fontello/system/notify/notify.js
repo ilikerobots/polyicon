@@ -1,3 +1,9 @@
+//
+// !!! Do not sync until TWBS upgrade to 4.0 !!!
+//
+
+
+
 /*
  * Show bulb notification on wire 'notify' events
  *
@@ -42,6 +48,7 @@ var DEFAULT_OPTIONS = {
 // key - message text
 var tracker = {};
 
+/* eslint-disable no-redeclare */
 function Notification(options) {
   if (!options) {
     options = {};

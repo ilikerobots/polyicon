@@ -16,7 +16,7 @@ function binaryParser(res, callback) {
     res.data += chunk;
   });
   res.on('end', () => {
-    callback(null, new Buffer(res.data, 'binary'));
+    callback(null, Buffer.from(res.data, 'binary'));
   });
 }
 
@@ -25,17 +25,18 @@ describe('API.download', function () {
 
   it('with custom icon', function () {
     return Promise.resolve()
-      .then(() => Promise.fromCallback(cb => request
+      .then(() => request
         .post('/')
+        .field('url', 'http://example.com')
         .attach('config', path.join(__dirname, 'fixtures', 'config_custom.json'))
         .set('Accept', 'application/json')
         .expect(200)
-        .end(cb)))
-      .then(res => Promise.fromCallback(cb => request
+      )
+      .then(res => request
         .get(`/${res.text}/get`)
         .expect(200)
         .parse(binaryParser)
-        .end(cb)))
+      )
       .then(res => {
         let fixture = fs.readFileSync(path.join(__dirname, 'fixtures', 'result_custom.zip'));
 
@@ -46,22 +47,26 @@ describe('API.download', function () {
             .then(zip => zip.file(/flutter-icons-[0-9a-f]+\/my_flutter_icon_font_icons\.dart/)[0].async('string'))
         ]);
       })
-      .then(values => assert.strictEqual(values[0], values[1]));
+      // copyright year can change, strip it
+      .then(([ actual, expected ]) => assert.strictEqual(
+        actual.replace(/<metadata>.+<\/metadata>/, ''),
+        expected.replace(/<metadata>.+<\/metadata>/, ''))
+      );
   });
 
   it('with fontelico icon', function () {
     return Promise.resolve()
-      .then(() => Promise.fromCallback(cb => request
+      .then(() => request
         .post('/')
         .attach('config', path.join(__dirname, 'fixtures', 'config_fontelico.json'))
         .set('Accept', 'application/json')
         .expect(200)
-        .end(cb)))
-      .then(res => Promise.fromCallback(cb => request
+      )
+      .then(res => request
         .get(`/${res.text}/get`)
         .expect(200)
         .parse(binaryParser)
-        .end(cb)))
+      )
       .then(res => {
         let fixture = fs.readFileSync(path.join(__dirname, 'fixtures', 'result_fontelico.zip'));
 
@@ -72,6 +77,16 @@ describe('API.download', function () {
             .then(zip => zip.file(/flutter-icons-[0-9a-f]+\/my_icons_icons\.dart/)[0].async('string'))
         ]);
       })
-      .then(values => assert.strictEqual(values[0], values[1]));
+      // copyright year can change, strip it
+      .then(([ actual, expected ]) => assert.strictEqual(
+        actual.replace(/<metadata>.+<\/metadata>/, ''),
+        expected.replace(/<metadata>.+<\/metadata>/, ''))
+      );
+  });
+
+
+  it('non-existent url', function () {
+    return request.get('/00000000/get')
+                  .expect(404);
   });
 });

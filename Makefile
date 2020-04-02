@@ -39,7 +39,7 @@ rebuild:
 	# convert to other formats
 	./node_modules/.bin/svg2ttf "$(FONT_DIR)/fontello.svg" "$(FONT_DIR)/fontello.ttf"
 	./node_modules/.bin/ttf2woff "$(FONT_DIR)/fontello.ttf" "$(FONT_DIR)/fontello.woff"
-	cat "$(FONT_DIR)/fontello.ttf" | ./node_modules/.bin/ttf2woff2 >> "$(FONT_DIR)/fontello.woff2"
+	./node_modules/wawoff/bin/woff2_compress.js "$(FONT_DIR)/fontello.ttf" "$(FONT_DIR)/fontello.woff2"
 	rm "$(FONT_DIR)/fontello.ttf"
 	rm "$(FONT_DIR)/fontello.svg"
 
@@ -53,7 +53,7 @@ lint:
 
 
 test: lint
-	@NODECA_ENV=test NODECA_NOMINIFY=1 ./fontello.js test
+	@NODECA_ENV=test NODECA_NOMINIFY=1 ./server.js test
 
 
 todo:
