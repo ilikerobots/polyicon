@@ -39,7 +39,7 @@ rebuild:
 	# convert to other formats
 	./node_modules/.bin/svg2ttf "$(FONT_DIR)/fontello.svg" "$(FONT_DIR)/fontello.ttf"
 	./node_modules/.bin/ttf2woff "$(FONT_DIR)/fontello.ttf" "$(FONT_DIR)/fontello.woff"
-	./node_modules/wawoff/bin/woff2_compress.js "$(FONT_DIR)/fontello.ttf" "$(FONT_DIR)/fontello.woff2"
+	./node_modules/wawoff2/bin/woff2_compress.js "$(FONT_DIR)/fontello.ttf" "$(FONT_DIR)/fontello.woff2"
 	rm "$(FONT_DIR)/fontello.ttf"
 	rm "$(FONT_DIR)/fontello.svg"
 
@@ -63,7 +63,7 @@ todo:
 
 
 #FONTELLO_HOST ?= http://fontello.com
-FONTELLO_HOST ?= http://localhost:3000
+FONTELLO_HOST ?= http://localhost:3001
 FONTELLO_DIR  ?= ./client/lib/icons/src
 
 
