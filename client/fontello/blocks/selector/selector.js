@@ -1,6 +1,6 @@
 'use strict';
 
-
+var _  = require('lodash');
 const ko = require('knockout');
 
 
@@ -87,4 +87,33 @@ N.wire.once('navigate.done', function () {
 
     font.collapsed(!font.collapsed());
   });
+
+  // Select none for given font
+  //
+  N.wire.on('selector:font_select_none', function font_select_none(data) {
+    let id = data.$this.data('id');
+    let font = N.app.fontsList.getFont(id);
+    N.app.fontsList.lock();
+
+    _.forEach(font.glyphs(), glyph => {
+      if (glyph.selected()) glyph.selected(false);
+    });
+
+    N.app.fontsList.unlock();
+  });
+
+  // Select all for given font
+  //
+  N.wire.on('selector:font_select_all', function font_select_all(data) {
+    let id = data.$this.data('id');
+    let font = N.app.fontsList.getFont(id);
+    N.app.fontsList.lock();
+
+    _.forEach(font.glyphs(), glyph => {
+      if (!glyph.selected()) glyph.selected(true);
+    });
+
+    N.app.fontsList.unlock();
+  });
+
 });

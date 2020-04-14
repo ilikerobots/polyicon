@@ -5,3 +5,5 @@ en-US:
   custom_icons_help: Drag custom SVG icons or SVG font here.
   clear_all_icons: clear all icons
   clear_selected_icons: clear selected icons
+  select_all_in_family: Select all icons in this family
+  select_none_in_family: Unselect all icons in this family
