@@ -39,7 +39,7 @@
 #
 # #
 # # Optional. You can apply global rescale + offset to all font glyphs.
-# # Param values ar 0..1, where 1 = 100%. 
+# # Param values ar 0..1, where 1 = 100%.
 # #
 # transform:
 #   baseline: 0.2                 # baseline for rescale symmetry. Default value
@@ -77,7 +77,7 @@
 meta:
   author: Google
   homepage: https://design.google.com/icons/
-  twitter: 
+  twitter:
   github: https://github.com/google/material-design-icons/
   license: Apache 2.0
   license_url: https://www.apache.org/licenses/LICENSE-2.0
@@ -106,8 +106,8 @@ font:
   weight: Normal
 
 
-glyphs: 
-  - css: 3d_rotation
+glyphs:
+  - css: threedee_rotation
     code: 0xf0028
     uid: 2cc10cdba83708a30142016d40519bb9
     search: []
