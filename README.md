@@ -33,7 +33,7 @@ and set the `--host` option to `fluttericon.com`.  Example to download a font:
 ## Fontello
 
 This project is a fork of Fontello, a great product for producing 
-webfonts.  The authors of that project declined a Merge Request to 
+webfonts.  The authors of that project declined a Pull Request to 
 support generation of polymer iconsets directly in Fontello, so 
 PolyIcon was spun off to handle that task exclusively.  I didn't 
 bother asking about Flutter icons. ;)
