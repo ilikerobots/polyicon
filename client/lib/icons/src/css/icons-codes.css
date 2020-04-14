@@ -5,6 +5,8 @@
 .icon-remove:before { content: '\2715'; } /* '✕' */
 .icon-edit:before { content: '\e800'; } /* '' */
 .icon-twitter-bird:before { content: '\e801'; } /* '' */
+.icon-ok-circled2:before { content: '\e802'; } /* '' */
+.icon-cancel-circled2:before { content: '\e803'; } /* '' */
 .icon-load:before { content: '\e834'; } /* '' */
 .icon-firefox:before { content: '\e840'; } /* '' */
 .icon-chrome:before { content: '\e841'; } /* '' */

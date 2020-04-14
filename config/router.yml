@@ -28,4 +28,4 @@ router:
 
     core.static:
       "/{path}":
-        path: /favicon|favicon.ico|snippet.png/
+        path: /favicon|favicon.ico|snippet.png|logo_dart_192px.svg/

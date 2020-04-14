@@ -107,6 +107,18 @@
       "css": "github-circled",
       "code": 61595,
       "src": "fontawesome"
+    },
+    {
+      "uid": "ad33e708f4d2e25c5056c931da1528d6",
+      "css": "ok-circled2",
+      "code": 59394,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "2e2dba0307a502a8507c1729084c7ab5",
+      "css": "cancel-circled2",
+      "code": 59395,
+      "src": "fontawesome"
     }
   ]
 }

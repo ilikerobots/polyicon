@@ -11,9 +11,9 @@
             span.selector__font-cnt-selected(data-bind='visible: selectedCount, text: selectedCount')
 
         a.selector__font-name._collapser(href='#', data-bind='text: fullname, attr: { "data-id": fontname }', data-on-click='selector:font_collapse')
-
+       
         small.selector__font-details(data-bind='visible: visibleCount()')
-          a.selector__font-control(
+         a.selector__font-control(
             href='#',
             data-on-click='cmd:clear_custom_icons',
             data-bind='visible: !selectedCount()')= self.t('clear_all_icons')
@@ -41,6 +41,9 @@
             span.selector__font-cnt-selected(data-bind='visible: selectedCount, text: selectedCount')
 
         a.selector__font-name._collapser(href='#', data-bind='text: fullname, attr: { "data-id": fontname }', data-on-click='selector:font_collapse')
+        div.selector__font-select-controls
+          small.selector__font-select._select_all.icon-ok-circled2(href='#', data-bind='attr: { "data-id": fontname }', data-on-click='selector:font_select_all', title=self.t("select_all_in_family"))
+          small.selector__font-select._select_none.icon-cancel-circled2(href='#', data-bind='attr: { "data-id": fontname }', data-on-click='selector:font_select_none', title=self.t("select_none_in_family"))
 
         small.selector__font-details(data-bind='visible: version, text: ("v"+version)')
         small.selector__font-details(data-bind='visible: author')= self.t('author')
