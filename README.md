@@ -12,7 +12,7 @@ your own svg art.
 
 ## Contacts
  
-Please report all issues on the [GitHub issue tracker](https://github.com/ilikerobots/fluttericon/issues)
+Please report all issues on the [GitHub issue tracker](https://github.com/ilikerobots/polyicon/issues)
 including request for additional fonts.
 
 ## API Mode
