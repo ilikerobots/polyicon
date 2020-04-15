@@ -1,6 +1,6 @@
 en-US:
-  title: FlutterIcon - Flutter icon font generator
-  description: Build custom Flutter icon fonts from popular webfonts.
+  title: FlutterIcon - Flutter custom icons generator
+  description: Build custom Flutter icons from popular icon sets or your own images.
   desc_long: >
     Build a truetype font for use with Flutter with the necessary
     Dart code to use within your apps.
@@ -16,7 +16,7 @@ en-US:
 
   menu_donate: donate
   menu_donate_help: >
-    Fontello is not done for money, but feel free to
+    Fluttericon is not done for money, but feel free to
     show us how much you like it :)
 
   twitter_follow: Follow
