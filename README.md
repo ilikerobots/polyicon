@@ -1,4 +1,4 @@
-FlutterIcon - Flutter icon font creator
+FlutterIcon - Flutter icons creator
 =======================================
 
 [![Build Status](https://travis-ci.org/ilikerobots/polyicon.png)](https://travis-ci.org/ilikerobots/polyicon)
@@ -7,10 +7,16 @@ website: [fluttericon.com](http://fluttericon.com/), help: [wiki](https://github
 
 FlutterIcon is a web-based generator of Flutter icon font elements.
 Customized icon fonts can be produced from not only Material Design Icons,
-but several popular open source webfonts as well, or by uploading 
+but more than a dozen other open source webfonts as well, or by uploading 
 your own svg art.
 
-## Contacts
+## Pre-made Flutter package
+
+To aid in development, there is a [pre-made Fluttericon package](https://pub.dev/packages/fluttericon) containing all the Fluttericon fonts (except Material).
+Note this should not be used in production due to its large size.  Instead, this package is intended as an aid to quickly test icons styles.
+
+
+## Issues
  
 Please report all issues on the [GitHub issue tracker](https://github.com/ilikerobots/polyicon/issues)
 including request for additional fonts.
