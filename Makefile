@@ -14,6 +14,8 @@ FONTS         += elusive.font
 FONTS         += linecons.font
 FONTS         += websymbols-uni.font
 FONTS         += linearicons.font
+FONTS         += octicons.font
+FONTS         += rpgawesome.font
 FONT_CONFIGS   = $(foreach f,$(FONTS),src/${f}/config.yml)
 
 FONT_DIR 			= ./client/lib/embedded_fonts/font
