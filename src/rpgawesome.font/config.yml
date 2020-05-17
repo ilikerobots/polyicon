@@ -1,0 +1,2116 @@
+---
+# This is configuration file for font builder and other support scripts.
+# Format is descriped below.
+#
+#
+# # metadata, to generate demo & fontello info dialogs
+# meta:
+#
+#  author: Daniel Buce
+#  homepage: http://...
+#  email: ...
+#  twitter: http://twitter.com/...
+#  dribble: http://dribbble.com/...
+#  license: SIL
+#  license_url: http://scripts.sil.org/OFL
+#
+#   css-prefix: "icon-"             # prefix for css-generated classes
+#   demo-columns: 4                 # used for html demo page generation
+#
+# # Font headers. All vars from here will be used as font
+# # params in fontforge http://fontforge.sourceforge.net/python.html
+# font:
+#
+#   version: "1.0"
+#
+#   # use !!!small!!! letters a-z, or Opera will fail under OS X
+#   # fontname will be also used as file name.
+#   fontname: myfont
+#
+#   fullname: MyFont
+#   familyname: Myfont
+#
+#   copyright: Copyright (C) 2012 by xxxxxxxx
+#
+#   ascent: 1638
+#   descent: 410
+#   weight: Regular
+#
+#
+# #
+# # Optional. You can apply global rescale + offset to all font glyphs.
+# # Param values ar 0..1, where 1 = 100%.
+# #
+# transform:
+#   baseline: 0.2                 # baseline for rescale symmetry. Default value
+#                                 # calculated from ascent/decsent
+#   rescale: 0.68                 # rescale glyphs and center around baseline
+#   offset: -0.1                  # shift up/down
+#
+# glyphs:
+#   - file: glyph1_file           # file name, without extention
+#     from: 0xNNN                 # Source code for remapper or merge tool
+#     code: 0xNNN                 # Symbol code 0x - hex
+#     css: icon-gpyph1-name       # For generated CSS
+#     search: [word1, word2]      # Search aliases (array). CSS name will be
+#                                 # included automatically
+#     src: first_font_alias       # alias to font for merge tool
+#                                 # list of aliases in src_fonts section
+#
+#     #
+#     # local transformations, only for this glyph (optional)
+#     #
+#     transform:                  # personal glyph transformation.
+#       rescale_rel               # *_rel - applyed after global.
+#       offset: 0.2               # without *_rel - override global
+#
+# #
+# # Fonts aliases used only in font merge tool
+# #
+# src_fonts:
+#   first_font_alias: "/absolute/path/to/first/font.ttf"
+#
+################################################################################
+#
+
+
+meta:
+  author: Daniela Howe & Ivan Montiel
+  homepage: http://nagoshiashumari.github.io/Rpg-Awesome/
+  twitter: 
+  github: https://github.com/nagoshiashumari/Rpg-Awesome
+  license: BSD
+  license_url: https://github.com/nagoshiashumari/Rpg-Awesome/blob/master/LICENSE.md
+  css_prefix_text: "icon-"
+  columns: 4
+
+#transform:
+  #baseline: 0.5
+  #rescale: 0.2
+  #offset: -0.025
+
+font:
+  # use !!!small!!! letters a-z, or Opera will fail under OS X
+  # fontname will be also used as file name.
+  version: 0.1.1
+  fontname: rpgawesome
+
+  fullname: RPG Awesome
+  familyname: RPGAwesome
+
+  copyright: tbd
+
+  ascent: 850
+  descent: -150
+#  weight: Normal
+
+
+glyphs:
+
+  - css: aura
+    code: 0xe914
+    uid: af3a798569fd475feaad426059020803
+    search: []
+  - css: aware
+    code: 0xe915
+    uid: ba5531a3907d3ae934e1399045def1dc
+    search: []
+  - css: double_team
+    code: 0xe99e
+    uid: a58b3fca1430c548133cdb4d7ef53974
+    search: []
+  - css: falling
+    code: 0xe9b9
+    uid: 2a11eeea5af123178d8e6b09a8af4909
+    search: []
+  - css: monster_skull
+    code: 0xea43
+    uid: 323de09ce358db0932cfc1bfc17198aa
+    search: []
+  - css: muscle_fat
+    code: 0xea47
+    uid: e1560b7b5aa5a794cc6635e4ff96dee4
+    search: []
+  - css: muscle_up
+    code: 0xea48
+    uid: 575f5418ee53db3a04b54dfbe5213422
+    search: []
+  - css: player
+    code: 0xea6f
+    uid: 4cc14d03787e77b63029e066bced121a
+  - css: player_despair
+    code: 0xea66
+    uid: e2a5c8feda425ae795e9f4ac825ef118
+    search: []
+  - css: player_dodge
+    code: 0xea67
+    uid: 8b7d8693c2dedfaeb8fc127f31144aaf
+    search: []
+  - css: player_king
+    code: 0xea68
+    uid: f95351f0dc22d38da667731cd220e519
+    search: []
+  - css: player_lift
+    code: 0xea69
+    uid: f0f8c298c200050d900c014108969bc6
+    search: []
+  - css: player_pain
+    code: 0xea6a
+    uid: dd7604372d19534148010d28b00d2a12
+    search: []
+  - css: player_pyromaniac
+    code: 0xea6b
+    uid: 53f371ae91b0749d31c2f7bd013a4b4c
+    search: []
+  - css: player_shot
+    code: 0xea6c
+    uid: e924d6eeced76535ae7d1842de52883a
+    search: []
+  - css: player_teleport
+    code: 0xea6d
+    uid: be6f85aa14ffc2dfb18c6fc98c004154
+    search: []
+  - css: player_thunder_struck
+    code: 0xea6e
+    uid: 1387e0ee3a7ea0d2a484ce5ef0ea2d2f
+    search: []
+  - css: bottle_vapors
+    code: 0xe93d
+    uid: 602f7aef5c0c00c861a70a6232b92da0
+    search: []
+  - css: bottled_bolt
+    code: 0xe93e
+    uid: 0bfa99b1dce07c9b8feb300b64e07c82
+    search: []
+  - css: broken_bottle
+    code: 0xe948
+    uid: ca71276a801627cd27fa224e88313458
+    search: []
+  - css: bubbling_potion
+    code: 0xe94c
+    uid: d36519263b5a61cae27c7e1bda35dd35
+    search: []
+  - css: corked_tube
+    code: 0xe973
+    uid: fc9f513311366d10dfad53359e08a302
+    search: []
+  - css: fizzing_flask
+    code: 0xe9c6
+    uid: 98d60a79d51f10dfa19a8ef113f5a774
+    search: []
+  - css: flask
+    code: 0xe9cb
+    uid: f16bb78fea6242c74fe27ac81751f55f
+    search: []
+  - css: heart_bottle
+    code: 0xe9f6
+    uid: cbcba3351f1c6adebe8c70a5da0f76ad
+    search: []
+  - css: round_bottom_flask
+    code: 0xea86
+    uid: 87cf37bd0354087302c0358d26d60d77
+    search: []
+  - css: vase
+    code: 0xeade
+    uid: 24873873db18356983fdca3506488e40
+    search: []
+  - css: vial
+    code: 0xeae1
+    uid: 83144bbd75010bc8e25422836c78ad77
+    search: []
+
+  - css: alligator_clip
+    code: 0xe904
+    uid: a6515f6b740de672497cd911bb862982
+    search: []
+  - css: ammo_bag
+    code: 0xe905
+    uid: cbbea93ff03387c2dc887a8136768da0
+    search: []
+  - css: ball
+    code: 0xe918
+    uid: bea245bbe3ade0944aaa69e9a0255557
+    search: []
+  - css: book
+    code: 0xe93a
+    uid: 3ffde0be38a27af3601318db732ecd29
+    search: []
+  - css: candle
+    code: 0xe958
+    uid: 3c8a2a1ddc980ff3e4ae5880701aac03
+    search: []
+  - css: castle_flag
+    code: 0xe95e
+    uid: 6f8b467b1ce2e2ca7a6e7b7de59ab94e
+    search: []
+  - css: compass
+    code: 0xe972
+    uid: 26eb1dcf6569cec4e0c036afb8a3b19a
+    search: []
+  - css: crown_of_thorns
+    code: 0xe97e
+    uid: dab78a5265e24a3e00d0ce063a0b3735
+    search: []
+  - css: crown
+    code: 0xe97f
+    uid: 1b16b101f385f8c1c265fadd23f1a7ea
+    search: []
+  - css: horseshoe
+    code: 0xea06
+    uid: 9a8a788a5d1d13914493ff70282424fe
+    search: []
+  - css: hourglass
+    code: 0xea09
+    uid: 01b5e15f5416eedae5ecab8cca354101
+    search: []
+  - css: jigsaw_piece
+    code: 0xea12
+    uid: 716fcd0fdc820536b840d86c417e3ed6
+    search: []
+  - css: kettlebell
+    code: 0xea14
+    uid: e8a23ea83a43553b7862d8d4b46e2e85
+    search: []
+  - css: key_basic
+    code: 0xea15
+    uid: 785cd72ce7dbfa40a455ffec37cfe2cb
+    search: []
+  - css: key
+    code: 0xea16
+    uid: 76e071bd9e229189e4b842b33aebdc41
+    search: []
+  - css: lantern_flame
+    code: 0xea1c
+    uid: 2d6d7b1bd6936c20810f0a0039e02a6b
+    search: []
+  - css: lit_candelabra
+    code: 0xea33
+    uid: d30a3b28fbb8a85d5f16a9ed57e775af
+    search: []
+  - css: match
+    code: 0xea3a
+    uid: 548ef260f414db443d03b7fd21c6993d
+    search: []
+  - css: medical_pack
+    code: 0xea3d
+    uid: f7c0a2dada81558482028bb5bbf57e75
+    search: []
+  - css: mirror
+    code: 0xea42
+    uid: f09fc16880d177e1735ba4edec9e3ec1
+    search: []
+  - css: moon_sun
+    code: 0xea45
+    uid: d96ea352a3a716408bc4524a629d1282
+    search: []
+  - css: nails
+    code: 0xea4a
+    uid: 7410dd16418e3a0713700e8d5e638b8b
+    search: []
+  - css: noose
+    code: 0xea4c
+    uid: d5e61e4f2969a3e2b8af419657f754ea
+    search: []
+  - css: ocarina
+    code: 0xea4e
+    uid: bb3fad24e8d07fed281318073f9233b1
+    search: []
+  - css: pawn
+    code: 0xea57
+    uid: 07984137162cff7fef21e87551efa60c
+    search: []
+  - css: pill
+    code: 0xea60
+    uid: 72e73dd451e3f34a1c35f0a115df5ad1
+    search: []
+  - css: pills
+    code: 0xea61
+    uid: 068e41b04132708004e8449c7bde3c26
+    search: []
+  - css: ping_pong
+    code: 0xea63
+    uid: e594286bb40eab3737eff4fde101b79c
+    search: []
+  - css: potion
+    code: 0xea72
+    uid: 67ce48471af4255fcd00ff9cc958a692
+    search: []
+  - css: quill_ink
+    code: 0xea75
+    uid: cb75bb1ad5d14ef48f14821565aea50f
+    search: []
+  - css: ringing_bell
+    code: 0xea83
+    uid: 102838e5ec3a24c4ff04d1022588a85f
+    search: []
+  - css: rune_stone
+    code: 0xea89
+    uid: 92cd278f846d734e1b259b6df4e526c2
+    search: []
+  - css: sheriff
+    code: 0xea95
+    uid: b4168070085c51c2146a03f9ee036f32
+    search: []
+  - css: ship_emblem
+    code: 0xea97
+    uid: 69ddc09d141268749cfb503386be6d3c
+    search: []
+  - css: shotgun_shell
+    code: 0xea9a
+    uid: ea15f6eebc798393d5339bc621f43678
+    search: []
+  - css: slash_ring
+    code: 0xeaa2
+    uid: 8c33d60ad0fbc2e5307f30f52323a1b7
+    search: []
+  - css: snorkel
+    code: 0xeaa6
+    uid: 934f1fc61a5ebe4f5e48be61219a423c
+    search: []
+  - css: soccer_ball
+    code: 0xeaa8
+    uid: 8207ac14a2dd7b64df49cbe7961f5ffd
+    search: []
+  - css: spray_can
+    code: 0xeab6
+    uid: 4e627cc8201704dcfc8ac9502b63df49
+    search: []
+  - css: stopwatch
+    code: 0xeab9
+    uid: 8fd58d4a5faf953b6069ba222e41021e
+    search: []
+  - css: syringe
+    code: 0xeac2
+    uid: b3fede04462e05d46f106752de317752
+    search: []
+  - css: three_keys
+    code: 0xeacc
+    uid: 6d5a56b97ab989dcd9522ba2e2912171
+    search: []
+  - css: torch
+    code: 0xead1
+    uid: 2e9b3b23b5ee15e7b0a2aef8e7d139c4
+    search: []
+  - css: trophy
+    code: 0xead7
+    uid: 00b217d8be2a8db6dc8006da0ef92ea1
+    search: []
+  - css: wooden_sign
+    code: 0xeae9
+    uid: 7e7278d88deb62f2e69f5f9946f2bead
+    search: []
+  - css: wrench
+    code: 0xeaea
+    uid: 247ddf62125110a65917aef6d8215331
+    search: []
+
+
+  - css: beetle
+    code: 0xe92b
+    uid: 2733f803b01b59ae588e5405a27a180f
+    search: []
+  - css: cat
+    code: 0xe95f
+    uid: 4c7bbc0bcaaa7e01a76ed3c5e414928c
+    search: []
+  - css: bird_claw
+    code: 0xe92e
+    uid: 23026d7bd68fb4def9640cf9417ecd1e
+    search: []
+  - css: butterfly
+    code: 0xe953
+    uid: 023735ce70f73573ab98c8bdaf276c0a
+    search: []
+  - css: dinosaur
+    code: 0xe99b
+    uid: b73e8f36d8306ec16361ec36c7f00707
+    search: []
+  - css: dragon
+    code: 0xe9a2
+    uid: 36f081dec6678965c7bcbfab006d9c9b
+    search: []
+  - css: dragonfly
+    code: 0xe9a3
+    uid: 8ea711875dca5cf328997c34da2ad187
+    search: []
+  - css: eye_monster
+    code: 0xe9b3
+    uid: af18dad4c54abc72bf5285f509be11de
+    search: []
+  - css: fairy
+    code: 0xe9b7
+    uid: f841035e0ab846b479df622be5e95424
+    search: []
+  - css: fish
+    code: 0xe9c5
+    uid: 3a3a0fb9aec8b99316f9b5e43d759708
+    search: []
+  - css: fox
+    code: 0xe9d5
+    uid: ea2d307ea8aa679810792b27c05bd007
+    search: []
+  - css: gecko
+    code: 0xe9de
+    uid: 243a10fe614f9498147c0f137fb404fe
+    search: []
+  - css: hydra
+    code: 0xea0b
+    uid: 79bab90f8426a79204b74b328d5ab08d
+    search: []
+  - css: insect_jaws
+    code: 0xea0f
+    uid: 40be725f875828c3657b44346dc7d968
+    search: []
+  - css: lion
+    code: 0xea32
+    uid: a65879da99b4e763d00025f251d6de42
+    search: []
+  - css: love_howl
+    code: 0xea36
+    uid: efdb6e6d1f4993ffcdc925b5d111ca6c
+    search: []
+  - css: maggot
+    code: 0xea37
+    uid: b54c25059385f31b0fa014df3b31c3ec
+    search: []
+  - css: octopus
+    code: 0xea50
+    uid: fc45db7ef0c07cbacf6e1a92ab3013ea
+    search: []
+  - css: rabbit
+    code: 0xea76
+    uid: 0bba5d367e2149164b9802fc7b8e2533
+    search: []
+  - css: raven
+    code: 0xea7a
+    uid: c97f09ce793ca4773cf1cec6380aa066
+    search: []
+  - css: sea_serpent
+    code: 0xea91
+    uid: 23b1341c03573535250a83a49c7824fc
+    search: []
+  - css: seagull
+    code: 0xea92
+    uid: aef1b275112dc1215e003c1b334c68c6
+    search: []
+  - css: shark
+    code: 0xea93
+    uid: 717ba87302907eeaeb5e74ca2ce493d4
+    search: []
+  - css: sheep
+    code: 0xea94
+    uid: 55fb53bf8da91d88adbfc6544aa038f2
+    search: []
+  - css: snail
+    code: 0xeaa4
+    uid: 40763df89a6adea5d6d3f97aa6ef8b40
+    search: []
+  - css: snake
+    code: 0xeaa5
+    uid: f808d2556d1d30b5c2b363a8c4692f9c
+    search: []
+  - css: spider_face
+    code: 0xeaaf
+    uid: 9b616bde7eb9dca3999667785ecfd7ac
+    search: []
+  - css: spiked_tentacle
+    code: 0xeab2
+    uid: 41f02596b32a20e8953830659a1add2c
+    search: []
+  - css: spiral_shell
+    code: 0xeab4
+    uid: f969ca36a32737094d8c2a67d8f8991c
+    search: []
+  - css: suckered_tentacle
+    code: 0xeaba
+    uid: 328791b8b0dabb718fd9919fe1005967
+    search: []
+  - css: tentacle
+    code: 0xeac8
+    uid: 3b3f46dbf87f8f59eae3f0228d5d6a0f
+    search: []
+  - css: two_dragons
+    code: 0xead9
+    uid: ff7cd580f0d3130dbe9c6807d47491cd
+    search: []
+  - css: venomous_snake
+    code: 0xeadf
+    uid: 92073a8bc806ba62629dbf6867f4f3c7
+    search: []
+  - css: wolf_head
+    code: 0xeae7
+    uid: 7cb0e37671602d9a617baeef9e84fe72
+    search: []
+  - css: wolf_howl
+    code: 0xeae8
+    uid: 7721df449a9a79f5b38dfe423b1382c1
+    search: []
+  - css: wyvern
+    code: 0xeaeb
+    uid: d920ca92e8cc7a62310f20c1e6d506df
+    search: []
+  - css: alien_fire
+    code: 0xe902
+    uid: f0dd68e5fb1c9e9d5a4fa6510178bfd2
+    search: []
+  - css: batteries
+    code: 0xe91d
+    uid: 603b8485707e139b04a38f69459d1ebf
+    search: []
+  - css: battery_0
+    code: 0xe91e
+    uid: 68a731d17e290111f32603e131d31100
+    search: []
+  - css: battery_25
+    code: 0xe91f
+    uid: 3e31734219b8d8e9f27dfa7a3d4182bd
+    search: []
+  - css: battery_50
+    code: 0xe920
+    uid: a62050670978afb7c3f5de118e68728d
+    search: []
+  - css: battery_75
+    code: 0xe921
+    uid: 61f7c07cd8a0366c4d2a22639b95ab97
+    search: []
+  - css: battery_100
+    code: 0xe922
+    uid: d386c6ea042fb795eb75fb15f96a21ed
+    search: []
+  - css: battery_black
+    code: 0xe923
+    uid: caef1de4ed866b574732e43d9cbc2136
+    search: []
+  - css: battery_negative
+    code: 0xe924
+    uid: ff0113f71904a34afb7938e4a4fa0cc6
+    search: []
+  - css: battery_positive
+    code: 0xe925
+    uid: fe71c76a58a6781bc8ed5350d3010afe
+    search: []
+  - css: battery_white
+    code: 0xe926
+    uid: 493cd171b36b4fdd0dafc58a3ce2235a
+    search: []
+  - css: cog_wheel
+    code: 0xe96f
+    uid: e632e96d2fb2ad24a075cb0287520c2a
+    search: []
+  - css: cog
+    code: 0xe970
+    uid: e6e95ef96dc57c41e6926a601d200380
+    search: []
+  - css: defibrillate
+    code: 0xe98e
+    uid: 169d9621a18c4845db8433423068a3ab
+    search: []
+  - css: energise
+    code: 0xe9b0
+    uid: e66c3f982b42fcaa8cbbf0aab7b75d7b
+    search: []
+  - css: fast_ship
+    code: 0xe9ba
+    uid: 828a2437e9b053a19a3c72f674a1554c
+    search: []
+  - css: gamepad_cross
+    code: 0xe9d9
+    uid: ba10395a5444b774d3eccad3bf52d3bc
+    search: []
+  - css: gear_heart
+    code: 0xe9dc
+    uid: e67ed86bc7e90185bbe7dc18d493c4cd
+    search: []
+  - css: gears
+    code: 0xe9dd
+    uid: a8a7f1777889069e492b010bd9fcb249
+    search: []
+  - css: laser_site
+    code: 0xea1f
+    uid: cd18fbc918e85a5b82a8adf773535fa5
+    search: []
+  - css: lever
+    code: 0xea29
+    uid: bc6e95766248971c89565110ae85db2e
+    search: []
+  - css: light_bulb
+    code: 0xea2b
+    uid: bb2aa89e15e84f0d908e238ba355d5c2
+    search: []
+  - css: lighthouse
+    code: 0xea2c
+    uid: c333b27dfc456e2a50584364c174141d
+    search: []
+  - css: load
+    code: 0xea34
+    uid: 4c0d8c26b22c6f779201503421aebec2
+    search: []
+  - css: magnet
+    code: 0xea38
+    uid: 0afe86c69519025391e3a6e4d93f77d8
+    search: []
+  - css: microphone
+    code: 0xea3f
+    uid: 69fbc9e739dffe6f776685b4100db99b
+    search: []
+  - css: nuclear
+    code: 0xea4d
+    uid: f0178be87c34e1c3fd9d8e0e3c3d7b85
+    search: []
+  - css: radar_dish
+    code: 0xea77
+    uid: 3ebe8d293613ddeb627d976fdd48accc
+    search: []
+  - css: radioactive
+    code: 0xea79
+    uid: 3221c03a6404b11ba39e84a9ce225dd8
+    search: []
+  - css: reactor
+    code: 0xea7b
+    uid: 0d9286a84324b172a37713a799ae171b
+    search: []
+  - css: recycle
+    code: 0xea7c
+    uid: 9a8f616e91c231316d6e87444c58e941
+    search: []
+  - css: regeneration
+    code: 0xea7d
+    uid: 52c828260d27c7c8bde1b2c7b183c831
+    search: []
+  - css: repair
+    code: 0xea7f
+    uid: b8fbef4a8c8a087d57074c90a2e59b1a
+    search: []
+  - css: robot_arm
+    code: 0xea85
+    uid: 93bc83dcc4c3eb4fe85d7de382ad669e
+    search: []
+  - css: speech_bubble
+    code: 0xeaad
+    uid: 9c18fb3010b707a55dcb0919162b6c8c
+    search: []
+  - css: speech_bubbles
+    code: 0xeaae
+    uid: 98a19af88863e2470bf2eb37961de8b1
+    search: []
+  - css: surveillance_camera
+    code: 0xeac1
+    uid: feb51cdf13c9bd631a4f673f3bd8ba2d
+    search: []
+  - css: telescope
+    code: 0xeac7
+    uid: 2b43906d13d0dfd9d0516fde45871ef8
+    search: []
+  - css: tesla
+    code: 0xeac9
+    uid: ee81460043293a42ae7f4897bd32e9c5
+    search: []
+  - css: unplugged
+    code: 0xeadd
+    uid: 97a00788197ff229331c51e4e1f1d8e3
+    search: []
+  - css: wifi
+    code: 0xeae5
+    uid: 7607ae31bb7dce1f525d5a1354a46e47
+    search: []
+  - css: wireless_signal
+    code: 0xeae6
+    uid: ca7dfedf962494a718ae5801d45b4995
+    search: []
+
+
+  - css: bottom_right
+    code: 0xe93f
+    uid: adb5761616b6e8ae7a58dd67e2e8027e
+    search: []
+  - css: cancel
+    code: 0xe955
+    uid: d9e66bee1f49161ff595faf66d1c984b
+    search: []
+
+  - css: clovers_card
+    code: 0xe96b
+    uid: 5901fc0a5896b108a69a4ca7f239c436
+    search: []
+  - css: clovers
+    code: 0xe96c
+    uid: a1e3f98b74b8f07b4482ea9e23bb03e2
+    search: []
+  - css: diamonds_card
+    code: 0xe993
+    uid: 5c27ab5d272820b2a17d402d8b242c1b
+    search: []
+  - css: diamonds
+    code: 0xe994
+    uid: 353015bf181ed7da6c362b7e1cd9301d
+    search: []
+  - css: hearts_card
+    code: 0xe9f9
+    uid: 123604fef029db1f88efd19f38e8fa9f
+    search: []
+  - css: hearts
+    code: 0xe9fa
+    uid: f27decd5e70e8bb6a0722a770257663c
+    search: []
+  - css: spades_card
+    code: 0xeaa9
+    uid: 3f1bded9e5752797ca1aa15f1d58afdb
+    search: []
+  - css: spades
+    code: 0xeaaa
+    uid: def83b1268d5ed2bd4ae3446da64c6d4
+    search: []
+  - css: suits
+    code: 0xeabb
+    uid: b3f1f43bb36f65c79e32a7b6fd6db5b5
+    search: []
+
+  - css: chessboard
+    code: 0xe963
+    uid: f05112683672380350a4d1aa5680c7cb
+    search: []
+
+  - css: dice_one
+    code: 0xe997
+    uid: ad9515b670bda652a0de577cffbfc672
+    search: []
+  - css: dice_two
+    code: 0xe99a
+    uid: 8b764b451164cc07a8b68ff7b92a68c2
+    search: []
+  - css: dice_three
+    code: 0xe999
+    uid: 3244223db30576aa43fcb80d3da4b633
+    search: []
+  - css: dice_four
+    code: 0xe996
+    uid: db6d20173fd0ec71480b2cb196c270b9
+    search: []
+  - css: dice_five
+    code: 0xe995
+    uid: 1f717f4e938786c84185ac8710dd62a8
+    search: []
+  - css: dice_six
+    code: 0xe998
+    uid: 237cf91862389092364b4aabc6362fd4
+    search: []
+
+  - css: perspective_dice_one
+    code: 0xea5b
+    uid: bbdb2f44a3b0ed0f4e502ea32c4a9afc
+    search: []
+  - css: perspective_dice_six_two
+    code: 0xea5d
+    uid: 91cbd5d5dff6f0356cc239b1370568c9
+    search: []
+  - css: perspective_dice_three
+    code: 0xea5f
+    uid: 4d8cba41c96b3f6af5c1175bce6025bb
+    search: []
+  - css: perspective_dice_four
+    code: 0xea5a
+    uid: 296e9f8d3d0150270ee0c3148def71f8
+    search: []
+  - css: perspective_dice_five
+    code: 0xea59
+    uid: b9c903804d6b7e47e80763755501c9de
+    search: []
+  - css: perspective_dice_six
+    code: 0xea5e
+    uid: 7d608069c8752b109fbf8207519fa33e
+    search: []
+  - css: perspective_dice_random
+    code: 0xea5c
+    uid: 0e9ab6b8b6cc100687b7d02d089eaee7
+    search: []
+
+
+
+  - css: acorn
+    code: 0xe901
+    uid: 82146a9206967c41cc33ab21c160bcb5
+    search: []
+  - css: apple
+    code: 0xe90a
+    uid: 0e2ac1cc4ab6b596f660e7cb3a9d03d6
+    search: []
+  - css: beer
+    code: 0xe92a
+    uid: 8788ad7580c00e218788afaaf95cb7f4
+    search: []
+  - css: brandy_bottle
+    code: 0xe943
+    uid: 468106486a7d1c27d12062b080849848
+    search: []
+  - css: carrot
+    code: 0xe95c
+    uid: 8dcb8470160dc08a8fd81b37ce3c04ec
+    search: []
+  - css: cheese
+    code: 0xe961
+    uid: 37948269530d0cbe30f1f73489f0c517
+    search: []
+  - css: chicken_leg
+    code: 0xe964
+    uid: 69bf8c6e80f41bb355f7ec9f8981bbbb
+    search: []
+  - css: coffee_mug
+    code: 0xe96e
+    uid: 4c722218206ac67e3a2d743c7a0e317e
+    search: []
+  - css: crab_claw
+    code: 0xe974
+    uid: 0084ad4108e2fc7f09487dc57063dc25
+    search: []
+  - css: egg_pod
+    code: 0xe9ac
+    uid: b51f30bcef710563cd3e17fd3a1b7009
+    search: []
+  - css: egg
+    code: 0xe9ad
+    uid: edca931fb856a7a561d83d31a0513987
+    search: []
+  - css: eggplant
+    code: 0xe9ae
+    uid: 3c23038a3a7520042bbf79c8c71f6355
+    search: []
+  - css: honeycomb
+    code: 0xea02
+    uid: a2fcf22adb01626bcfb6d33af127700e
+    search: []
+  - css: ice_cube
+    code: 0xea0c
+    uid: fb6e9d2ecadd10e8b0552d1775ba5c06
+    search: []
+  - css: knife_fork
+    code: 0xea18
+    uid: 041d33fdd0e7a29547536b028cd5ed8b
+    search: []
+  - css: meat
+    code: 0xea3c
+    uid: 76063d5f73feb53f6f154971aea5da66
+    search: []
+  - css: roast_chicken
+    code: 0xea84
+    uid: e4cb74a20ae84abe61e46cad7d2b36a1
+    search: []
+  - css: toast
+    code: 0xeace
+    uid: 32ed8d99bf87449c58ea9c059fbc3833
+    search: []
+
+
+
+  - css: clover
+    code: 0xe96a
+    uid: f7aaaff57d6c2e825b208033423c29ec
+    search: []
+  - css: daisy
+    code: 0xe98a
+    uid: 8b80f88f5fe738318a9fa42ce1655d66
+    search: []
+  - css: dead_tree
+    code: 0xe98b
+    uid: 51cdaff65cf97f86b527ebc1840fa03c
+    search: []
+  - css: flower
+    code: 0xe9cd
+    uid: 16d8ee7f115e0b6726faff20bd3f1e06
+    search: []
+  - css: flowers
+    code: 0xe9ce
+    uid: 0b55fe7a62b6a64765295b6d5e842414
+    search: []
+  - css: grass_patch
+    code: 0xe9e6
+    uid: 35305a310e3bc64f302766a59c88bb49
+    search: []
+  - css: grass
+    code: 0xe9e7
+    uid: 303ea632e56011b497cab7cd07fa595c
+    search: []
+  - css: leaf
+    code: 0xea21
+    uid: 859af21737bf15417764d7e48a15e219
+    search: []
+  - css: palm_tree
+    code: 0xea56
+    uid: ab7d8f416f03aa8e59908ea4f1c79f70
+    search: []
+  - css: pine_tree
+    code: 0xea62
+    uid: 9a367501675ae96451d1c458ab49dd6d
+    search: []
+  - css: sprout_emblem
+    code: 0xeab7
+    uid: a7a80dff022c1684edbfdb57b20be756
+    search: []
+  - css: sprout
+    code: 0xeab8
+    uid: 94f79369d1bdd4af2a44c1bc4b81b2cf
+    search: []
+  - css: super_mushroom
+    code: 0xeabf
+    uid: 28f8c675e6d29a8d6f8b24e2ed3f5843
+    search: []
+  - css: trefoil_lily
+    code: 0xead4
+    uid: fca2a7ff7701c8d37ce172fadd10fc48
+    search: []
+  - css: zigzag_leaf
+    code: 0xeaee
+    uid: 8260d3679335bcfd876ebdcc2a56018b
+    search: []
+
+
+  - css: aquarius
+    code: 0xe90b
+    uid: 0d83dce7384f2c6cdb9ee9fa9edefb93
+    search: []
+  - css: aries
+    code: 0xe910
+    uid: 92ab549bd4b930d9bc3410fc58670ad2
+    search: []
+  - css: cancer
+    code: 0xe956
+    uid: 674c7add3954c18e40b8addb44c65b4c
+    search: []
+  - css: capricorn
+    code: 0xe95b
+    uid: f02c14e5fd93879777a43f2400dd3223
+    search: []
+  - css: gemini
+    code: 0xe9e1
+    uid: 878985c8cb406b346a82880887fec692
+    search: []
+  - css: leo
+    code: 0xea22
+    uid: 1316ed2a879d17696bdc6fb9623b8df1
+    search: []
+  - css: libra
+    code: 0xea2a
+    uid: 600de5017c487b924b6f9630514279a4
+    search: []
+  - css: pisces
+    code: 0xea64
+    uid: 92305f59d4463f2a69aec36d846502a6
+    search: []
+  - css: sagittarius
+    code: 0xea8a
+    uid: c3d14ffe81195e055fe550fbc370060d
+    search: []
+  - css: scorpio
+    code: 0xea8e
+    uid: ff7e47ce96da2b85b09bed6f683da069
+    search: []
+  - css: taurus
+    code: 0xeac6
+    uid: 7bae4e5457c54c6492c6e1feb36047b2
+    search: []
+  - css: virgo
+    code: 0xeae3
+    uid: b75109570adca1297ece4db3524a5f46
+    search: []
+
+
+
+  - css: acid
+    code: 0xe900
+    uid: 7bf000a0a3e098766e2126ab7b9e8542
+    search: []
+  - css: arson
+    code: 0xe913
+    uid: 7711c2373e93ccd89e9d50e22ecc828c
+    search: []
+  - css: biohazard
+    code: 0xe92d
+    uid: 86b7f8e1916e4bb8c63994d09cfa2158
+    search: []
+  - css: blade_bite
+    code: 0xe930
+    uid: 5579621d3bc28d20e4edc30c7df23432
+    search: []
+  - css: blast
+    code: 0xe931
+    uid: 9d8fff57a6300fbbb91b87b178af0fda
+    search: []
+  - css: blaster
+    code: 0xe932
+    uid: 113eb130d733265a776d0fff524ac5e8
+    search: []
+  - css: bleeding_eye
+    code: 0xe933
+    uid: c6d6812b43086e271125756209488d89
+    search: []
+  - css: bleeding_hearts
+    code: 0xe934
+    uid: 96b23f6aa151a7712a6a195be3b1af47
+    search: []
+  - css: bone_bite
+    code: 0xe938
+    uid: 51c9f0c4b5da31f11189d9c9be089a32
+    search: []
+  - css: burning_meteor
+    code: 0xe951
+    uid: f8995447e2ae066145b35ee7fa48e28d
+    search: []
+  - css: crush
+    code: 0xe981
+    uid: 1099ccb6fbe72178ddff4a7b0f017a87
+    search: []
+  - css: decapitation
+    code: 0xe98d
+    uid: aa98e6688975ceb6e0c49773fb71ea50
+    search: []
+  - css: fall_down
+    code: 0xe9b8
+    uid: b51217d17e19e1a634fb739a06dea8cd
+    search: []
+  - css: fire
+    code: 0xe9c3
+    uid: 1b067788f995a7f0af9b17e1375b58ed
+    search: []
+  - css: focused_lightning
+    code: 0xe9d0
+    uid: 60378f1bac03d191e3bc936c56cf7df8
+    search: []
+  - css: food_chain
+    code: 0xe9d1
+    uid: ad17d7d6fe7c91b54ee3665d665c9b98
+    search: []
+  - css: heartburn
+    code: 0xe9f8
+    uid: d87d007d48789400af106c57b6a611f6
+    search: []
+  - css: poison_cloud
+    code: 0xea71
+    uid: 88fb3aedea05ed0d2bb205eee2b0b334
+    search: []
+  - css: tombstone
+    code: 0xeacf
+    uid: d6e40caa08f4c26b30de9817a37063b5
+    search: []
+
+
+
+  - css: brain_freeze
+    code: 0xe942
+    uid: 4c8256bc5de0a4aa2099eba5b8b250d9
+    search: []
+  - css: burning_book
+    code: 0xe94e
+    uid: ee98d2c4e75eb4eebd674b4e517ebd11
+    search: []
+  - css: burning_embers
+    code: 0xe94f
+    uid: dc0aaaf6e299abe3b9d254564119bc8f
+    search: []
+  - css: burning_eye
+    code: 0xe950
+    uid: 9d5fe8fa2f6067165c23fa975b750c03
+    search: []
+  - css: burst_blob
+    code: 0xe952
+    uid: a40e67f1ba8aace8cadaa078496d5ab2
+    search: []
+  - css: cold_heart
+    code: 0xe971
+    uid: 4e73e3ff6e807314f71a4ccd3d0a3922
+    search: []
+  - css: crystal_ball
+    code: 0xe982
+    uid: 9549526547c77c8b7951909ce07af652
+    search: []
+  - css: crystal_cluster
+    code: 0xe983
+    uid: a1c427de37e368a02ef27589f3c4ea55
+    search: []
+  - css: crystal_wand
+    code: 0xe984
+    uid: 8330e230bd689c84830aaac4d932b88b
+    search: []
+  - css: crystals
+    code: 0xe985
+    uid: 40faabbcc7d83e88f1a2575b0cf639cc
+    search: []
+  - css: diamond
+    code: 0xe992
+    uid: 2676c2da5d2994f33c87845a819da783
+    search: []
+  - css: divert
+    code: 0xe99c
+    uid: cb22f39ae172be6225de7d7a43009621
+    search: []
+  - css: doubled
+    code: 0xe99f
+    uid: bad68a234b66b199d80f3ef6cbdf18eb
+    search: []
+  - css: dragon_breath
+    code: 0xe9a0
+    uid: 0be91a1530695eff5043303eb43750a3
+    search: []
+  - css: droplet_splash
+    code: 0xe9a8
+    uid: ca5c5ff5fc0b83c38e366b8f27d43644
+    search: []
+  - css: droplet
+    code: 0xe9a9
+    uid: 9cc2b974d28b0fbe1a62e49cc1c49ecb
+    search: []
+  - css: droplets
+    code: 0xe9aa
+    uid: 29c9afd6da7b12fe6f22c96a6926fd84
+    search: []
+  - css: emerald
+    code: 0xe9af
+    uid: b49122cee34a8ceed2c8a2216eb1c35d
+    search: []
+  - css: eyeball
+    code: 0xe9b5
+    uid: 2a5918f9255be75b19d0975f98583220
+    search: []
+  - css: fairy_wand
+    code: 0xe9b6
+    uid: 9366c4135ec6e20621ad1c4df55fdbc6
+    search: []
+  - css: fire_breath
+    code: 0xe9bf
+    uid: af9136bdcdcf8f8d6f448aac688e6bb5
+    search: []
+  - css: fire_ring
+    code: 0xe9c0
+    uid: 70eca067c6b463f8e2f3ed5fffc59cb0
+    search: []
+  - css: fire_symbol
+    code: 0xe9c2
+    uid: 8b7b5e4c47965937c6bf7fccea0b0bfc
+    search: []
+  - css: flame_symbol
+    code: 0xe9c7
+    uid: c27d1dfac9a0175c05277c89bb691b61
+    search: []
+  - css: frost_emblem
+    code: 0xe9d6
+    uid: 418a0bb4323d617d62fc555c8ea93f29
+    search: []
+  - css: frostfire
+    code: 0xe9d7
+    uid: c8895c2a0dbee2a3d42d5df3b79d4706
+    search: []
+  - css: gem_pendant
+    code: 0xe9df
+    uid: 94b985f66983360904d3719b2531474c
+    search: []
+  - css: gem
+    code: 0xe9e0
+    uid: 40c64ecabe739713e771a6b83307964a
+    search: []
+  - css: gloop
+    code: 0xe9e3
+    uid: 18d5d382fa16518894e8d07f6466262a
+    search: []
+  - css: gold_bar
+    code: 0xe9e4
+    uid: 24621380e9e3e756f89e67cad1783153
+    search: []
+  - css: health_decrease
+    code: 0xe9f3
+    uid: 4dfede75b9adedf016741e595aa38249
+    search: []
+  - css: health_increase
+    code: 0xe9f4
+    uid: fdc00a3b4786742ed6b0a02c5d1c5f63
+    search: []
+  - css: health
+    code: 0xe9f5
+    uid: 2d30f7a9bf3ff3e03a053db58687bd1d
+    search: []
+  - css: hospital_cross
+    code: 0xea07
+    uid: ec66e59498568dbd1f10f21df835d978
+    search: []
+  - css: hot_surface
+    code: 0xea08
+    uid: 97794d8d98bb0fca98a5ad984b949030
+    search: []
+  - css: hydra_shot
+    code: 0xea0a
+    uid: d63b8bd99922d7a74ac8dae7bded72ff
+    search: []
+  - css: incense
+    code: 0xea0e
+    uid: 1bf10de942bbf4b5faf925e90b365913
+    search: []
+  - css: kaleidoscope
+    code: 0xea13
+    uid: 91783e69aafaeb660b220819c398f403
+    search: []
+  - css: lava
+    code: 0xea20
+    uid: fa6a4f7bde43b70c8d8df65a2f40d3a9
+    search: []
+  - css: level_four_advanced
+    code: 0xea23
+    uid: 320c156d34748c20e0aedb951d7b9032
+    search: []
+  - css: level_four
+    code: 0xea24
+    uid: c071e68eab1a979ba705b6cb3682211b
+    search: []
+  - css: level_three_advanced
+    code: 0xea25
+    uid: fc4db1ba12da44cab81322d735ef89f9
+    search: []
+  - css: level_three
+    code: 0xea26
+    uid: f2af7896c276035f8e75d43838f7a1d3
+    search: []
+  - css: level_two_advanced
+    code: 0xea27
+    uid: 7c32768e5573c51fb54da1717cddc231
+    search: []
+  - css: level_two
+    code: 0xea28
+    uid: 5360e70310563b9da55995d341bd71b7
+    search: []
+  - css: lightning_bolt
+    code: 0xea2d
+    uid: 8ee4224be68c5cb20a766a117137c450
+    search: []
+  - css: lightning_storm
+    code: 0xea2e
+    uid: 4028342e7bc3b07edfd09ac0a0bbf5a6
+    search: []
+  - css: lightning_trio
+    code: 0xea30
+    uid: 2dfbc7052448acff9d94dbdea47defe3
+    search: []
+  - css: lightning
+    code: 0xea31
+    uid: 1534492cb37d9c56e9916cffcec1d85a
+    search: []
+  - css: sapphire
+    code: 0xea8b
+    uid: 26ef563b04da60cfab091e6786669a5f
+    search: []
+  - css: small_fire
+    code: 0xeaa3
+    uid: f94999a43506cb6a8a7adcb757e7d9b0
+    search: []
+  - css: snowflake
+    code: 0xeaa7
+    uid: 186276601dce594e7c043c6cd219ebae
+    search: []
+  - css: sun_symbol
+    code: 0xeabc
+    uid: ac0e0275f10c015426c6adaed3321633
+    search: []
+  - css: sun
+    code: 0xeabd
+    uid: c2a506fcb103905b93e3877c07dac484
+    search: []
+  - css: sunbeams
+    code: 0xeabe
+    uid: 6e929639f77973220a415676ad9d9693
+    search: []
+  - css: triforce
+    code: 0xead6
+    uid: 01f5777cf26c2223dc964e8dcf890e5d
+    search: []
+  - css: two_hearts
+    code: 0xeada
+    uid: e4df4e611b971bd7d40fc8e7d12a198b
+    search: []
+  - css: water_drop
+    code: 0xeae4
+    uid: 9abbd324ea543b186b4e90967f252dd7
+    search: []
+
+
+  - css: all_for_one
+    code: 0xe903
+    uid: 0a6a54836f3dd2ee182d90f05c165950
+    search: []
+  - css: anvil
+    code: 0xe909
+    uid: e9195b182fca4484b4fab5322ea90a4e
+    search: []
+  - css: arcane_mask
+    code: 0xe90c
+    uid: 6cb63032d418ddd01d2e3890f73946b0
+    search: []
+  - css: archer
+    code: 0xe90d
+    uid: 67744f15f1a079ab942dc64e6013ea59
+    search: []
+  - css: archery_target
+    code: 0xe90e
+    uid: 71ee97b42b998cb61f902c02dc579076
+    search: []
+  - css: arena
+    code: 0xe90f
+    uid: 37c25c0f104723da7591c8a50a2b184b
+    search: []
+  - css: arrow_cluster
+    code: 0xe911
+    uid: 24e727b76fae4510cc2869747066d570
+    search: []
+  - css: arrow_flights
+    code: 0xe912
+    uid: c19124b5ef93dfbdbe49241f1f20a0e6
+    search: []
+  - css: axe_swing
+    code: 0xe916
+    uid: f4603b4f5655dff78c0edbe237ec0b85
+    search: []
+  - css: axe
+    code: 0xe917
+    uid: 0abc41cd43915d1519ca5d85aa5a3eb9
+    search: []
+  - css: barbed_arrow
+    code: 0xe919
+    uid: 3d113fd2a18a8dcdcef14a407ed91fcb
+    search: []
+  - css: barrier
+    code: 0xe91a
+    uid: 050c925ead3a6201a51c54515a6762d9
+    search: []
+  - css: bat_sword
+    code: 0xe91b
+    uid: 4ebdf8e31260f03f2acf032e72502a4e
+    search: []
+  - css: battered_axe
+    code: 0xe91c
+    uid: 5b2516b47fd2b9355a96e75fd986cff4
+    search: []
+  - css: beam_wake
+    code: 0xe928
+    uid: f67cd79b9bfac41589671f4d0f3010a7
+    search: []
+  - css: bear_trap
+    code: 0xe929
+    uid: 5c64c07f80770255b97775e3e6dfc519
+    search: []
+  - css: bolt_shield
+    code: 0xe935
+    uid: b137519bd241a0658042b8302db0c63a
+    search: []
+  - css: bomb_explosion
+    code: 0xe936
+    uid: 3fe06060d09a16e92fa260e72a10f1b4
+    search: []
+  - css: bombs
+    code: 0xe937
+    uid: e86fd7865651cdd85467bb4c9afba941
+    search: []
+  - css: bone_knife
+    code: 0xe939
+    uid: 6e120e0d19d2d68a670f0cada402cefa
+    search: []
+  - css: boomerang
+    code: 0xe93b
+    uid: 063fe02dffea6913237b0505ef147e59
+    search: []
+  - css: boot_stomp
+    code: 0xe93c
+    uid: ee555aaabbd33ee303f39474e4f3aa24
+    search: []
+  - css: bowie_knife
+    code: 0xe940
+    uid: d56e5d54e67258541900010ab07971a9
+    search: []
+  - css: broadhead_arrow
+    code: 0xe945
+    uid: cb7f1f7693502767ba82c87a7d844489
+    search: []
+  - css: broadsword
+    code: 0xe946
+    uid: f3aa0f8eae3c7632564c34445991e971
+    search: []
+  - css: broken_bone
+    code: 0xe947
+    uid: 712fd71c958c566758bd015cfb475827
+    search: []
+  - css: broken_shield
+    code: 0xe94a
+    uid: 2bc503beafd0fa3b3c660a3c9685e8e2
+    search: []
+  - css: bullets
+    code: 0xe94d
+    uid: 18bb0ff6a5e4bfec87a19f40824bd40b
+    search: []
+  - css: cannon_shot
+    code: 0xe959
+    uid: 146b8f29b82cbbaff7410e4a72ad35fc
+    search: []
+  - css: chain
+    code: 0xe960
+    uid: 28fc6131c0f1cf04ed10c95f81155714
+    search: []
+  - css: chemical_arrow
+    code: 0xe962
+    uid: 8540310efd0a1caa686595f2af95a0ce
+    search: []
+  - css: circular_saw
+    code: 0xe966
+    uid: dccfff10e4c7e20793dcf5f76011491f
+    search: []
+  - css: circular_shield
+    code: 0xe967
+    uid: 56a5b1971194a2b8259c3c39f2a358a6
+    search: []
+  - css: cluster_bomb
+    code: 0xe96d
+    uid: 09f3d4a8b819c24f00a83e422d1fcecf
+    search: []
+  - css: cracked_helm
+    code: 0xe975
+    uid: 3bf0417a2481b70832856b13cbd9c6bb
+    search: []
+  - css: cracked_shield
+    code: 0xe976
+    uid: 5e3b689457a8d65d7833eb0fdea97834
+    search: []
+  - css: croc_sword
+    code: 0xe977
+    uid: 274e659f9ccac668d365a734ea278c3b
+    search: []
+  - css: crossbow
+    code: 0xe978
+    uid: 6e33551260f75c88291c430cd5714dfd
+    search: []
+  - css: crossed_axes
+    code: 0xe979
+    uid: 7391921698450a3ec54812f4f8764985
+    search: []
+  - css: crossed_bones
+    code: 0xe97a
+    uid: ef073452b32bee5775a97808dddd1cfd
+    search: []
+  - css: crossed_pistols
+    code: 0xe97b
+    uid: e09a914ceb2017f6568958af2ff4ef1c
+    search: []
+  - css: crossed_sabres
+    code: 0xe97c
+    uid: 907ad76947657f820c3ffc5c1f7ad9de
+    search: []
+  - css: crossed_swords
+    code: 0xe97d
+    uid: acca5a333bcfe091982b3c7898ab626c
+    search: []
+  - css: daggers
+    code: 0xe989
+    uid: f8f8cc352eae9fee495dbb30304801b9
+    search: []
+  - css: dervish_swords
+    code: 0xe990
+    uid: 2a8542d683382a2f8e39ebb89db925b5
+    search: []
+  - css: diving_dagger
+    code: 0xe99d
+    uid: d4154fae11f2bc4c0ab021ddc4e7698d
+    search: []
+  - css: drill
+    code: 0xe9a4
+    uid: b7c62170fc69e66ee45757ca8eea22a3
+    search: []
+  - css: dripping_blade
+    code: 0xe9a5
+    uid: 515e71283336921534c0b18628246af3
+    search: []
+  - css: dripping_knife
+    code: 0xe9a6
+    uid: cb32f5763509f06bb4f07c01b84f8b42
+    search: []
+  - css: dripping_sword
+    code: 0xe9a7
+    uid: bba2783b3f1458e8729b3a3f8fc1662a
+    search: []
+  - css: duel
+    code: 0xe9ab
+    uid: 5b27c0b480ae9e7a686c663e5c800e1a
+    search: []
+  - css: explosion
+    code: 0xe9b1
+    uid: e0b7c5305136d7d1a00352ab98362d7e
+    search: []
+  - css: explosive_materials
+    code: 0xe9b2
+    uid: 92ec6201945c87393e8b41d6a08ca8cb
+    search: []
+  - css: eye_shield
+    code: 0xe9b4
+    uid: d3a0f4ad152bb9aef32ecbcee171f59d
+    search: []
+  - css: fire_bomb
+    code: 0xe9be
+    uid: 37aff26134ffd166a35410d681352040
+    search: []
+  - css: fire_shield
+    code: 0xe9c1
+    uid: eae9123bf0c25de9e0c204b839871590
+    search: []
+  - css: fireball_sword
+    code: 0xe9c4
+    uid: 33e49d65e646699eab066f001b746bc0
+    search: []
+  - css: flaming_arrow
+    code: 0xe9c8
+    uid: 7a1fe6295d5caaf087b66eb188e6891b
+    search: []
+  - css: flaming_claw
+    code: 0xe9c9
+    uid: de0567ff8d7562ad881b7a9445dfd9a5
+    search: []
+  - css: flaming_trident
+    code: 0xe9ca
+    uid: 7ab8b0a2f292255940ee8cf00e91bb49
+    search: []
+  - css: flat_hammer
+    code: 0xe9cc
+    uid: a4fc761ca076bb3c6fc2213fe6121d65
+    search: []
+  - css: frozen_arrow
+    code: 0xe9d8
+    uid: c23865ad56dcb95a5b5c2e1c8bf6d465
+    search: []
+  - css: gavel
+    code: 0xe9da
+    uid: 509fa4d2ffa6537af551973e4dd8ccbd
+    search: []
+  - css: gear_hammer
+    code: 0xe9db
+    uid: 9075e54a24ce3091aafba6c4c4d2f553
+    search: []
+  - css: grappling_hook
+    code: 0xe9e5
+    uid: 4dde2407fac243360e40c5f6ab65a3d3
+    search: []
+  - css: grenade
+    code: 0xe9e8
+    uid: 195e94ad84c7f99d2fd3c142d67d5a57
+    search: []
+  - css: guillotine
+    code: 0xe9eb
+    uid: 6d72e3d2fa2552599295c9543a543004
+    search: []
+  - css: halberd
+    code: 0xe9ec
+    uid: b6db20a8f0649725be9373cf23666c54
+    search: []
+  - css: hammer_drop
+    code: 0xe9ed
+    uid: 1ecc81024ce99d289f7d35d6c0545fef
+    search: []
+  - css: hammer
+    code: 0xe9ee
+    uid: a8ef13bc684882e3aca29987fbe56f5b
+    search: []
+  - css: hand_saw
+    code: 0xe9f0
+    uid: b55c20e8f0927babadaf5e4e4b4f7929
+    search: []
+  - css: harpoon_trident
+    code: 0xe9f2
+    uid: b94281dfbaccfdaacb75ebd94dd05500
+    search: []
+  - css: heavy_shield
+    code: 0xe9fd
+    uid: f061966819b0189d8817a9cbd48e11a8
+    search: []
+  - css: helmet
+    code: 0xe9fe
+    uid: 8abbf8abd6779115aa94febb6b7e4ead
+    search: []
+  - css: horns
+    code: 0xea05
+    uid: 0ddf74c09397aed6808b14a96ba64aeb
+    search: []
+  - css: implosion
+    code: 0xea0d
+    uid: 7ec2d99a757c1d231c86073ce1b3cd91
+    search: []
+  - css: jetpack
+    code: 0xea11
+    uid: 1d929ada615574e91e0f9f8e86b44ec3
+    search: []
+  - css: kitchen_knives
+    code: 0xea17
+    uid: 7b5f302b547630a28fa853481d770f1f
+    search: []
+  - css: knife
+    code: 0xea19
+    uid: d638b960c78cc4e8d916548964fadde6
+    search: []
+  - css: knight_helmet
+    code: 0xea1a
+    uid: 81e9b6b5e9f062b2169d9d1dde46886d
+    search: []
+  - css: kunai
+    code: 0xea1b
+    uid: e9feb5e16b1e552dc798e7c5e7c4af83
+    search: []
+  - css: large_hammer
+    code: 0xea1d
+    uid: 198dc82e4de3a648c367ca7496dabdfd
+    search: []
+  - css: laser_blast
+    code: 0xea1e
+    uid: d009fc3737675fc8740f0995c899aaa3
+    search: []
+  - css: lightning_sword
+    code: 0xea2f
+    uid: 8720da23ee0589d4d6445e8183a5a892
+    search: []
+  - css: mass_driver
+    code: 0xea39
+    uid: e1459348c2179b1f85b95665e25eec97
+    search: []
+  - css: mp5
+    code: 0xea46
+    uid: d817eb79c665f40191e93b9acf871389
+    search: []
+  - css: musket
+    code: 0xea49
+    uid: 000ec9083fe88c45b2a4b605d2d9849b
+    search: []
+  - css: plain_dagger
+    code: 0xea65
+    uid: 3344ef2c913886b8a2af35741eeb9b53
+    search: []
+  - css: relic_blade
+    code: 0xea7e
+    uid: c683288dccf115aa47aee4cdb38db729
+    search: []
+  - css: revolver
+    code: 0xea81
+    uid: a871fd60dda0fd722e105b9253c11ecb
+    search: []
+  - css: rifle
+    code: 0xea82
+    uid: 38c9ab79cc1574e0338c943f5c18ac4a
+    search: []
+  - css: round_shield
+    code: 0xea87
+    uid: f4cce5f4376072bce5e71f67451ec886
+    search: []
+  - css: scythe
+    code: 0xea90
+    uid: b50c76bedb6137bd38e999f9f6f48cde
+    search: []
+  - css: shield
+    code: 0xea96
+    uid: d0330a7c986a04cbf311efe5394fbc4c
+    search: []
+  - css: shuriken
+    code: 0xea9c
+    uid: 5ff6f4c02fffbfa6b8563e1a7a6de39a
+    search: []
+  - css: sickle
+    code: 0xea9d
+    uid: 54413341d67b79a17336720840cf1e24
+    search: []
+  - css: spear_head
+    code: 0xeaac
+    uid: 86c622610c1a2b42f835d8c1e82751a2
+    search: []
+  - css: spikeball
+    code: 0xeab0
+    uid: 9a8834141d77a8529ad78381014d5e3b
+    search: []
+  - css: spiked_mace
+    code: 0xeab1
+    uid: 68cff89e2577802637152a9d09b69805
+    search: []
+  - css: spinning_sword
+    code: 0xeab3
+    uid: 1594f941b806425f95be463ec0ef3adc
+    search: []
+  - css: supersonic_arrow
+    code: 0xeac0
+    uid: 94380c236eb771311492755c94a3d3b8
+    search: []
+  - css: target_arrows
+    code: 0xeac3
+    uid: 70ab6d6e4fe20e72b6b0e0bc3765f667
+    search: []
+  - css: target_laser
+    code: 0xeac4
+    uid: 4ce036de5af1b6d1044b6d1210e28425
+    search: []
+  - css: thorn_arrow
+    code: 0xeaca
+    uid: 5f2ee6dc701ac819794d44f7953d75a5
+    search: []
+  - css: thorny_vine
+    code: 0xeacb
+    uid: 4035a3c9b3fc09a4ae4db4df6bdfa25d
+    search: []
+  - css: trident
+    code: 0xead5
+    uid: 6a4cf8e336fdbc94763d7db432af8f83
+    search: []
+  - css: vest
+    code: 0xeae0
+    uid: 73e93c3aab4411dc5e05663f0aa5f45c
+    search: []
+  - css: vine_whip
+    code: 0xeae2
+    uid: 918a7f6a4cc938aac1d920f0fbbd0e14
+    search: []
+  - css: zebra_shield
+    code: 0xeaed
+    uid: 23053c34893ed45acc81ade6ab1d3bbc
+    search: []
+
+
+  - css: anchor
+    code: 0xe906
+    uid: 192e49ffe230d7d5bd142a70ff26380a
+    search: []
+  - css: angel_wings
+    code: 0xe907
+    uid: 369f49caef048a6a7fdd4ab69ab9a7bd
+    search: []
+  - css: ankh
+    code: 0xe908
+    uid: f36e36877cca5e7abc1443957f563892
+    search: []
+  - css: batwings
+    code: 0xe927
+    uid: e776a06d529815400c5ea72b5dccc883
+    search: []
+  - css: bell
+    code: 0xe92c
+    uid: b65169d91e3f9ffd12865c9e7f48569a
+    search: []
+  - css: bird_mask
+    code: 0xe92f
+    uid: 11530f63ed4bad39c46fa8226f13b14e
+    search: []
+  - css: bowling_pin
+    code: 0xe941
+    uid: 9ac2d18cdd5b1bb0d6a764db3143cb33
+    search: []
+  - css: bridge
+    code: 0xe944
+    uid: fa676227c4f51f3c914efee9425fb26b
+    search: []
+  - css: broken_heart
+    code: 0xe949
+    uid: 3c9bfe17ba75480e3de0be86105c9b84
+    search: []
+  - css: broken_skull
+    code: 0xe94b
+    uid: 2496ee78c515584b838a2f6b75501fbd
+    search: []
+  - css: campfire
+    code: 0xe954
+    uid: 8f195a656646458e341e854344d8cab4
+    search: []
+  - css: candle_fire
+    code: 0xe957
+    uid: 8bbefa2ec417f6f9c335f04e06514910
+    search: []
+  - css: capitol
+    code: 0xe95a
+    uid: 4d29097f38b556bd9b4629c0d39855f9
+    search: []
+  - css: castle_emblem
+    code: 0xe95d
+    uid: 98ab181bc64606649fa596b5fe3e5139
+    search: []
+  - css: circle_of_circles
+    code: 0xe965
+    uid: bf5148f7e6024c084f4c11bccd440b56
+    search: []
+  - css: cloak_and_dagger
+    code: 0xe968
+    uid: ebbe51c631533f2d91e3c298a000bf40
+    search: []
+  - css: clockwork
+    code: 0xe969
+    uid: c5ed4f5a29f5104a733a67f078ba009a
+    search: []
+  - css: crowned_heart
+    code: 0xe980
+    uid: 4ff8fe83fb361d855d3b9891874e1e30
+    search: []
+  - css: cubes
+    code: 0xe986
+    uid: f0af88af512d80d752c6d62a1eead7fb
+    search: []
+  - css: cut_palm
+    code: 0xe987
+    uid: 459d04ce02384e056db98f3976cb8253
+    search: []
+  - css: cycle
+    code: 0xe988
+    uid: a4b4d68aed903c74606b75f83be20f73
+    search: []
+  - css: death_skull
+    code: 0xe98c
+    uid: 0ad98427c484de25786bba8433f39421
+    search: []
+  - css: demolish
+    code: 0xe98f
+    uid: 65cc1743533b3bfee855153156de9f11
+    search: []
+  - css: desert_skull
+    code: 0xe991
+    uid: 7e95880708c40f92563b95d2fe832c90
+    search: []
+  - css: dragon_wing
+    code: 0xe9a1
+    uid: ff30593387834b24cc9494d2aac820fa
+    search: []
+  - css: feather_wing
+    code: 0xe9bb
+    uid: 4c231feaa42a8eb7d2582d7821db53b8
+    search: []
+  - css: feathered_wing
+    code: 0xe9bc
+    uid: 743eb248f2c5419667fbcc40fe0780ca
+    search: []
+  - css: fedora
+    code: 0xe9bd
+    uid: 6035c031f6f99dfb1409d93a8da10f57
+    search: []
+  - css: fluffy_swirl
+    code: 0xe9cf
+    uid: 9a14437359bcf0ef6c1906d791bec71f
+    search: []
+  - css: footprint
+    code: 0xe9d2
+    uid: 43469e0792a9a7db0ece298bdcb63ea8
+    search: []
+  - css: forging
+    code: 0xe9d3
+    uid: 41a96798633e0a9a7dd884f978e7ac82
+    search: []
+  - css: forward
+    code: 0xe9d4
+    uid: 1e859618f842a435475e4fce1cffecc6
+    search: []
+  - css: glass_heart
+    code: 0xe9e2
+    uid: e3c69fca0f916e040b6007e0f1744db0
+    search: []
+  - css: groundbreaker
+    code: 0xe9e9
+    uid: eef34a4493c968df853057f7dc927ea3
+    search: []
+  - css: guarded_tower
+    code: 0xe9ea
+    uid: fbdefb3e7d76c430f86f532ad6709921
+    search: []
+  - css: hand_emblem
+    code: 0xe9ef
+    uid: 0a4022a5fc130d1fe5623cc531096dda
+    search: []
+  - css: hand
+    code: 0xe9f1
+    uid: 2bf86c564f305d4932b68eef36c03364
+    search: []
+  - css: heart_tower
+    code: 0xe9f7
+    uid: 69a7706e1f8b3a91fd121bb34f8e6ce2
+    search: []
+  - css: heat_haze
+    code: 0xe9fb
+    uid: f30274f07bd6233c0e0b9f4829479e87
+    search: []
+  - css: heavy_fall
+    code: 0xe9fc
+    uid: 3c8a1294bb7eb10f8b647c6470e0add8
+    search: []
+  - css: help
+    code: 0xe9ff
+    uid: 4f7f14d918eebff2e31da741c3bd067c
+    search: []
+  - css: hive_emblem
+    code: 0xea00
+    uid: 7cf9de2713586859b1e3f07237f3826c
+    search: []
+  - css: hole_ladder
+    code: 0xea01
+    uid: 969f53ed1929af53ad4beb15f7df2935
+    search: []
+  - css: hood
+    code: 0xea03
+    uid: 5b1f2fddeb9d2efc2beb912565fd3724
+    search: []
+  - css: horn_call
+    code: 0xea04
+    uid: 8a64a19e786492a3b5fd50dc503edbf1
+    search: []
+  - css: interdiction
+    code: 0xea10
+    uid: fc0becd6e20e20e9867d1436a6b0b390
+    search: []
+  - css: locked_fortress
+    code: 0xea35
+    uid: e5629ff2157219865b86e75f2b8ccab7
+    search: []
+  - css: meat_hook
+    code: 0xea3b
+    uid: 46d228e5b328b6c6ff7825ea0cdb57ab
+    search: []
+  - css: metal_gate
+    code: 0xea3e
+    uid: a2ef00ee3a0c2781eb8f3e3911ff4a0b
+    search: []
+  - css: mine_wagon
+    code: 0xea40
+    uid: 42233a0ecd40816e534bca933be21ab1
+    search: []
+  - css: mining_diamonds
+    code: 0xea41
+    uid: feaf1b7cfbea8cd0cb41b47a050946c6
+    search: []
+  - css: montains
+    code: 0xea44
+    uid: a89f50d5d3a1d10d645a2d497843628c
+    search: []
+  - css: nodular
+    code: 0xea4b
+    uid: 392bcf3683391c9a49900da17e8fa38a
+    search: []
+  - css: ocean_emblem
+    code: 0xea4f
+    uid: 3feae0f9eb5bf97e84de94b69b31187c
+    search: []
+  - css: omega
+    code: 0xea51
+    uid: 5b54096d1ac64d089efd0ef2f20cd253
+    search: []
+  - css: on_target
+    code: 0xea52
+    uid: 8c690daa98f22522241771cea43ab513
+    search: []
+  - css: ophiuchus
+    code: 0xea53
+    uid: 518dc1362d259df9ef529e545f7ba1da
+    search: []
+  - css: overhead
+    code: 0xea54
+    uid: 37d5fc9a8819870e22f2691f91be524b
+    search: []
+  - css: overmind
+    code: 0xea55
+    uid: 0b90f50e06b323a32c0dca801214c9e1
+    search: []
+  - css: pawprint
+    code: 0xea58
+    uid: f289fabfe0360db9394cfa30c852000d
+    search: []
+  - css: podium
+    code: 0xea70
+    uid: 1cb1f90374328a2d62f07418e171b015
+    search: []
+  - css: pyramids
+    code: 0xea73
+    uid: 6c98de4c150f45c0be5c1c6df880dbad
+    search: []
+  - css: queen_crown
+    code: 0xea74
+    uid: 465d45740a328e039b80d55daf931467
+    search: []
+  - css: radial_balance
+    code: 0xea78
+    uid: 3386bd3c104ecb8ed642c4cd6ff8dd7c
+    search: []
+  - css: reverse
+    code: 0xea80
+    uid: 56cd4942ad547cebcb8b65efa95d4843
+    search: []
+  - css: scroll_unfurled
+    code: 0xea8f
+    uid: 2d2e900e19b64c9bb07d9a036330f723
+    search: []
+  - css: rss
+    code: 0xea88
+    uid: 059de53ec0efbb5bbf82355c9cd002a5
+    search: []
+  - css: satellite
+    code: 0xea8c
+    uid: 8a37a919574a45696d94022c5180267e
+    search: []
+  - css: save
+    code: 0xea8d
+    uid: 19afed9d77b549d90101f8323e42c76a
+    search: []
+  - css: shoe_prints
+    code: 0xea98
+    uid: 4d538a41fced0b1adbf9422bddc06aea
+    search: []
+  - css: shot_through_the_heart
+    code: 0xea99
+    uid: b1c60caeccdc37eb388157dbaa932b6c
+    search: []
+  - css: shovel
+    code: 0xea9b
+    uid: 2b6206279a4dd84177fe8e72c8c70f68
+    search: []
+  - css: sideswipe
+    code: 0xea9e
+    uid: 6bd608d1e6e6678fd12586418b37fc71
+    search: []
+  - css: site
+    code: 0xea9f
+    uid: 2bd232a10b7fb0d836ea520c6c384860
+    search: []
+  - css: skull_trophy
+    code: 0xeaa0
+    uid: b72fb555f7d382911e02f42c99397da0
+    search: []
+  - css: skull
+    code: 0xeaa1
+    uid: 348c61256c98b062f1000f79933177cd
+    search: []
+  - css: spawn_node
+    code: 0xeaab
+    uid: 93cea6e32277754dc62cb35dc6a40a67
+    search: []
+  - css: splash
+    code: 0xeab5
+    uid: a2215b43f273175e7773d8f943f6ed4d
+    search: []
+  - css: targeted
+    code: 0xeac5
+    uid: 73a167e8c45117301ddbc8ec6288226c
+    search: []
+  - css: tic_tac_toe
+    code: 0xeacd
+    uid: 363017754a3bde70edfae674a2990842
+    search: []
+  - css: tooth
+    code: 0xead0
+    uid: 1d056d267d8d25cdc2dcae57bccc13d3
+    search: []
+  - css: tower
+    code: 0xead2
+    uid: 91ce80e0edba06593a5798fc8c0d61c5
+    search: []
+  - css: trail
+    code: 0xead3
+    uid: f8bfccd532a87e5e665433a866841be3
+    search: []
+  - css: turd
+    code: 0xead8
+    uid: 7fa2a7efe333c1c463d96b399472a5d3
+    search: []
+  - css: uncertainty
+    code: 0xeadb
+    uid: 1331b3de0dd9e589ac1da9f381ae560b
+    search: []
+  - css: underhand
+    code: 0xeadc
+    uid: c20e82400e7ea5c61ba31e3ac4ec6d4c
+    search: []
+  - css: x_mark
+    code: 0xeaec
+    uid: 2956b0f1cff35bb822311d5f64236945
+    search: []  
+  

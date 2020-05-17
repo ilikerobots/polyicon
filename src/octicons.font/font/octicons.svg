@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2013 by TODO</metadata>
+<defs>
+<font id="octicons" horiz-adv-x="1000" >
+<font-face font-family="Octicons" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="alert" unicode="&#xf300;" d="M500 62288c-23-1-44-12-55-32L9 61506a61 61 0 0 0 0-62c12-20 33-32 55-32h873c23 0 44 12 55 32a64 64 0 0 0 0 62l-436 750c-12 20-33 32-56 32z m-63-312h127v-251l-127 1v250z m0-313h127v-125H437v125z" horiz-adv-x="16" />
+</font>
+</defs>
+</svg>

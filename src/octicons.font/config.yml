@@ -1,0 +1,1733 @@
+---
+# This is configuration file for font builder and other support scripts.
+# Format is descriped below.
+#
+#
+# # metadata, to generate demo & fontello info dialogs
+# meta:
+#
+#  author: Daniel Buce
+#  homepage: http://...
+#  email: ...
+#  twitter: http://twitter.com/...
+#  dribbble: http://dribbble.com/...
+#  license: SIL
+#  license_url: http://scripts.sil.org/OFL
+#
+#   css-prefix: "icon-"             # prefix for css-generated classes
+#   demo-columns: 4                 # used for html demo page generation
+#
+# # Font headers. All vars from here will be used as font
+# # params in fontforge http://fontforge.sourceforge.net/python.html
+# font:
+#
+#   version: "1.0"
+#
+#   # use !!!small!!! letters a-z, or Opera will fail under OS X
+#   # fontname will be also used as file name.
+#   fontname: myfont
+#
+#   fullname: MyFont
+#   familyname: Myfont
+#
+#   copyright: Copyright (C) 2012 by xxxxxxxx
+#
+#   ascent: 1638
+#   descent: 410
+#   weight: Regular
+#
+#
+# #
+# # Optional. You can apply global rescale + offset to all font glyphs.
+# # Param values ar 0..1, where 1 = 100%. 
+# #
+# transform:
+#   baseline: 0.2                 # baseline for rescale symmetry. Default value
+#                                 # calculated from ascent/decsent
+#   rescale: 0.68                 # rescale glyphs and center around baseline
+#   offset: -0.1                  # shift up/down
+#
+# glyphs:
+#   - file: glyph1_file           # file name, without extention
+#     from: 0xNNN                 # Source code for remapper or merge tool
+#     code: 0xNNN                 # Symbol code 0x - hex
+#     css: icon-gpyph1-name       # For generated CSS
+#     search: [][word1, word2]      # Search aliases (array). CSS name will be
+#                                 # included automatically
+#     src: first_font_alias       # alias to font for merge tool
+#                                 # list of aliases in src_fonts section
+#
+#     #
+#     # local transformations, only for this glyph (optional)
+#     #
+#     transform:                  # personal glyph transformation.
+#       rescale_rel               # *_rel - applyed after global.
+#       offset: 0.2               # without *_rel - override global
+#
+# #
+# # Fonts aliases used only in font merge tool
+# #
+# src_fonts:
+#   first_font_alias: "/absolute/path/to/first/font.ttf"
+#
+################################################################################
+#
+
+
+meta:
+  author: GitHub
+  homepage: https://primer.style/octicons/
+  email: 
+  twitter: https://twitter.com/github
+  github: https://github.com/primer/octicons
+  license: MIT
+  license_url: http://opensource.org/licenses/mit-license.php
+
+  css_prefix_text: "icon-"
+  columns: 4
+
+font:
+  # use !!!small!!! letters a-z, or Opera will fail under OS X
+  # fontname will be also used as file name.
+  fontname: octicons
+  fullname: Octicons
+  familyname: Octicons
+  copyright: Copyright (C) 2020 by GitHub Inc.
+  ascent: 850
+  descent: -150
+  weight: Normal
+
+
+glyphs:
+  - code: 0xf300
+    uid: e9f1a444968111eab72aacfdce5a3d9f
+    css: arrow-small-left
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [arrow-small-left]
+
+  - code: 0xf301
+    uid: e9f1a445968111eab72aacfdce5a3d9f
+    css: checklist
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [checklist]
+
+  - code: 0xf302
+    uid: e9f1a446968111eab72aacfdce5a3d9f
+    css: diff-modified
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [diff-modified]
+
+  - code: 0xf303
+    uid: e9f1a447968111eab72aacfdce5a3d9f
+    css: plus
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [plus]
+
+  - code: 0xf304
+    uid: e9f1a448968111eab72aacfdce5a3d9f
+    css: pin
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [pin]
+
+  - code: 0xf305
+    uid: e9f1a449968111eab72aacfdce5a3d9f
+    css: database
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [database]
+
+  - code: 0xf306
+    uid: e9f1a44a968111eab72aacfdce5a3d9f
+    css: markdown
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [markdown]
+
+  - code: 0xf307
+    uid: e9f1a44b968111eab72aacfdce5a3d9f
+    css: unverified
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [unverified]
+
+  - code: 0xf308
+    uid: e9f1a44c968111eab72aacfdce5a3d9f
+    css: mark-github
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [mark-github]
+
+  - code: 0xf309
+    uid: e9f1a44d968111eab72aacfdce5a3d9f
+    css: globe
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [globe]
+
+  - code: 0xf30a
+    uid: e9f1a44e968111eab72aacfdce5a3d9f
+    css: light-bulb
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [light-bulb]
+
+  - code: 0xf30b
+    uid: e9f1a44f968111eab72aacfdce5a3d9f
+    css: watch
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [watch]
+
+  - code: 0xf30c
+    uid: e9f1a450968111eab72aacfdce5a3d9f
+    css: primitive-dot
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [primitive-dot]
+
+  - code: 0xf30d
+    uid: e9f1a451968111eab72aacfdce5a3d9f
+    css: bookmark
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [bookmark]
+
+  - code: 0xf30e
+    uid: e9f1a452968111eab72aacfdce5a3d9f
+    css: gift
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [gift]
+
+  - code: 0xf30f
+    uid: e9f1a453968111eab72aacfdce5a3d9f
+    css: file-directory
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [file-directory]
+
+  - code: 0xf310
+    uid: e9f1a454968111eab72aacfdce5a3d9f
+    css: versions
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [versions]
+
+  - code: 0xf311
+    uid: e9f1a455968111eab72aacfdce5a3d9f
+    css: triangle-up
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [triangle-up]
+
+  - code: 0xf312
+    uid: e9f1a456968111eab72aacfdce5a3d9f
+    css: issue-closed
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [issue-closed]
+
+  - code: 0xf313
+    uid: e9f1a457968111eab72aacfdce5a3d9f
+    css: tag
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [tag]
+
+  - code: 0xf314
+    uid: e9f1a458968111eab72aacfdce5a3d9f
+    css: book
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [book]
+
+  - code: 0xf315
+    uid: e9f1a459968111eab72aacfdce5a3d9f
+    css: git-commit
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [git-commit]
+
+  - code: 0xf316
+    uid: e9f1a45a968111eab72aacfdce5a3d9f
+    css: mail-read
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [mail-read]
+
+  - code: 0xf317
+    uid: e9f1a45b968111eab72aacfdce5a3d9f
+    css: repo-push
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [repo-push]
+
+  - code: 0xf318
+    uid: e9f1a45c968111eab72aacfdce5a3d9f
+    css: ellipsis
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [ellipsis]
+
+  - code: 0xf319
+    uid: e9f1a45d968111eab72aacfdce5a3d9f
+    css: lock
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [lock]
+
+  - code: 0xf31a
+    uid: e9f1a45e968111eab72aacfdce5a3d9f
+    css: terminal
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [terminal]
+
+  - code: 0xf31b
+    uid: e9f1a45f968111eab72aacfdce5a3d9f
+    css: key
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [key]
+
+  - code: 0xf31c
+    uid: e9f1a460968111eab72aacfdce5a3d9f
+    css: tasklist
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [tasklist]
+
+  - code: 0xf31d
+    uid: e9f1a461968111eab72aacfdce5a3d9f
+    css: repo
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [repo]
+
+  - code: 0xf31e
+    uid: e9f1a462968111eab72aacfdce5a3d9f
+    css: shield-lock
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [shield-lock]
+
+  - code: 0xf31f
+    uid: e9f1a463968111eab72aacfdce5a3d9f
+    css: pulse
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [pulse]
+
+  - code: 0xf320
+    uid: e9f1a464968111eab72aacfdce5a3d9f
+    css: triangle-down
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [triangle-down]
+
+  - code: 0xf321
+    uid: e9f1a465968111eab72aacfdce5a3d9f
+    css: credit-card
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [credit-card]
+
+  - code: 0xf322
+    uid: e9f1a466968111eab72aacfdce5a3d9f
+    css: diff-ignored
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [diff-ignored]
+
+  - code: 0xf323
+    uid: e9f1a467968111eab72aacfdce5a3d9f
+    css: file-submodule
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [file-submodule]
+
+  - code: 0xf324
+    uid: e9f1a468968111eab72aacfdce5a3d9f
+    css: primitive-square
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [primitive-square]
+
+  - code: 0xf325
+    uid: e9f1a469968111eab72aacfdce5a3d9f
+    css: mute
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [mute]
+
+  - code: 0xf326
+    uid: e9f1a46a968111eab72aacfdce5a3d9f
+    css: unmute
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [unmute]
+
+  - code: 0xf327
+    uid: e9f1a46b968111eab72aacfdce5a3d9f
+    css: heart-outline
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [heart-outline]
+
+  - code: 0xf328
+    uid: e9f1a46c968111eab72aacfdce5a3d9f
+    css: sync
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [sync]
+
+  - code: 0xf329
+    uid: e9f1a46d968111eab72aacfdce5a3d9f
+    css: beaker
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [beaker]
+
+  - code: 0xf32a
+    uid: e9f1a46e968111eab72aacfdce5a3d9f
+    css: reply
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [reply]
+
+  - code: 0xf32b
+    uid: e9f1a46f968111eab72aacfdce5a3d9f
+    css: italic
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [italic]
+
+  - code: 0xf32c
+    uid: e9f1a470968111eab72aacfdce5a3d9f
+    css: diff-renamed
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [diff-renamed]
+
+  - code: 0xf32d
+    uid: e9f1a471968111eab72aacfdce5a3d9f
+    css: plus-small
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [plus-small]
+
+  - code: 0xf32e
+    uid: e9f1a472968111eab72aacfdce5a3d9f
+    css: dash
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [dash]
+
+  - code: 0xf32f
+    uid: e9f1a473968111eab72aacfdce5a3d9f
+    css: list-unordered
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [list-unordered]
+
+  - code: 0xf330
+    uid: e9f1a474968111eab72aacfdce5a3d9f
+    css: pencil
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [pencil]
+
+  - code: 0xf331
+    uid: e9f1a475968111eab72aacfdce5a3d9f
+    css: question
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [question]
+
+  - code: 0xf332
+    uid: e9f1a476968111eab72aacfdce5a3d9f
+    css: primitive-dot-stroke
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [primitive-dot-stroke]
+
+  - code: 0xf333
+    uid: e9f1a477968111eab72aacfdce5a3d9f
+    css: saved
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [saved]
+
+  - code: 0xf334
+    uid: e9f1a478968111eab72aacfdce5a3d9f
+    css: unfold
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [unfold]
+
+  - code: 0xf335
+    uid: e9f1a479968111eab72aacfdce5a3d9f
+    css: rss
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [rss]
+
+  - code: 0xf336
+    uid: e9f1a47a968111eab72aacfdce5a3d9f
+    css: arrow-small-down
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [arrow-small-down]
+
+  - code: 0xf337
+    uid: e9f1a47b968111eab72aacfdce5a3d9f
+    css: line-arrow-down
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [line-arrow-down]
+
+  - code: 0xf338
+    uid: e9f1a47c968111eab72aacfdce5a3d9f
+    css: fold
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [fold]
+
+  - code: 0xf339
+    uid: e9f1a47d968111eab72aacfdce5a3d9f
+    css: sign-out
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [sign-out]
+
+  - code: 0xf33a
+    uid: e9f1a47e968111eab72aacfdce5a3d9f
+    css: issue-opened
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [issue-opened]
+
+  - code: 0xf33b
+    uid: e9f1a47f968111eab72aacfdce5a3d9f
+    css: file-code
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [file-code]
+
+  - code: 0xf33c
+    uid: e9f1a480968111eab72aacfdce5a3d9f
+    css: trashcan
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [trashcan]
+
+  - code: 0xf33d
+    uid: e9f1a481968111eab72aacfdce5a3d9f
+    css: star
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [star]
+
+  - code: 0xf33e
+    uid: e9f1a482968111eab72aacfdce5a3d9f
+    css: shield-check
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [shield-check]
+
+  - code: 0xf33f
+    uid: e9f1a483968111eab72aacfdce5a3d9f
+    css: repo-template
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [repo-template]
+
+  - code: 0xf340
+    uid: e9f1a484968111eab72aacfdce5a3d9f
+    css: thumbsup
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [thumbsup]
+
+  - code: 0xf341
+    uid: e9f1a485968111eab72aacfdce5a3d9f
+    css: shield-x
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [shield-x]
+
+  - code: 0xf342
+    uid: e9f1a486968111eab72aacfdce5a3d9f
+    css: logo-gist
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [logo-gist]
+
+  - code: 0xf343
+    uid: e9f1a487968111eab72aacfdce5a3d9f
+    css: report
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [report]
+
+  - code: 0xf344
+    uid: e9f1a488968111eab72aacfdce5a3d9f
+    css: mention
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [mention]
+
+  - code: 0xf345
+    uid: e9f1a489968111eab72aacfdce5a3d9f
+    css: cloud-download
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [cloud-download]
+
+  - code: 0xf346
+    uid: e9f1a48a968111eab72aacfdce5a3d9f
+    css: git-branch
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [git-branch]
+
+  - code: 0xf347
+    uid: e9f1a48b968111eab72aacfdce5a3d9f
+    css: squirrel
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [squirrel]
+
+  - code: 0xf348
+    uid: e9f1a48c968111eab72aacfdce5a3d9f
+    css: desktop-download
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [desktop-download]
+
+  - code: 0xf349
+    uid: e9f1a48d968111eab72aacfdce5a3d9f
+    css: kebab-vertical
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [kebab-vertical]
+
+  - code: 0xf34a
+    uid: e9f1a48e968111eab72aacfdce5a3d9f
+    css: line-arrow-left
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [line-arrow-left]
+
+  - code: 0xf34b
+    uid: e9f1a48f968111eab72aacfdce5a3d9f
+    css: clippy
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [clippy]
+
+  - code: 0xf34c
+    uid: e9f1a490968111eab72aacfdce5a3d9f
+    css: megaphone
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [megaphone]
+
+  - code: 0xf34d
+    uid: e9f1a491968111eab72aacfdce5a3d9f
+    css: repo-clone
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [repo-clone]
+
+  - code: 0xf34e
+    uid: e9f1a492968111eab72aacfdce5a3d9f
+    css: workflow
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [workflow]
+
+  - code: 0xf34f
+    uid: e9f1a493968111eab72aacfdce5a3d9f
+    css: arrow-up
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [arrow-up]
+
+  - code: 0xf350
+    uid: e9f1a494968111eab72aacfdce5a3d9f
+    css: chevron-up
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [chevron-up]
+
+  - code: 0xf351
+    uid: e9f1a495968111eab72aacfdce5a3d9f
+    css: plug
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [plug]
+
+  - code: 0xf352
+    uid: e9f1a496968111eab72aacfdce5a3d9f
+    css: comment
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [comment]
+
+  - code: 0xf353
+    uid: e9f1a497968111eab72aacfdce5a3d9f
+    css: location
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [location]
+
+  - code: 0xf354
+    uid: e9f1a498968111eab72aacfdce5a3d9f
+    css: kebab-horizontal
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [kebab-horizontal]
+
+  - code: 0xf355
+    uid: e9f1a499968111eab72aacfdce5a3d9f
+    css: link-external
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [link-external]
+
+  - code: 0xf356
+    uid: e9f1a49a968111eab72aacfdce5a3d9f
+    css: link
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [link]
+
+  - code: 0xf357
+    uid: e9f1a49b968111eab72aacfdce5a3d9f
+    css: code
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [code]
+
+  - code: 0xf358
+    uid: e9f1a49c968111eab72aacfdce5a3d9f
+    css: history
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [history]
+
+  - code: 0xf359
+    uid: e9f1a49d968111eab72aacfdce5a3d9f
+    css: stop
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [stop]
+
+  - code: 0xf35a
+    uid: e9f1a49e968111eab72aacfdce5a3d9f
+    css: graph
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [graph]
+
+  - code: 0xf35b
+    uid: e9f1a49f968111eab72aacfdce5a3d9f
+    css: file-media
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [file-media]
+
+  - code: 0xf35c
+    uid: e9f1a4a0968111eab72aacfdce5a3d9f
+    css: text-size
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [text-size]
+
+  - code: 0xf35d
+    uid: e9f1a4a1968111eab72aacfdce5a3d9f
+    css: no-newline
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [no-newline]
+
+  - code: 0xf35e
+    uid: e9f1a4a2968111eab72aacfdce5a3d9f
+    css: gear
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [gear]
+
+  - code: 0xf35f
+    uid: e9f1a4a3968111eab72aacfdce5a3d9f
+    css: home
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [home]
+
+  - code: 0xf360
+    uid: e9f1a4a4968111eab72aacfdce5a3d9f
+    css: device-camera-video
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [device-camera-video]
+
+  - code: 0xf361
+    uid: e9f1a4a5968111eab72aacfdce5a3d9f
+    css: diff-added
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [diff-added]
+
+  - code: 0xf362
+    uid: e9f1a4a6968111eab72aacfdce5a3d9f
+    css: arrow-both
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [arrow-both]
+
+  - code: 0xf363
+    uid: e9f1a4a7968111eab72aacfdce5a3d9f
+    css: circuit-board
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [circuit-board]
+
+  - code: 0xf364
+    uid: e9f1a4a8968111eab72aacfdce5a3d9f
+    css: repo-pull
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [repo-pull]
+
+  - code: 0xf365
+    uid: e9f1a4a9968111eab72aacfdce5a3d9f
+    css: sign-in
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [sign-in]
+
+  - code: 0xf366
+    uid: e9f1a4aa968111eab72aacfdce5a3d9f
+    css: eye-closed
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [eye-closed]
+
+  - code: 0xf367
+    uid: e9f1a4ab968111eab72aacfdce5a3d9f
+    css: north-star
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [north-star]
+
+  - code: 0xf368
+    uid: e9f1a4ac968111eab72aacfdce5a3d9f
+    css: internal-repo
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [internal-repo]
+
+  - code: 0xf369
+    uid: e9f1a4ad968111eab72aacfdce5a3d9f
+    css: check
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [check]
+
+  - code: 0xf36a
+    uid: e9f1a4ae968111eab72aacfdce5a3d9f
+    css: law
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [law]
+
+  - code: 0xf36b
+    uid: e9f1a4af968111eab72aacfdce5a3d9f
+    css: cloud-upload
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [cloud-upload]
+
+  - code: 0xf36c
+    uid: e9f1a4b0968111eab72aacfdce5a3d9f
+    css: settings
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [settings]
+
+  - code: 0xf36d
+    uid: e9f1a4b1968111eab72aacfdce5a3d9f
+    css: three-bars
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [three-bars]
+
+  - code: 0xf36e
+    uid: e9f1a4b2968111eab72aacfdce5a3d9f
+    css: flame
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [flame]
+
+  - code: 0xf36f
+    uid: e9f1a4b3968111eab72aacfdce5a3d9f
+    css: horizontal-rule
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [horizontal-rule]
+
+  - code: 0xf370
+    uid: e9f1a4b4968111eab72aacfdce5a3d9f
+    css: chevron-right
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [chevron-right]
+
+  - code: 0xf371
+    uid: e9f1a4b5968111eab72aacfdce5a3d9f
+    css: chevron-left
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [chevron-left]
+
+  - code: 0xf372
+    uid: e9f1a4b6968111eab72aacfdce5a3d9f
+    css: repo-template-private
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [repo-template-private]
+
+  - code: 0xf373
+    uid: e9f1a4b7968111eab72aacfdce5a3d9f
+    css: github-action
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [github-action]
+
+  - code: 0xf374
+    uid: e9f1a4b8968111eab72aacfdce5a3d9f
+    css: broadcast
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [broadcast]
+
+  - code: 0xf375
+    uid: e9f1a4b9968111eab72aacfdce5a3d9f
+    css: archive
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [archive]
+
+  - code: 0xf376
+    uid: e9f1a4ba968111eab72aacfdce5a3d9f
+    css: note
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [note]
+
+  - code: 0xf377
+    uid: e9f1a4bb968111eab72aacfdce5a3d9f
+    css: milestone
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [milestone]
+
+  - code: 0xf378
+    uid: e9f1a4bc968111eab72aacfdce5a3d9f
+    css: project
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [project]
+
+  - code: 0xf379
+    uid: e9f1a4bd968111eab72aacfdce5a3d9f
+    css: device-mobile
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [device-mobile]
+
+  - code: 0xf37a
+    uid: e9f1a4be968111eab72aacfdce5a3d9f
+    css: line-arrow-right
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [line-arrow-right]
+
+  - code: 0xf37b
+    uid: e9f1a4bf968111eab72aacfdce5a3d9f
+    css: arrow-small-right
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [arrow-small-right]
+
+  - code: 0xf37c
+    uid: e9f1a4c0968111eab72aacfdce5a3d9f
+    css: arrow-right
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [arrow-right]
+
+  - code: 0xf37d
+    uid: e9f1a4c1968111eab72aacfdce5a3d9f
+    css: inbox
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [inbox]
+
+  - code: 0xf37e
+    uid: e9f1a4c2968111eab72aacfdce5a3d9f
+    css: repo-forked
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [repo-forked]
+
+  - code: 0xf37f
+    uid: e9f1a4c3968111eab72aacfdce5a3d9f
+    css: line-arrow-up
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [line-arrow-up]
+
+  - code: 0xf380
+    uid: e9f1a4c4968111eab72aacfdce5a3d9f
+    css: tools
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [tools]
+
+  - code: 0xf381
+    uid: e9f1a4c5968111eab72aacfdce5a3d9f
+    css: jersey
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [jersey]
+
+  - code: 0xf382
+    uid: e9f1a4c6968111eab72aacfdce5a3d9f
+    css: device-desktop
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [device-desktop]
+
+  - code: 0xf383
+    uid: e9f1a4c7968111eab72aacfdce5a3d9f
+    css: package
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [package]
+
+  - code: 0xf384
+    uid: e9f1a4c8968111eab72aacfdce5a3d9f
+    css: thumbsdown
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [thumbsdown]
+
+  - code: 0xf385
+    uid: e9f1a4c9968111eab72aacfdce5a3d9f
+    css: dashboard
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [dashboard]
+
+  - code: 0xf386
+    uid: e9f1a4ca968111eab72aacfdce5a3d9f
+    css: play
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [play]
+
+  - code: 0xf387
+    uid: e9f1a4cb968111eab72aacfdce5a3d9f
+    css: dependent
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [dependent]
+
+  - code: 0xf388
+    uid: e9f1a4cc968111eab72aacfdce5a3d9f
+    css: rocket
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [rocket]
+
+  - code: 0xf389
+    uid: e9f1a4cd968111eab72aacfdce5a3d9f
+    css: calendar
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [calendar]
+
+  - code: 0xf38a
+    uid: e9f1a4ce968111eab72aacfdce5a3d9f
+    css: smiley
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [smiley]
+
+  - code: 0xf38b
+    uid: e9f1a4cf968111eab72aacfdce5a3d9f
+    css: issue-reopened
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [issue-reopened]
+
+  - code: 0xf38c
+    uid: e9f1a4d0968111eab72aacfdce5a3d9f
+    css: clock
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [clock]
+
+  - code: 0xf38d
+    uid: e9f1a4d1968111eab72aacfdce5a3d9f
+    css: mirror
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [mirror]
+
+  - code: 0xf38e
+    uid: e9f1a4d2968111eab72aacfdce5a3d9f
+    css: shield
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [shield]
+
+  - code: 0xf38f
+    uid: e9f1a4d3968111eab72aacfdce5a3d9f
+    css: file-symlink-directory
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [file-symlink-directory]
+
+  - code: 0xf390
+    uid: e9f1a4d4968111eab72aacfdce5a3d9f
+    css: browser
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [browser]
+
+  - code: 0xf391
+    uid: e9f1a4d5968111eab72aacfdce5a3d9f
+    css: server
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [server]
+
+  - code: 0xf392
+    uid: e9f1a4d6968111eab72aacfdce5a3d9f
+    css: triangle-right
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [triangle-right]
+
+  - code: 0xf393
+    uid: e9f1a4d7968111eab72aacfdce5a3d9f
+    css: radio-tower
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [radio-tower]
+
+  - code: 0xf394
+    uid: e9f1a4d8968111eab72aacfdce5a3d9f
+    css: mail
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [mail]
+
+  - code: 0xf395
+    uid: e9f1a4d9968111eab72aacfdce5a3d9f
+    css: arrow-down
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [arrow-down]
+
+  - code: 0xf396
+    uid: e9f1a4da968111eab72aacfdce5a3d9f
+    css: diff-removed
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [diff-removed]
+
+  - code: 0xf397
+    uid: e9f1a4db968111eab72aacfdce5a3d9f
+    css: hubot
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [hubot]
+
+  - code: 0xf398
+    uid: e9f1a4dc968111eab72aacfdce5a3d9f
+    css: file
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [file]
+
+#  - code: 0xf399
+#    uid: e9f1a4dd968111eab72aacfdce5a3d9f
+#    css: logo-github
+#    meta:
+#      author: GitHub
+#      homepage: https://primer.style/octicons/
+#    search: [logo-github]
+
+  - code: 0xf39a
+    uid: e9f1a4de968111eab72aacfdce5a3d9f
+    css: gist-secret
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [gist-secret]
+
+  - code: 0xf39b
+    uid: e9f1a4df968111eab72aacfdce5a3d9f
+    css: x
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [x]
+
+  - code: 0xf39c
+    uid: e9f1a4e0968111eab72aacfdce5a3d9f
+    css: screen-normal
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [screen-normal]
+
+  - code: 0xf39d
+    uid: e9f1a4e1968111eab72aacfdce5a3d9f
+    css: infinity
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [infinity]
+
+  - code: 0xf39e
+    uid: e9f1a4e2968111eab72aacfdce5a3d9f
+    css: mortar-board
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [mortar-board]
+
+  - code: 0xf39f
+    uid: e9f1a4e3968111eab72aacfdce5a3d9f
+    css: alert
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [alert]
+
+  - code: 0xf3a0
+    uid: e9f1a4e4968111eab72aacfdce5a3d9f
+    css: file-pdf
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [file-pdf]
+
+  - code: 0xf3a1
+    uid: e9f1a4e5968111eab72aacfdce5a3d9f
+    css: workflow-all
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [workflow-all]
+
+  - code: 0xf3a2
+    uid: e9f1a4e6968111eab72aacfdce5a3d9f
+    css: verified
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [verified]
+
+  - code: 0xf3a3
+    uid: e9f1a4e7968111eab72aacfdce5a3d9f
+    css: list-ordered
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [list-ordered]
+
+  - code: 0xf3a4
+    uid: e9f1a4e8968111eab72aacfdce5a3d9f
+    css: briefcase
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [briefcase]
+
+  - code: 0xf3a5
+    uid: e9f1a4e9968111eab72aacfdce5a3d9f
+    css: device-camera
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [device-camera]
+
+  - code: 0xf3a6
+    uid: e9f1a4ea968111eab72aacfdce5a3d9f
+    css: request-changes
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [request-changes]
+
+  - code: 0xf3a7
+    uid: e9f1a4eb968111eab72aacfdce5a3d9f
+    css: organization
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [organization]
+
+  - code: 0xf3a8
+    uid: e9f1a4ec968111eab72aacfdce5a3d9f
+    css: eye
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [eye]
+
+  - code: 0xf3a9
+    uid: e9f1a4ed968111eab72aacfdce5a3d9f
+    css: info
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [info]
+
+  - code: 0xf3aa
+    uid: e9f1a4ee968111eab72aacfdce5a3d9f
+    css: fold-up
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [fold-up]
+
+  - code: 0xf3ab
+    uid: e9f1a4ef968111eab72aacfdce5a3d9f
+    css: grabber
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [grabber]
+
+  - code: 0xf3ac
+    uid: e9f1a4f0968111eab72aacfdce5a3d9f
+    css: skip
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [skip]
+
+  - code: 0xf3ad
+    uid: e9f1a4f1968111eab72aacfdce5a3d9f
+    css: file-symlink-file
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [file-symlink-file]
+
+  - code: 0xf3ae
+    uid: e9f1a4f2968111eab72aacfdce5a3d9f
+    css: file-binary
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [file-binary]
+
+  - code: 0xf3af
+    uid: e9f1a4f3968111eab72aacfdce5a3d9f
+    css: telescope
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [telescope]
+
+  - code: 0xf3b0
+    uid: e9f1a4f4968111eab72aacfdce5a3d9f
+    css: screen-full
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [screen-full]
+
+  - code: 0xf3b1
+    uid: e9f1a4f5968111eab72aacfdce5a3d9f
+    css: git-merge
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [git-merge]
+
+  - code: 0xf3b2
+    uid: e9f1a4f6968111eab72aacfdce5a3d9f
+    css: fold-down
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [fold-down]
+
+  - code: 0xf3b3
+    uid: e9f1a4f7968111eab72aacfdce5a3d9f
+    css: bold
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [bold]
+
+  - code: 0xf3b4
+    uid: e9f1a4f8968111eab72aacfdce5a3d9f
+    css: circle-slash
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [circle-slash]
+
+  - code: 0xf3b5
+    uid: e9f1a4f9968111eab72aacfdce5a3d9f
+    css: octoface
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [octoface]
+
+  - code: 0xf3b6
+    uid: e9f1a4fa968111eab72aacfdce5a3d9f
+    css: git-pull-request
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [git-pull-request]
+
+  - code: 0xf3b7
+    uid: e9f1a4fb968111eab72aacfdce5a3d9f
+    css: diff
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [diff]
+
+  - code: 0xf3b8
+    uid: e9f1a4fc968111eab72aacfdce5a3d9f
+    css: bug
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [bug]
+
+  - code: 0xf3b9
+    uid: e9f1a4fd968111eab72aacfdce5a3d9f
+    css: unsaved
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [unsaved]
+
+  - code: 0xf3ba
+    uid: e9f1a4fe968111eab72aacfdce5a3d9f
+    css: chevron-down
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [chevron-down]
+
+  - code: 0xf3bb
+    uid: e9f1a4ff968111eab72aacfdce5a3d9f
+    css: arrow-left
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [arrow-left]
+
+  - code: 0xf3bc
+    uid: e9f1a500968111eab72aacfdce5a3d9f
+    css: bell
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [bell]
+
+  - code: 0xf3bd
+    uid: e9f1a501968111eab72aacfdce5a3d9f
+    css: gist
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [gist]
+
+  - code: 0xf3be
+    uid: e9f1a502968111eab72aacfdce5a3d9f
+    css: zap
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [zap]
+
+  - code: 0xf3bf
+    uid: e9f1a503968111eab72aacfdce5a3d9f
+    css: git-compare
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [git-compare]
+
+  - code: 0xf3c0
+    uid: e9f1a504968111eab72aacfdce5a3d9f
+    css: triangle-left
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [triangle-left]
+
+  - code: 0xf3c1
+    uid: e9f1a505968111eab72aacfdce5a3d9f
+    css: comment-discussion
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [comment-discussion]
+
+  - code: 0xf3c2
+    uid: e9f1a506968111eab72aacfdce5a3d9f
+    css: file-zip
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [file-zip]
+
+  - code: 0xf3c3
+    uid: e9f1a507968111eab72aacfdce5a3d9f
+    css: search
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [search]
+
+  - code: 0xf3c4
+    uid: e9f1a508968111eab72aacfdce5a3d9f
+    css: heart
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [heart]
+
+  - code: 0xf3c5
+    uid: e9f1a509968111eab72aacfdce5a3d9f
+    css: quote
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [quote]
+
+  - code: 0xf3c6
+    uid: e9f1a50a968111eab72aacfdce5a3d9f
+    css: keyboard
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [keyboard]
+
+  - code: 0xf3c7
+    uid: e9f1a50b968111eab72aacfdce5a3d9f
+    css: paintcan
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [paintcan]
+
+  - code: 0xf3c8
+    uid: e9f1a50c968111eab72aacfdce5a3d9f
+    css: person
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [person]
+
+  - code: 0xf3c9
+    uid: e9f1a50d968111eab72aacfdce5a3d9f
+    css: ruby
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [ruby]
+
+  - code: 0xf3ca
+    uid: e9f1a50e968111eab72aacfdce5a3d9f
+    css: repo-force-push
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [repo-force-push]
+
+  - code: 0xf3cb
+    uid: e9f1a50f968111eab72aacfdce5a3d9f
+    css: arrow-small-up
+    meta:
+      author: GitHub
+      homepage: https://primer.style/octicons/
+    search: [arrow-small-up]
+

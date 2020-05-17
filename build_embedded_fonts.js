@@ -119,7 +119,7 @@ var configServer = {
 var configClient = [];
 
 // Counter
-var internalCode = 0xF000;
+var internalCode = 0xC000;
 
 ////////////////////////////////////////////////////////////////////////////////
 
