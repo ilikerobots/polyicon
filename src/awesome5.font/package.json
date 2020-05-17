@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "jade": "^1.11.0",
+    "js-yaml": "^3.6.1",
+    "stylus": "^0.54.5",
+    "svg-font-create": "^0.0.5",
+    "svg-font-dump": "^0.1.0",
+    "svg2ttf": "^4.0.1",
+    "svgo": "~ 0.6.6",
+    "ttf2eot": "^2.0.0",
+    "ttf2woff": "^2.0.1"
+  }
+}
