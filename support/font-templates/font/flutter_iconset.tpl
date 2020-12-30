@@ -23,7 +23,7 @@ class ${font.fontname} {
   ${font.fontname}._();
 
   static const _kFontFam = '${font.familyname}';
-  static const String _kFontPkg = null;
+  static const String? _kFontPkg = null;
 <% glyphs.forEach(function(glyph) { %>
   static const IconData ${glyph.dart} = IconData(0x${glyph.code16}, fontFamily: _kFontFam, fontPackage: _kFontPkg);<% }); %>
 }
