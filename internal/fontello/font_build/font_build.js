@@ -72,7 +72,7 @@ module.exports = function (N, apiPath) {
       clientConfig: data.config,
       builderConfig,
       cwdDir: N.mainApp.root,
-      tmpDir: path.join(os.tmpDir(), 'flutter-icons', `flutter-icons-${data.fontId.substr(0, 8)}`),
+      tmpDir: path.join(os.tmpdir(), 'flutter-icons', `flutter-icons-${data.fontId.substr(0, 8)}`),
       timestamp: Date.now(),
       result: null,
       logger
